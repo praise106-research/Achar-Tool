@@ -1,0 +1,6 @@
+S ::= p
+p ::= ( ( ( res * binpow( args , args ) ) % m ) == ( binpow( args , args ) % m ) )  
+expr ::= ( var op var ) | ( var op const ) | ( const op var ) | ( const op const ) | var | const
+cmp ::= < | > | == | <= | >=
+args ::= a | b | x | y
+op ::= + | - | *

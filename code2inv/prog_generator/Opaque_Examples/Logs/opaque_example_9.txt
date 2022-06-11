@@ -1,0 +1,151 @@
+Using default K-Induction K = 64
+    _        _                
+   / \   ___| |__   __ _ _ __ 
+  / _ \ / __| '_ \ / _` | '__|
+ / ___ \ (__| | | | (_| | |   
+/_/   \_\___|_| |_|\__,_|_|   
+                              
+K-Induction : 64, 64
+OP_FILE results/inv_result_9_fuzz_rq2.log
+ ==== Solving timeout=10s, epoch=8, K=64 | File : 9 ==== 
+{'S': [['p']], 'p': [['(', '(', 'var', '>=', 'cubeExpr', ')', '&&', '(', 'icbrt(', 'args', ')', '>=', 'y', ')', ')'], ['(', '(', 'var', '<=', 'cubeExpr', ')', '&&', '(', 'icbrt(', 'args', ')', '>=', 'y', ')', ')'], ['(', '(', 'var', '==', 'cubeExpr', ')', '&&', '(', 'icbrt(', 'args', ')', '==', 'y', ')', ')']], 'expr': [['(', 'var', 'op', 'var', ')'], ['(', 'var', 'op', 'const', ')'], ['(', 'const', 'op', 'var', ')'], ['(', 'const', 'op', 'const', ')'], ['var'], ['const']], 'cmp': [['<'], ['>'], ['=='], ['<='], ['>=']], 'args': [['orig_x'], ['x']], 'var': [['orig_x'], ['x']], 'cubeExpr': [['(', 'y', '*', 'y', '*', 'y', ')']], 'op': [['+'], ['-'], ['*']]}
+MAX CHILD 15
+VAR FORMAT ssa
+====== begin of s2v configuration ======
+| msg_average = 0
+======   end of s2v configuration ======
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Parameter inited
+[RQ2 Solver] ( ( x == ( y * y * y ) ) && ( icbrt( orig_x ) == y ) )
+[RQ2 Checker] False || Inv : ( ( orig_x == ( y * y * y ) ) && ( icbrt( x ) == y ) )
+[RQ2 Solver] ( ( orig_x == ( y * y * y ) ) && ( icbrt( x ) == y ) )
+[RQ2 Checker] False || Inv : ( ( orig_x <= ( y * y * y ) ) && ( icbrt( x ) >= y ) )
+[RQ2 Checker] False || Inv : ( ( orig_x <= ( y * y * y ) ) && ( icbrt( x ) >= y ) )
+[RQ2 Solver] ( ( orig_x <= ( y * y * y ) ) && ( icbrt( x ) >= y ) )
+[RQ2 Checker] False || Inv : ( ( x == ( y * y * y ) ) && ( icbrt( x ) == y ) )
+[RQ2 Checker] False || Inv : ( ( x == ( y * y * y ) ) && ( icbrt( x ) == y ) )
+[RQ2 Checker] False || Inv : ( ( x == ( y * y * y ) ) && ( icbrt( x ) == y ) )
+[RQ2 Solver] ( ( x == ( y * y * y ) ) && ( icbrt( x ) == y ) )
+[RQ2 Checker] False || Inv : ( ( x <= ( y * y * y ) ) && ( icbrt( x ) >= y ) )
+[RQ2 Checker] False || Inv : ( ( x <= ( y * y * y ) ) && ( icbrt( x ) >= y ) )
+[RQ2 Checker] False || Inv : ( ( x <= ( y * y * y ) ) && ( icbrt( x ) >= y ) )
+[RQ2 Checker] False || Inv : ( ( x <= ( y * y * y ) ) && ( icbrt( x ) >= y ) )
+[RQ2 Solver] ( ( x <= ( y * y * y ) ) && ( icbrt( x ) >= y ) )
+[RQ2 Checker] False || Inv : ( ( orig_x == ( y * y * y ) ) && ( icbrt( x ) == y ) )
+[RQ2 Checker] False || Inv : ( ( orig_x == ( y * y * y ) ) && ( icbrt( x ) == y ) )
+[RQ2 Checker] False || Inv : ( ( orig_x == ( y * y * y ) ) && ( icbrt( x ) == y ) )
+[RQ2 Checker] False || Inv : ( ( orig_x == ( y * y * y ) ) && ( icbrt( x ) == y ) )
+[RQ2 Checker] False || Inv : ( ( orig_x == ( y * y * y ) ) && ( icbrt( x ) == y ) )
+[RQ2 Solver] ( ( orig_x == ( y * y * y ) ) && ( icbrt( x ) == y ) )
+[RQ2 Checker] False || Inv : ( ( orig_x <= ( y * y * y ) ) && ( icbrt( x ) >= y ) )
+[RQ2 Checker] False || Inv : ( ( orig_x <= ( y * y * y ) ) && ( icbrt( x ) >= y ) )
+[RQ2 Checker] False || Inv : ( ( orig_x <= ( y * y * y ) ) && ( icbrt( x ) >= y ) )
+[RQ2 Checker] False || Inv : ( ( orig_x <= ( y * y * y ) ) && ( icbrt( x ) >= y ) )
+[RQ2 Checker] False || Inv : ( ( orig_x <= ( y * y * y ) ) && ( icbrt( x ) >= y ) )
+[RQ2 Checker] False || Inv : ( ( orig_x <= ( y * y * y ) ) && ( icbrt( x ) >= y ) )
+[RQ2 Checker] True || Inv : ( ( x >= ( y * y * y ) ) && ( icbrt( orig_x ) >= y ) )
+[RQ2 Checker] True || Inv : ( ( x >= ( y * y * y ) ) && ( icbrt( orig_x ) >= y ) )
+[RQ2 Checker] True || Inv : ( ( x >= ( y * y * y ) ) && ( icbrt( orig_x ) >= y ) )
+[RQ2 Checker] True || Inv : ( ( x >= ( y * y * y ) ) && ( icbrt( orig_x ) >= y ) )
+[RQ2 Checker] True || Inv : ( ( x >= ( y * y * y ) ) && ( icbrt( orig_x ) >= y ) )
+[RQ2 Checker] True || Inv : ( ( x >= ( y * y * y ) ) && ( icbrt( orig_x ) >= y ) )
+[RQ2 Solver] ( ( x >= ( y * y * y ) ) && ( icbrt( orig_x ) >= y ) )
+[RQ2 Checker] True || Inv : ( ( orig_x >= ( y * y * y ) ) && ( icbrt( x ) >= y ) )
+[RQ2 Checker] True || Inv : ( ( orig_x >= ( y * y * y ) ) && ( icbrt( x ) >= y ) )
+[RQ2 Checker] True || Inv : ( ( orig_x >= ( y * y * y ) ) && ( icbrt( x ) >= y ) )
+[RQ2 Checker] True || Inv : ( ( orig_x >= ( y * y * y ) ) && ( icbrt( x ) >= y ) )
+[RQ2 Checker] True || Inv : ( ( orig_x >= ( y * y * y ) ) && ( icbrt( x ) >= y ) )
+[RQ2 Checker] True || Inv : ( ( orig_x >= ( y * y * y ) ) && ( icbrt( x ) >= y ) )
+[RQ2 Checker] True || Inv : ( ( orig_x >= ( y * y * y ) ) && ( icbrt( x ) >= y ) )
+[RQ2 Checker] False || Inv : ( ( orig_x >= ( y * y * y ) ) && ( icbrt( x ) >= y ) )
+[RQ2 Checker] False || Inv : ( ( orig_x == ( y * y * y ) ) && ( icbrt( x ) == y ) )
+[RQ2 Checker] False || Inv : ( ( orig_x == ( y * y * y ) ) && ( icbrt( x ) == y ) )
+[RQ2 Checker] False || Inv : ( ( orig_x == ( y * y * y ) ) && ( icbrt( x ) == y ) )
+[RQ2 Checker] False || Inv : ( ( orig_x == ( y * y * y ) ) && ( icbrt( x ) == y ) )
+[RQ2 Checker] False || Inv : ( ( orig_x == ( y * y * y ) ) && ( icbrt( x ) == y ) )
+[RQ2 Checker] False || Inv : ( ( orig_x == ( y * y * y ) ) && ( icbrt( x ) == y ) )
+[RQ2 Checker] False || Inv : ( ( orig_x == ( y * y * y ) ) && ( icbrt( x ) == y ) )
+[RQ2 Checker] False || Inv : ( ( x == ( y * y * y ) ) && ( icbrt( x ) == y ) ) 
+[RQ2 Checker] False || Inv : ( ( x == ( y * y * y ) ) && ( icbrt( x ) == y ) ) 
+[RQ2 Checker] False || Inv : ( ( x == ( y * y * y ) ) && ( icbrt( x ) == y ) ) 
+[RQ2 Checker] False || Inv : ( ( x == ( y * y * y ) ) && ( icbrt( x ) == y ) ) 
+[RQ2 Checker] False || Inv : ( ( x == ( y * y * y ) ) && ( icbrt( x ) == y ) ) 
+[RQ2 Checker] False || Inv : ( ( x == ( y * y * y ) ) && ( icbrt( x ) == y ) ) 
+[RQ2 Checker] False || Inv : ( ( x == ( y * y * y ) ) && ( icbrt( x ) == y ) ) 
+[RQ2 Checker] False || Inv : ( ( x <= ( y * y * y ) ) && ( icbrt( orig_x ) >= y ) )
+[RQ2 Checker] False || Inv : ( ( x <= ( y * y * y ) ) && ( icbrt( orig_x ) >= y ) )
+[RQ2 Checker] False || Inv : ( ( x <= ( y * y * y ) ) && ( icbrt( orig_x ) >= y ) )
+[RQ2 Checker] False || Inv : ( ( x <= ( y * y * y ) ) && ( icbrt( orig_x ) >= y ) )
+[RQ2 Checker] False || Inv : ( ( x <= ( y * y * y ) ) && ( icbrt( orig_x ) >= y ) )
+[RQ2 Checker] False || Inv : ( ( x <= ( y * y * y ) ) && ( icbrt( orig_x ) >= y ) )
+[RQ2 Checker] False || Inv : ( ( x <= ( y * y * y ) ) && ( icbrt( orig_x ) >= y ) )
+[RQ2 Checker] True || Inv : ( ( orig_x >= ( y * y * y ) ) && ( icbrt( orig_x ) >= y ) )
+[RQ2 Checker] True || Inv : ( ( orig_x >= ( y * y * y ) ) && ( icbrt( orig_x ) >= y ) )
+[RQ2 Checker] True || Inv : ( ( orig_x >= ( y * y * y ) ) && ( icbrt( orig_x ) >= y ) )
+[RQ2 Checker] True || Inv : ( ( orig_x >= ( y * y * y ) ) && ( icbrt( orig_x ) >= y ) )
+[RQ2 Checker] True || Inv : ( ( orig_x >= ( y * y * y ) ) && ( icbrt( orig_x ) >= y ) )
+[RQ2 Checker] True || Inv : ( ( orig_x >= ( y * y * y ) ) && ( icbrt( orig_x ) >= y ) )
+[RQ2 Checker] True || Inv : ( ( orig_x >= ( y * y * y ) ) && ( icbrt( orig_x ) >= y ) )
+[RQ2 Checker] True || Inv : ( ( orig_x >= ( y * y * y ) ) && ( icbrt( orig_x ) >= y ) )
+[RQ2 Solver] ( ( orig_x >= ( y * y * y ) ) && ( icbrt( orig_x ) >= y ) )       
+found a solution for 0 , sol: ( ( orig_x >= ( y * y * y ) ) && ( icbrt( orig_x ) >= y ) )
+z3_report time: 102.20 pid: 0 stats: Counter({'ce-T:': 57, 'boogie_result': 13, 'actual_z3': 8, 'ce-I:': 5})
+Writing logs to results/inv_result_9_fuzz_rq2.log                              
+avg reward so far : -2.30200:   1%|          | 1/100 [01:41<2:46:45, 101.07s/it]
+
+real    1m42.996s
+user    0m18.087s
+sys     0m6.704s
+K-Induction : 64, 64
+Could not converge for 9 & fuzz_rq2

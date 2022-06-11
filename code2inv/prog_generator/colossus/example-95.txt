@@ -1,0 +1,141 @@
+Using default K-Induction K = 64
+    _        _                
+   / \   ___| |__   __ _ _ __ 
+  / _ \ / __| '_ \ / _` | '__|
+ / ___ \ (__| | | | (_| | |   
+/_/   \_\___|_| |_|\__,_|_|   
+                              
+colossus
+OP_FILE results/inv_result_95_colossus_spec.log
+ ==== Solving timeout=10s, epoch=8, K=1 | File : 95 ==== 
+{'S': [['S1'], ['S2']], 'S1': [['(', 'C1', ')'], ['(', 'C1', '||', 'C1', ')'], ['(', 'C1', '||', 'C1', '||', 'C1', ')']], 'C1': [['p'], ['(', 'p', '&&', 'p', ')']], 'S2': [['(', 'C2', ')'], ['(', 'C2', '&&', 'C2', ')'], ['(', 'C2', '&&', 'C2', '&&', 'C2', ')']], 'C2': [['p'], ['(', 'p', '||', 'p', ')']], 'p': [['var', 'cmp', 'expr']], 'expr': [['(', 'var', 'op', 'var', ')'], ['(', 'var', 'op', 'const', ')'], ['(', 'const', 'op', 'var', ')'], ['(', 'const', 'op', 'const', ')'], ['var'], ['const']], 'cmp': [['<'], ['>'], ['=='], ['<='], ['>=']], 'op': [['+'], ['-'], ['*']]}
+MAX CHILD 7
+VAR FORMAT ssa
+====== begin of s2v configuration ======
+| msg_average = 0
+======   end of s2v configuration ======
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Parameter inited
+  0%|          | 0/100 [00:00<?, ?it/s]/usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1709: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1698: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+[Colossus Checker] ( ( x > 1 || y > ( 1 * x ) ) && ( i < ( j + j ) || i >= ( 1 + x ) ) && ( y < ( x * x ) || y < ( x - 1 ) ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( y > 1 && ( j < ( j - 0 ) || i <= ( 0 * x ) ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( i > ( j * x ) )   
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( i <= ( 1 + y ) || ( j < ( 0 + 1 ) && y == ( 0 + 1 ) ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( ( j >= i && j < ( x + 0 ) ) || j <= 1 )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( ( i < ( i - 0 ) && i > ( 1 + i ) ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( ( x >= ( 0 - 1 ) || i <= i ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( i < ( 1 + 0 ) )   
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( ( i == ( j + x ) && j <= ( 1 + 0 ) ) || y < 1 || i == y )
+[Colossus Checker] Fuzzer Called                                             
+[Colossus Checker] ( ( y >= ( y * i ) && j >= j ) || ( x == x && x <= ( 0 - 1 ) ) || ( x >= ( 1 * 0 ) && y == ( 1 * 0 ) ) )
+[Colossus Checker] Fuzzer Called                                             
+[Colossus Checker] ( j >= ( i * y ) )                                         
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] ( ( x <= ( 0 * j ) || x > ( x * 1 ) ) && ( y == ( j - 0 ) || i == 0 ) && ( y < ( 1 - j ) || j <= ( 0 * 1 ) ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] ( ( y > ( y - 0 ) || i == ( j * 1 ) ) && ( y > j || j < ( 0 * 1 ) ) && ( y >= 0 || x > ( 0 * 1 ) ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] ( ( j <= ( 1 * 1 ) && i <= ( 1 + 1 ) ) || ( j > y && j == ( y * i ) ) || ( i < ( y * 0 ) && y >= ( 0 * 0 ) ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] ( y <= ( 0 * 1 ) || ( j < ( y - j ) && i == 0 ) )          
+[Colossus Checker] Fuzzer Called                                              
+avg reward so far : -0.54343: 100%|██████████| 100/100 [01:13<00:00,  1.36it/s]
+Example is not trivial
+epoch: 0, average reward: -0.5434, Random: ( ( i <= j && x == ( x - i ) ) ), result_r: -1.8158
+best_reward: 0.0 , best_root: ( j >= ( i * y ) )
+Simpify :  [j >= i*y]
+z3_global_stats: Counter({'ce-I:': 7223, 'ce-F:': 2856, 'ce-T:': 2835, 'boogie_result': 994, 'actual_z3': 15})
+avg reward so far : -0.56885: 100%|██████████| 100/100 [00:53<00:00,  1.89it/s]
+Example is not trivial
+epoch: 1, average reward: -0.5689, Random: ( y < ( 0 * 0 ) && x == ( i * 0 ) ), result_r: -2.0200
+best_reward: -1.09125 , best_root: ( ( j >= ( i * 1 ) || x < j ) && y > j )
+Simpify :  [Or(Not(j <= x), j >= i), Not(y <= j)]
+z3_global_stats: Counter({'ce-I:': 15151, 'ce-F:': 5829, 'ce-T:': 5808, 'boogie_result': 1985, 'actual_z3': 15})
+avg reward so far : -0.53503: 100%|██████████| 100/100 [00:54<00:00,  1.83it/s]
+Example is not trivial
+epoch: 2, average reward: -0.5350, Random: ( x < ( 0 * 0 ) && ( x < ( 0 * 1 ) || x < 0 ) && j > ( i * 1 ) ), result_r: -2.1833
+best_reward: -1.09125 , best_root: ( ( j == ( x - x ) || x >= ( i * y ) ) && j >= ( i * y ) )
+Simpify :  [Or(j == 0, x >= i*y), j >= i*y]
+z3_global_stats: Counter({'ce-I:': 23063, 'ce-F:': 8796, 'ce-T:': 8775, 'boogie_result': 2974, 'actual_z3': 15})
+[Colossus Checker] ( j == ( i * y ) )                                         
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] No Counterexamples Found.                                  
+
+found a solution for 0 , sol: ( j == ( i * y ) )                              
+z3_report time: 237.69 pid: 0 stats: Counter({'ce-I:': 28887, 'ce-F:': 10980, 'ce-T:': 10959, 'boogie_result': 3702, 'actual_z3': 16})
+Writing logs to results/inv_result_95_colossus_spec.log                       
+avg reward so far : -0.53824:  74%|███████▍  | 74/100 [00:54<00:19,  1.35it/s]
+
+real    3m58.497s
+user    12m59.479s
+sys     0m6.318s
+colossus
+
+➜  code2inv git:(almost-ver) ✗ ./scripts/check.sh 95 " ( j == ( i * y ) ) " fuzz_spec
+Invariant Checked :  ( j == ( i * y ) ) 
+CounterExample : [None, None, None]
+Simplifed Expression : []

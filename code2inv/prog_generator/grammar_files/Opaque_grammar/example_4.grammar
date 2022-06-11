@@ -1,0 +1,7 @@
+S ::= p
+p ::= ( ( 0 <= var ) && ( i <= var ) && ( y == fib( args ) ) && ( var == fib( args ) ) )
+expr ::= ( var op var ) | ( var op const ) | ( const op var ) | ( const op const ) | var | const
+cmp ::= < | > | == | <= | >=
+var ::= i | n | x 
+args ::= i | i + 1 | i - 1
+op ::= + | - | *

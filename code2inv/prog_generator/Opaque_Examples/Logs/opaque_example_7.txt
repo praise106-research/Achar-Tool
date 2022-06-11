@@ -1,0 +1,235 @@
+Using default K-Induction K = 64
+    _        _                
+   / \   ___| |__   __ _ _ __ 
+  / _ \ / __| '_ \ / _` | '__|
+ / ___ \ (__| | | | (_| | |   
+/_/   \_\___|_| |_|\__,_|_|   
+                              
+K-Induction : 64, 64
+OP_FILE results/inv_result_7_fuzz_rq2.log
+ ==== Solving timeout=10s, epoch=8, K=64 | File : 7 ==== 
+{'S': [['p']], 'p': [['(', '(', '(', 'varX', '==', '0', ')', '&&', 'expr', ')', '||', '(', '(', 'varY', '!=', '0', ')', ')', ')']], 'expr': [['(', 'var', '*', 'var', '<=', 'var', ')'], ['(', 'var', '*', 'var', '>=', 'var', ')']], 'cmp': [['<'], ['>'], ['=='], ['<='], ['>=']], 'var': [['res'], ['num_orig']], 'varX': [['bit'], ['res']], 'varY': [['bit'], ['res']], 'op': [['+'], ['-'], ['*']]}
+MAX CHILD 19
+VAR FORMAT ssa
+====== begin of s2v configuration ======
+| msg_average = 0
+======   end of s2v configuration ======
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Parameter inited
+[RQ2 Solver] ( ( ( bit == 0 ) && ( res * num_orig >= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res <= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Solver] ( ( ( bit == 0 ) && ( res * res <= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( res * res <= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res <= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Solver] ( ( ( bit == 0 ) && ( res * res <= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * res >= res ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * res >= res ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( num_orig * res >= res ) ) || ( ( bit != 0 ) ) )
+[RQ2 Solver] ( ( ( bit == 0 ) && ( num_orig * res >= res ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * res <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * res <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * res <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( num_orig * res <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Solver] ( ( ( bit == 0 ) && ( num_orig * res <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Solver] ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig >= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig >= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig >= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig >= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig >= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig >= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig >= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * num_orig <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * num_orig <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * num_orig <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * num_orig <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( res * num_orig <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * num_orig <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( res * num_orig <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( num_orig * res >= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( num_orig * res >= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( num_orig * res >= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * res >= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * res >= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * res >= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * res >= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * res >= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * res >= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * res >= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * res >= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * res >= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * res >= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * res >= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * num_orig >= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * num_orig >= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * num_orig >= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * num_orig >= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * num_orig >= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * num_orig >= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * num_orig >= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * num_orig >= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * num_orig >= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * num_orig >= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * num_orig >= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * num_orig >= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * num_orig >= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * num_orig >= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( res * res >= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( res * res >= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( res * res >= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res >= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res >= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res >= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res >= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= res ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= res ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= res ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= res ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= res ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= res ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= res ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( num_orig * res >= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( num_orig * res >= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( num_orig * res >= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * res >= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * res >= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * res >= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * res >= res ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res >= res ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res >= res ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res >= res ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res >= res ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res >= res ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res >= res ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res >= res ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( res == 0 ) && ( num_orig * num_orig <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( res == 0 ) && ( num_orig * num_orig <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( res == 0 ) && ( num_orig * num_orig <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( res == 0 ) && ( num_orig * num_orig <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( res == 0 ) && ( num_orig * num_orig <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( res == 0 ) && ( res * res <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( res == 0 ) && ( res * res <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( res == 0 ) && ( num_orig * num_orig <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( res == 0 ) && ( num_orig * num_orig <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( res == 0 ) && ( num_orig * num_orig <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( num_orig * num_orig <= num_orig ) ) || ( ( res != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] True || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Checker] False || Inv : ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( bit != 0 ) ) )
+[RQ2 Solver] ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( bit != 0 ) ) )
+found a solution for 0 , sol: ( ( ( bit == 0 ) && ( res * res <= num_orig ) ) || ( ( bit != 0 ) ) )
+z3_report time: 209.68 pid: 0 stats: Counter({'ce-T:': 64, 'ce-F:': 45, 'boogie_result': 25, 'ce-I:': 20, 'actual_z3': 7})
+Writing logs to results/inv_result_7_fuzz_rq2.log                              
+avg reward so far : -1.75950:   2%|▏         | 2/100 [03:29<2:51:09, 104.79s/it]
+
+real    3m30.444s
+user    0m31.822s
+sys     0m15.013s
+K-Induction : 64, 64
+Could not converge for 7 & fuzz_rq2

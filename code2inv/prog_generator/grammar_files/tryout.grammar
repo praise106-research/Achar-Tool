@@ -1,0 +1,8 @@
+S ::= p
+p ::= ( ( var <= var ) && ( ( ( var % const == 0 ) && ( var == i ) ) "||" ( ( var % const != 0 ) && ( out == 2 * i ) ) ) ) 
+expr ::= ( var op var ) | ( var op const ) | ( const op var ) | ( const op const ) | var | const
+var ::= n | i | out
+const ::= 2 | 3
+cmp ::= < | > | == | <= | >=
+op ::= + | -
+

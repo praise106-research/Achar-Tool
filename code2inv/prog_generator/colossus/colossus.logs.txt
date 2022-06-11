@@ -1,0 +1,955 @@
+Using default K-Induction K = 64
+    _        _                
+   / \   ___| |__   __ _ _ __ 
+  / _ \ / __| '_ \ / _` | '__|
+ / ___ \ (__| | | | (_| | |   
+/_/   \_\___|_| |_|\__,_|_|   
+                              
+colossus
+OP_FILE results/inv_result_45_colossus_spec.log
+ ==== Solving timeout=10s, epoch=8, K=1 | File : 45 ==== 
+{'S': [['S1'], ['S2']], 'S1': [['(', 'C1', ')'], ['(', 'C1', '||', 'C1', ')'], ['(', 'C1', '||', 'C1', '||', 'C1', ')']], 'C1': [['p'], ['(', 'p', '&&', 'p', ')']], 'S2': [['(', 'C2', ')'], ['(', 'C2', '&&', 'C2', ')'], ['(', 'C2', '&&', 'C2', '&&', 'C2', ')']], 'C2': [['p'], ['(', 'p', '||', 'p', ')']], 'p': [['var', 'cmp', 'expr']], 'expr': [['(', 'var', 'op', 'var', ')'], ['(', 'var', 'op', 'const', ')'], ['(', 'const', 'op', 'var', ')'], ['(', 'const', 'op', 'const', ')'], ['var'], ['const']], 'cmp': [['<'], ['>'], ['=='], ['<='], ['>=']], 'op': [['+'], ['-'], ['*']]}
+MAX CHILD 7
+VAR FORMAT ssa
+====== begin of s2v configuration ======
+| msg_average = 0
+======   end of s2v configuration ======
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Parameter inited
+  0%|          | 0/100 [00:00<?, ?it/s]/usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1709: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1698: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+[Colossus Checker] ( c < ( 0 * 1 ) || n >= ( c + 1 ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( c < ( n * n ) )   
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( n >= ( n * n ) )  
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( ( c <= ( n * 1 ) || n <= 0 ) && n >= n )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus 
+
+[Colassus Checker] Colassus Found Counterexamples.
+[Colassus Checker] [None, None, {'n': '16777216', 'c': '-2122317567'}] 
+
+[Colossus Checker] ( ( c == 0 || n < ( c - 1 ) ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( n <= ( 1 * 0 ) || ( c <= ( c + n ) && c < ( c - n ) ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( c >= ( n * 0 ) && n > ( 0 * c ) )                       
+[Colossus Checker] Fuzzer Called                                             
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                         
+
+[Colassus Checker] Colassus Found Counterexamples.                           
+[Colassus Checker] [None, ({'n': '1', 'c': '2147483647'}, {'n': '1', 'c': '-2147483648'}), None] 
+
+[Colossus Checker] ( ( n >= 0 && n <= 1 ) || n > n || n > ( 0 - c ) )         
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] Colassus Found Counterexamples.                            
+[Colassus Checker] [None, ({'n': '1073741823', 'c': '-2147483648'}, {'n': '1073741823', 'c': '-2147483647'}), {'n': '0', 'c': '-2147418110'}] 
+
+[Colossus Checker] ( ( n == 1 && n > ( c - 0 ) ) || ( n >= ( c - 0 ) && n <= c ) || c > ( 1 - n ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] ( ( n == ( 1 * c ) || n > ( 1 - c ) ) && ( n <= c || n > ( c + c ) ) && n > ( c + 0 ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] ( c > ( 0 - 1 ) && ( n == ( c * 0 ) || n > ( 0 - c ) ) && ( c == ( c - n ) || n >= ( c * 1 ) ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] Colassus Found Counterexamples.                            
+[Colassus Checker] [None, ({'n': '0', 'c': '2147483647'}, {'n': '0', 'c': '-2147483648'}), None] 
+
+[Colossus Checker] ( ( n == ( c * 1 ) || n > c ) && n > ( 1 + 0 ) && n > ( 0 - c ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] ( ( c > ( 0 - 0 ) || n > ( c - c ) ) && n > ( 0 * n ) && ( n == ( c + n ) || c == ( 1 - 0 ) ) )
+[Colossus Checker] Fuzzer Called                                              
+avg reward so far : -0.63047: 100%|██████████| 100/100 [02:00<00:00,  1.21s/it]
+Example is not trivial
+epoch: 0, average reward: -0.6305, Random: ( c >= ( c * 1 ) ), result_r: -2.0200
+best_reward: -0.5 , best_root: ( ( c <= ( n * 1 ) || n <= 0 ) && n >= n )
+Simpify :  [Or(c <= n, n <= 0)]
+z3_global_stats: Counter({'ce-I:': 6306, 'ce-T:': 2176, 'boogie_result': 987, 'ce-F:': 983, 'actual_z3': 13})
+[Colossus Checker] ( n <= ( c + n ) && n >= ( c - 1 ) )                      
+[Colossus Checker] Fuzzer Called                                             
+[Colossus Checker] ( ( n >= ( c * 1 ) && c > ( 0 - n ) ) || ( c == ( 0 * n ) && c == ( 1 - c ) ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] Colassus Found Counterexamples.                            
+[Colassus Checker] [None, None, {'n': '1073741822', 'c': '-1'}]               
+
+avg reward so far : -0.57442: 100%|██████████| 100/100 [01:08<00:00,  1.47it/s]
+Example is not trivial
+epoch: 1, average reward: -0.5744, Random: ( ( c == 0 || n < 0 ) && ( n <= c || n == ( n + 1 ) ) ), result_r: -2.0690
+best_reward: 0.0 , best_root: ( ( n >= ( c * 1 ) && c > ( 0 - n ) ) || ( c == ( 0 * n ) && c == ( 1 - c ) ) )
+Simpify :  [n >= c, Not(c <= -1*n)]
+z3_global_stats: Counter({'ce-I:': 16162, 'ce-T:': 5140, 'ce-F:': 2558, 'boogie_result': 1975, 'actual_z3': 15})
+[Colossus Checker] ( c >= 0 || c <= ( c * n ) )                              
+[Colossus Checker] Fuzzer Called                                             
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                         
+
+[Colassus Checker] Colassus Found Counterexamples.                           
+[Colassus Checker] [None, ({'n': '751195172', 'c': '-176696002'}, {'n': '751195172', 'c': '-176696001'}), {'n': '0', 'c': '-2147483648'}] 
+
+[Colossus Checker] ( c <= ( c * n ) || n <= ( 1 - 1 ) || ( c >= 0 && n == ( c - c ) ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] Colassus Found Counterexamples.                            
+[Colassus Checker] [None, ({'n': '1342790154', 'c': '-96436226'}, {'n': '1342790154', 'c': '-96436225'}), {'n': '15221769', 'c': '-1711275849'}] 
+
+avg reward so far : -0.57149: 100%|██████████| 100/100 [01:23<00:00,  1.20it/s]
+Example is not trivial
+epoch: 2, average reward: -0.5715, Random: ( ( n < ( 1 + n ) && n >= ( c - 1 ) ) || c >= ( 1 - 1 ) ), result_r: -2.0200
+best_reward: -1.0 , best_root: ( c >= 0 || c <= ( c * n ) )
+Simpify :  [Or(c >= 0, c <= c*n)]
+z3_global_stats: Counter({'ce-I:': 27235, 'ce-T:': 8092, 'ce-F:': 4526, 'boogie_result': 2959, 'actual_z3': 17})
+[Colossus Checker] ( c <= ( c * n ) || n == 0 )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( ( c <= c && c == 0 ) || n <= 1 || ( n == ( 1 * n ) && n <= ( c * n ) ) )
+[Colossus Checker] Fuzzer Called                                             
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                         
+
+[Colassus Checker] Colassus Found Counterexamples.                           
+[Colassus Checker] [None, ({'n': '605677127', 'c': '1411440063'}, {'n': '605677127', 'c': '1411440064'}), {'n': '-2130706432', 'c': '-2147417854'}] 
+
+[Colossus Checker] ( ( c <= ( c * n ) || c >= ( 1 - 1 ) ) )                   
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] Colassus Found Counterexamples.                            
+[Colassus Checker] [None, ({'n': '1375476224', 'c': '-2'}, {'n': '1375476224', 'c': '-1'}), {'n': '0', 'c': '-2139094783'}] 
+
+[Colossus Checker] ( ( c <= ( c * n ) || n <= ( c - c ) ) && n >= ( 1 - 1 ) ) 
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] Colassus Found Counterexamples.                            
+[Colassus Checker] [None, ({'n': '1582695430', 'c': '203118462'}, {'n': '1582695430', 'c': '203118463'}), {'n': '0', 'c': '-2139094783'}] 
+
+[Colossus Checker] ( n <= ( c - n ) || c <= ( c * n ) )                       
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] Colassus Found Counterexamples.                            
+[Colassus Checker] [None, ({'n': '-2147483647', 'c': '-2147483647'}, {'n': '-2147483647', 'c': '1'}), {'n': '-1073741825', 'c': '-1073733631'}] 
+
+[Colossus Checker] ( ( c <= ( c * n ) || c >= ( 1 - c ) ) && ( c >= c || n == ( 0 + 1 ) ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] Colassus Found Counterexamples.                            
+[Colassus Checker] [None, ({'n': '-1849548736', 'c': '-1097730'}, {'n': '-1849548736', 'c': '-1097729'}), {'n': '-2147483648', 'c': '-2147483647'}] 
+
+[Colossus Checker] ( c > ( 0 + n ) || c <= ( c * n ) || ( n == ( 1 + n ) && n == ( 0 - c ) ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] Colassus Found Counterexamples.                            
+[Colassus Checker] [None, ({'n': '1677983908', 'c': '1294406335'}, {'n': '1677983908', 'c': '1294406336'}), {'n': '-2147483648', 'c': '-2147483647'}] 
+
+avg reward so far : -0.59339: 100%|██████████| 100/100 [02:26<00:00,  1.46s/it]
+Example is not trivial
+epoch: 3, average reward: -0.5934, Random: ( ( c == c || c >= ( c - 1 ) ) ), result_r: -2.0200
+best_reward: -1.0 , best_root: ( c <= ( c * n ) || n == 0 )
+Simpify :  [Or(c <= c*n, n == 0)]
+z3_global_stats: Counter({'ce-I:': 42445, 'ce-T:': 11038, 'ce-F:': 6490, 'boogie_result': 3941, 'actual_z3': 24})
+[Colossus Checker] ( ( c >= ( 1 - 1 ) || c <= ( c * n ) ) && n < ( 1 + n ) )  
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] Colassus Found Counterexamples.                            
+[Colassus Checker] [None, ({'n': '-1036430334', 'c': '-1073742082'}, {'n': '-1036430334', 'c': '-1073742081'}), {'n': '0', 'c': '-2147483648'}] 
+
+[Colossus Checker] ( ( c <= ( c * n ) || c > ( 0 - 1 ) ) )                    
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] Colassus Found Counterexamples.                            
+[Colassus Checker] [None, ({'n': '-531887988', 'c': '-1648611330'}, {'n': '-531887988', 'c': '-1648611329'}), {'n': '0', 'c': '-2139094783'}] 
+
+[Colossus Checker] ( ( n <= c && c >= ( 1 - c ) ) || c > n || ( c <= ( c * n ) && c == c ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] Colassus Found Counterexamples.                            
+[Colassus Checker] [None, ({'n': '186036224', 'c': '185414654'}, {'n': '186036224', 'c': '185414655'}), {'n': '-2147483648', 'c': '-2147483647'}] 
+
+[Colossus Checker] ( n < ( n + 0 ) || ( c < 1 && n == ( n * n ) ) || ( n >= ( n - c ) && c >= ( 1 - 1 ) ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] Colassus Found Counterexamples.                            
+[Colassus Checker] [None, None, {'n': '0', 'c': '-2147205088'}]               
+
+avg reward so far : -0.48033: 100%|██████████| 100/100 [02:01<00:00,  1.21s/it]
+Example is not trivial
+epoch: 4, average reward: -0.4803, Random: ( ( c >= ( 0 + 0 ) || n == ( c - c ) ) && c > ( n + 0 ) ), result_r: -2.0645
+best_reward: 0.0 , best_root: ( n < ( n + 0 ) || ( c < 1 && n == ( n * n ) ) || ( n >= ( n - c ) && c >= ( 1 - 1 ) ) )
+Simpify :  [Or(c >= 0, And(Not(1 <= c), n == n*n))]
+z3_global_stats: Counter({'ce-I:': 63428, 'ce-T:': 14005, 'ce-F:': 8935, 'boogie_result': 4930, 'actual_z3': 28})
+avg reward so far : -0.55716: 100%|██████████| 100/100 [00:59<00:00,  1.69it/s]
+Example is not trivial
+epoch: 5, average reward: -0.5572, Random: ( c >= 0 && c > ( 0 + n ) ), result_r: -2.0645
+best_reward: -1.0522727272727272 , best_root: ( ( c > ( 0 + 0 ) || c == ( c * n ) ) )
+Simpify :  [Or(Not(c <= 0), c == c*n)]
+z3_global_stats: Counter({'ce-I:': 84768, 'ce-T:': 16915, 'ce-F:': 11845, 'boogie_result': 5900, 'actual_z3': 28})
+[Colossus Checker] ( c <= ( c * n ) && n > ( 0 + 0 ) )                       
+[Colossus Checker] Fuzzer Called                                             
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                         
+
+[Colassus Checker] Colassus Found Counterexamples.                           
+[Colassus Checker] [None, ({'n': '1514151936', 'c': '1073729534'}, {'n': '1514151936', 'c': '1073729535'}), {'n': '1157627910', 'c': '-2119515061'}] 
+
+[Colossus Checker] ( c <= ( c * n ) && ( n >= 0 || n == ( 0 * n ) ) && n > 0 )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] Colassus Found Counterexamples.                            
+[Colassus Checker] [None, ({'n': '1371539140', 'c': '-706374402'}, {'n': '1371539140', 'c': '-706374401'}), {'n': '640', 'c': '-1811414835'}] 
+
+avg reward so far : -0.55678: 100%|██████████| 100/100 [01:24<00:00,  1.18it/s]
+Example is not trivial
+epoch: 6, average reward: -0.5568, Random: ( ( c >= ( 0 - 1 ) && n >= ( 0 - c ) ) ), result_r: -1.7342
+best_reward: -1.0 , best_root: ( c <= ( c * n ) && n > ( 0 + 0 ) )
+Simpify :  [c <= c*n, Not(n <= 0)]
+z3_global_stats: Counter({'ce-I:': 107488, 'ce-T:': 19843, 'ce-F:': 14773, 'boogie_result': 6876, 'actual_z3': 30})
+[Colossus Checker] ( c <= ( c * n ) && n >= ( 0 + 1 ) && n >= ( c - 1 ) )     
+[Colossus Checker] Fuzzer Called                                              
+avg reward so far : -0.52261: 100%|██████████| 100/100 [01:03<00:00,  1.58it/s]
+Example is not trivial
+epoch: 7, average reward: -0.5226, Random: ( n >= ( 0 - 1 ) ), result_r: -2.0200
+best_reward: -1.0 , best_root: ( c <= ( c * n ) && n >= ( 0 + 1 ) && n >= ( c - 1 ) )
+Simpify :  [c <= c*n, n >= 1, n >= -1 + c]
+z3_global_stats: Counter({'ce-I:': 131620, 'ce-T:': 22786, 'ce-F:': 17716, 'boogie_result': 7857, 'actual_z3': 31})
+
+real    12m31.404s
+user    29m4.276s
+sys     0m26.564s
+colossus
+Could not converge for 45 & colossus_spec
+Using default K-Induction K = 64
+    _        _                
+   / \   ___| |__   __ _ _ __ 
+  / _ \ / __| '_ \ / _` | '__|
+ / ___ \ (__| | | | (_| | |   
+/_/   \_\___|_| |_|\__,_|_|   
+                              
+colossus
+OP_FILE results/inv_result_65_colossus_spec.log
+ ==== Solving timeout=10s, epoch=8, K=1 | File : 65 ==== 
+{'S': [['S1'], ['S2']], 'S1': [['(', 'C1', ')'], ['(', 'C1', '||', 'C1', ')'], ['(', 'C1', '||', 'C1', '||', 'C1', ')']], 'C1': [['p'], ['(', 'p', '&&', 'p', ')']], 'S2': [['(', 'C2', ')'], ['(', 'C2', '&&', 'C2', ')'], ['(', 'C2', '&&', 'C2', '&&', 'C2', ')']], 'C2': [['p'], ['(', 'p', '||', 'p', ')']], 'p': [['var', 'cmp', 'expr']], 'expr': [['(', 'var', 'op', 'var', ')'], ['(', 'var', 'op', 'const', ')'], ['(', 'const', 'op', 'var', ')'], ['(', 'const', 'op', 'const', ')'], ['var'], ['const']], 'cmp': [['<'], ['>'], ['=='], ['<='], ['>=']], 'op': [['+'], ['-'], ['*']]}
+MAX CHILD 7
+VAR FORMAT ssa
+====== begin of s2v configuration ======
+| msg_average = 0
+======   end of s2v configuration ======
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Parameter inited
+  0%|          | 0/100 [00:00<?, ?it/s]/usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1709: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1698: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+[Colossus Checker] ( x > ( x * y ) && ( y < ( 1 + y ) || x >= ( x + 0 ) ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( x <= ( x - x ) || y >= ( 100 * y ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( y > ( x * y ) || y <= ( y + x ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( y == y )          
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( x > ( x - y ) && ( y == 1 || y == 0 ) && y >= ( 100 - y ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( ( y == ( 1 * x ) && y >= 0 ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( ( y < x || y < ( 1 * 100 ) ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( ( x > ( y * y ) || x > ( 0 * 0 ) ) && ( x <= y || y == ( x - y ) ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( ( x <= ( y - y ) && y < ( 0 + 100 ) ) || ( x <= ( 0 * 0 ) && x > 0 ) || ( x == 1 && x >= y ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( x > ( y + 0 ) )   
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( y == ( 0 + 0 ) || x <= 1 || ( x == ( 1 + 0 ) && y <= ( x - 1 ) ) )
+[Colossus Checker] Fuzzer Called                                             
+[Colossus Checker] ( ( y == ( 0 + 1 ) && y > ( x * 1 ) ) || y > 0 || x < ( 1 + 1 ) )
+[Colossus Checker] Fuzzer Called                                             
+[Colossus Checker] ( y <= ( y * 100 ) || ( y >= 0 && x == x ) || x == 0 )    
+[Colossus Checker] Fuzzer Called                                             
+[Colossus Checker] ( y == ( 0 - 0 ) || x < ( 100 + 1 ) )                      
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] No Counterexamples Found.                                  
+
+found a solution for 0 , sol: ( y == ( 0 - 0 ) || x < ( 100 + 1 ) )           
+z3_report time: 54.77 pid: 0 stats: Counter({'ce-F:': 574, 'ce-I:': 502, 'ce-T:': 499, 'boogie_result': 194, 'actual_z3': 14})
+Writing logs to results/inv_result_65_colossus_spec.log                       
+avg reward so far : -0.58096:  19%|█▉        | 19/100 [00:54<03:53,  2.88s/it]
+
+real    0m55.541s
+user    0m54.584s
+sys     0m5.536s
+colossus
+Could not converge for 65 & colossus_spec
+Using default K-Induction K = 64
+    _        _                
+   / \   ___| |__   __ _ _ __ 
+  / _ \ / __| '_ \ / _` | '__|
+ / ___ \ (__| | | | (_| | |   
+/_/   \_\___|_| |_|\__,_|_|   
+                              
+colossus
+OP_FILE results/inv_result_95_colossus_spec.log
+ ==== Solving timeout=10s, epoch=8, K=1 | File : 95 ==== 
+{'S': [['S1'], ['S2']], 'S1': [['(', 'C1', ')'], ['(', 'C1', '||', 'C1', ')'], ['(', 'C1', '||', 'C1', '||', 'C1', ')']], 'C1': [['p'], ['(', 'p', '&&', 'p', ')']], 'S2': [['(', 'C2', ')'], ['(', 'C2', '&&', 'C2', ')'], ['(', 'C2', '&&', 'C2', '&&', 'C2', ')']], 'C2': [['p'], ['(', 'p', '||', 'p', ')']], 'p': [['var', 'cmp', 'expr']], 'expr': [['(', 'var', 'op', 'var', ')'], ['(', 'var', 'op', 'const', ')'], ['(', 'const', 'op', 'var', ')'], ['(', 'const', 'op', 'const', ')'], ['var'], ['const']], 'cmp': [['<'], ['>'], ['=='], ['<='], ['>=']], 'op': [['+'], ['-'], ['*']]}
+MAX CHILD 7
+VAR FORMAT ssa
+====== begin of s2v configuration ======
+| msg_average = 0
+======   end of s2v configuration ======
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Parameter inited
+  0%|          | 0/100 [00:00<?, ?it/s]/usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1709: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1698: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+[Colossus Checker] ( ( x > 1 || y > ( 1 * x ) ) && ( i < ( j + j ) || i >= ( 1 + x ) ) && ( y < ( x * x ) || y < ( x - 1 ) ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( y > 1 && ( j < ( j - 0 ) || i <= ( 0 * x ) ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( i > ( j * x ) )   
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( i <= ( 1 + y ) || ( j < ( 0 + 1 ) && y == ( 0 + 1 ) ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( ( j >= i && j < ( x + 0 ) ) || j <= 1 )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( ( i < ( i - 0 ) && i > ( 1 + i ) ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( ( x >= ( 0 - 1 ) || i <= i ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( i < ( 1 + 0 ) )   
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( ( i == ( j + x ) && j <= ( 1 + 0 ) ) || y < 1 || i == y )
+[Colossus Checker] Fuzzer Called                                             
+[Colossus Checker] ( ( y >= ( y * i ) && j >= j ) || ( x == x && x <= ( 0 - 1 ) ) || ( x >= ( 1 * 0 ) && y == ( 1 * 0 ) ) )
+[Colossus Checker] Fuzzer Called                                             
+[Colossus Checker] ( j >= ( i * y ) )                                         
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] ( ( x <= ( 0 * j ) || x > ( x * 1 ) ) && ( y == ( j - 0 ) || i == 0 ) && ( y < ( 1 - j ) || j <= ( 0 * 1 ) ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] ( ( y > ( y - 0 ) || i == ( j * 1 ) ) && ( y > j || j < ( 0 * 1 ) ) && ( y >= 0 || x > ( 0 * 1 ) ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] ( ( j <= ( 1 * 1 ) && i <= ( 1 + 1 ) ) || ( j > y && j == ( y * i ) ) || ( i < ( y * 0 ) && y >= ( 0 * 0 ) ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] ( y <= ( 0 * 1 ) || ( j < ( y - j ) && i == 0 ) )          
+[Colossus Checker] Fuzzer Called                                              
+avg reward so far : -0.54343: 100%|██████████| 100/100 [01:13<00:00,  1.36it/s]
+Example is not trivial
+epoch: 0, average reward: -0.5434, Random: ( ( i <= j && x == ( x - i ) ) ), result_r: -1.8158
+best_reward: 0.0 , best_root: ( j >= ( i * y ) )
+Simpify :  [j >= i*y]
+z3_global_stats: Counter({'ce-I:': 7223, 'ce-F:': 2856, 'ce-T:': 2835, 'boogie_result': 994, 'actual_z3': 15})
+avg reward so far : -0.56885: 100%|██████████| 100/100 [00:53<00:00,  1.89it/s]
+Example is not trivial
+epoch: 1, average reward: -0.5689, Random: ( y < ( 0 * 0 ) && x == ( i * 0 ) ), result_r: -2.0200
+best_reward: -1.09125 , best_root: ( ( j >= ( i * 1 ) || x < j ) && y > j )
+Simpify :  [Or(Not(j <= x), j >= i), Not(y <= j)]
+z3_global_stats: Counter({'ce-I:': 15151, 'ce-F:': 5829, 'ce-T:': 5808, 'boogie_result': 1985, 'actual_z3': 15})
+avg reward so far : -0.53503: 100%|██████████| 100/100 [00:54<00:00,  1.83it/s]
+Example is not trivial
+epoch: 2, average reward: -0.5350, Random: ( x < ( 0 * 0 ) && ( x < ( 0 * 1 ) || x < 0 ) && j > ( i * 1 ) ), result_r: -2.1833
+best_reward: -1.09125 , best_root: ( ( j == ( x - x ) || x >= ( i * y ) ) && j >= ( i * y ) )
+Simpify :  [Or(j == 0, x >= i*y), j >= i*y]
+z3_global_stats: Counter({'ce-I:': 23063, 'ce-F:': 8796, 'ce-T:': 8775, 'boogie_result': 2974, 'actual_z3': 15})
+[Colossus Checker] ( j == ( i * y ) )                                         
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] No Counterexamples Found.                                  
+
+found a solution for 0 , sol: ( j == ( i * y ) )                              
+z3_report time: 237.69 pid: 0 stats: Counter({'ce-I:': 28887, 'ce-F:': 10980, 'ce-T:': 10959, 'boogie_result': 3702, 'actual_z3': 16})
+Writing logs to results/inv_result_95_colossus_spec.log                       
+avg reward so far : -0.53824:  74%|███████▍  | 74/100 [00:54<00:19,  1.35it/s]
+
+real    3m58.497s
+user    12m59.479s
+sys     0m6.318s
+colossus
+Could not converge for 95 & colossus_spec
+Using default K-Induction K = 64
+    _        _                
+   / \   ___| |__   __ _ _ __ 
+  / _ \ / __| '_ \ / _` | '__|
+ / ___ \ (__| | | | (_| | |   
+/_/   \_\___|_| |_|\__,_|_|   
+                              
+colossus
+OP_FILE results/inv_result_130_colossus_spec.log
+ ==== Solving timeout=10s, epoch=8, K=1 | File : 130 ==== 
+{'S': [['S1'], ['S2']], 'S1': [['(', 'C1', ')'], ['(', 'C1', '||', 'C1', ')'], ['(', 'C1', '||', 'C1', '||', 'C1', ')']], 'C1': [['p'], ['(', 'p', '&&', 'p', ')']], 'S2': [['(', 'C2', ')'], ['(', 'C2', '&&', 'C2', ')'], ['(', 'C2', '&&', 'C2', '&&', 'C2', ')']], 'C2': [['p'], ['(', 'p', '||', 'p', ')']], 'p': [['var', 'cmp', 'expr']], 'expr': [['(', 'var', 'op', 'var', ')'], ['(', 'var', 'op', 'const', ')'], ['(', 'const', 'op', 'var', ')'], ['(', 'const', 'op', 'const', ')'], ['var'], ['const']], 'cmp': [['<'], ['>'], ['=='], ['<='], ['>=']], 'op': [['+'], ['-'], ['*']]}
+MAX CHILD 7
+VAR FORMAT ssa
+====== begin of s2v configuration ======
+| msg_average = 0
+======   end of s2v configuration ======
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Parameter inited
+[Colossus Checker] ( x3 < ( 1 - d3 ) ) 
+[Colossus Checker] Fuzzer Called       
+  0%|          | 0/100 [00:00<?, ?it/s]/usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1709: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1698: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+[Colossus Checker] ( ( x3 > ( x1 + x2 ) && x2 == ( x3 + x2 ) ) || d2 == d1 )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( d3 == ( x1 * 0 ) && ( x2 == ( d1 * x2 ) || x1 < d2 ) && ( d2 > ( x3 - d1 ) || x3 < 1 ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( ( d1 > ( x2 + x2 ) && x3 <= ( x2 + 1 ) ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( d1 > 0 || ( d2 < ( x3 * 1 ) && x3 > ( x2 + x1 ) ) || ( d1 == ( 0 + 1 ) && x2 < ( x1 + d3 ) ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( ( d3 == 1 && x3 == ( x3 - 1 ) ) || d1 > ( 0 * 0 ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( d2 == ( x1 * 1 ) || ( d1 == ( d3 * d3 ) && d1 > d1 ) || ( d1 > ( 1 + d3 ) && x1 < ( 1 + 0 ) ) )
+[Colossus Checker] Fuzzer Called                                             
+[Colossus Checker] ( ( x2 >= ( x3 + 0 ) || d1 >= ( 0 - x1 ) ) && x1 == 1 )   
+[Colossus Checker] Fuzzer Called                                             
+[Colossus Checker] ( x3 < x1 || x2 == 0 || x2 >= ( 0 * 1 ) )                  
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] ( ( x2 >= ( 0 + d3 ) || d1 <= ( d3 + x3 ) ) && ( x3 > ( 0 + d3 ) || x1 >= ( 1 + 0 ) ) && x3 <= ( 1 - 1 ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] ( ( x3 > ( 0 * 0 ) || d1 >= ( 0 * d1 ) ) && ( x1 > ( 0 - x1 ) || x2 >= ( 0 * d2 ) ) && ( x2 >= ( x2 * d3 ) || d2 > ( 1 + 0 ) ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] Colassus Found Counterexamples.                            
+[Colassus Checker] [None, ({'d1': '-2147483648', 'd2': '0', 'd3': '1073864075', 'x1': '2147483647', 'x2': '1923290140', 'x3': '1073619460'}, {'d1': '-2147483648', 'd2': '0', 'd3': '1073864075', 'x1': '-1', 'x2': '1923290140', 'x3': '-244615'}), {'d1': '0', 'd2': '0', 'd3': '0', 'x1': '0', 'x2': '0', 'x3': '-2130706432'}] 
+
+avg reward so far : -0.51911: 100%|██████████| 100/100 [01:22<00:00,  1.22it/s]
+Example is not trivial
+epoch: 0, average reward: -0.5191, Random: ( ( d1 < 1 && d3 >= ( 0 * d1 ) ) || x3 < ( 0 - d2 ) || ( x2 == ( x2 * x1 ) && d3 > d3 ) ), result_r: -2.3140
+best_reward: 0.0 , best_root: ( d2 == ( x1 * 1 ) || ( d1 == ( d3 * d3 ) && d1 > d1 ) || ( d1 > ( 1 + d3 ) && x1 < ( 1 + 0 ) ) )
+Simpify :  [Or(d2 == x1, And(Not(d1 <= 1 + d3), Not(1 <= x1)))]
+z3_global_stats: Counter({'ce-F:': 4852, 'ce-T:': 3802, 'ce-I:': 1412, 'boogie_result': 1002, 'actual_z3': 11})
+[Colossus Checker] ( ( d1 < ( x2 * d1 ) || x1 == 1 ) )                        
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] ( x2 == ( d3 * 0 ) || ( x2 >= ( d3 * 0 ) && x3 <= 1 ) || ( x1 == ( 1 + 0 ) && d1 <= d1 ) )
+[Colossus Checker] Fuzzer Called                                              
+avg reward so far : -0.50197: 100%|██████████| 100/100 [00:52<00:00,  1.90it/s]
+Example is not trivial
+epoch: 1, average reward: -0.5020, Random: ( x2 >= ( 0 + 0 ) ), result_r: -1.8975
+best_reward: -1.0 , best_root: ( ( d1 < ( x2 * d1 ) || x1 == 1 ) )
+Simpify :  [Or(Not(d1*x2 <= d1), x1 == 1)]
+z3_global_stats: Counter({'ce-F:': 9857, 'ce-T:': 7806, 'ce-I:': 4966, 'boogie_result': 2003, 'actual_z3': 13})
+[Colossus Checker] ( ( x1 > ( 0 + 0 ) && d1 >= ( d3 * 0 ) ) || ( d1 > ( 0 - d2 ) && d1 > d2 ) || d1 < ( x2 - d1 ) )
+[Colossus Checker] Fuzzer Called                                             
+[Colossus Checker] ( ( d2 < ( x1 + d2 ) || x3 > ( 0 - x2 ) ) )                
+[Colossus Checker] Fuzzer Called                                              
+avg reward so far : -0.58284: 100%|██████████| 100/100 [00:52<00:00,  1.91it/s]
+Example is not trivial
+epoch: 2, average reward: -0.5828, Random: ( ( x2 >= ( 0 - d2 ) && d2 >= 0 ) || ( x3 <= ( 1 * 1 ) && x3 <= ( x3 * d1 ) ) ), result_r: -2.0608
+best_reward: 0.0 , best_root: ( ( d2 < ( x1 + d2 ) || x3 > ( 0 - x2 ) ) )
+Simpify :  [Or(Not(x1 <= 0), Not(x3 <= -1*x2))]
+z3_global_stats: Counter({'ce-F:': 14823, 'ce-T:': 11758, 'ce-I:': 9863, 'boogie_result': 2991, 'actual_z3': 15})
+[Colossus Checker] ( x2 > ( 1 - d2 ) || ( x1 > ( 0 + 0 ) && d2 < ( x1 + d3 ) ) || x2 >= ( 1 - 1 ) )
+[Colossus Checker] Fuzzer Called                                             
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                         
+
+[Colassus Checker] Colassus Found Counterexamples.                           
+[Colassus Checker] [None, ({'d1': '-2147426302', 'd2': '-570703871', 'd3': '0', 'x1': '2147016699', 'x2': '2147482868', 'x3': '16777216'}, {'d1': '-2147426302', 'd2': '-570703871', 'd3': '0', 'x1': '-524295', 'x2': '-1576780557', 'x3': '16777216'}), {'d1': '0', 'd2': '0', 'd3': '0', 'x1': '0', 'x2': '0', 'x3': '-2147483648'}] 
+
+[Colossus Checker] ( ( d2 < ( x1 + d3 ) || x2 > ( 0 - d2 ) ) )                
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] Colassus Found Counterexamples.                            
+[Colassus Checker] [None, ({'d1': '412970369', 'd2': '-18876444', 'd3': '-900138692', 'x1': '1109422140', 'x2': '2147482499', 'x3': '16777216'}, {'d1': '412970369', 'd2': '-18876444', 'd3': '-900138692', 'x1': '696451771', 'x2': '-2128608353', 'x3': '916915908'}), {'d1': '0', 'd2': '2147483646', 'd3': '1929349533', 'x1': '-251627934', 'x2': '3', 'x3': '-2147483648'}] 
+
+avg reward so far : -0.52252: 100%|██████████| 100/100 [01:24<00:00,  1.19it/s]
+Example is not trivial
+epoch: 3, average reward: -0.5225, Random: ( x1 == ( x1 * d1 ) || x3 >= 1 ), result_r: -2.0900
+best_reward: -1.0 , best_root: ( x2 > ( 1 - d2 ) || ( x1 > ( 0 + 0 ) && d2 < ( x1 + d3 ) ) || x2 >= ( 1 - 1 ) )
+Simpify :  [Or(Not(x2 <= 1 + -1*d2),
+    And(Not(x1 <= 0), Not(x1 + d3 <= d2)),
+    x2 >= 0)]
+z3_global_stats: Counter({'ce-F:': 20793, 'ce-I:': 16419, 'ce-T:': 15738, 'boogie_result': 3986, 'actual_z3': 17})
+[Colossus Checker] ( d1 < ( x1 + x1 ) || ( x2 > ( 0 - d2 ) && d2 >= 1 ) )     
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] Colassus Found Counterexamples.                            
+[Colassus Checker] [None, ({'d1': '562509585', 'd2': '0', 'd3': '0', 'x1': '510056174', 'x2': '16777216', 'x3': '16777216'}, {'d1': '562509585', 'd2': '0', 'd3': '0', 'x1': '-52453411', 'x2': '16777216', 'x3': '16777216'}), {'d1': '0', 'd2': '1072693280', 'd3': '0', 'x1': '0', 'x2': '1074790369', 'x3': '-2147483648'}] 
+
+[Colossus Checker] ( ( d3 <= 1 && x2 >= ( d3 - 1 ) ) || ( x3 == ( x1 - d2 ) && x2 >= 0 ) || d1 < ( x1 + x1 ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] Colassus Found Counterexamples.                            
+[Colassus Checker] [None, ({'d1': '536870913', 'd2': '-1073741824', 'd3': '1610612736', 'x1': '536870910', 'x2': '1207959552', 'x3': '1610612734'}, {'d1': '536870913', 'd2': '-1073741824', 'd3': '1610612736', 'x1': '-3', 'x2': '-2013265920', 'x3': '-2'}), {'d1': '0', 'd2': '0', 'd3': '0', 'x1': '0', 'x2': '0', 'x3': '-2147483648'}] 
+
+avg reward so far : -0.52198: 100%|██████████| 100/100 [01:26<00:00,  1.16it/s]
+Example is not trivial
+epoch: 4, average reward: -0.5220, Random: ( x1 == ( x1 * x1 ) ), result_r: -1.7750
+best_reward: -1.0 , best_root: ( d1 < ( x1 + x1 ) || ( x2 > ( 0 - d2 ) && d2 >= 1 ) )
+Simpify :  [Or(Not(2*x1 <= d1), And(Not(x2 <= -1*d2), d2 >= 1))]
+z3_global_stats: Counter({'ce-F:': 26733, 'ce-I:': 24674, 'ce-T:': 19698, 'boogie_result': 4976, 'actual_z3': 19})
+[Colossus Checker] ( ( x2 > ( 0 - d2 ) && x1 <= 1 ) || ( x2 <= ( 1 - 1 ) && x1 < ( x1 + x1 ) ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] Colassus Found Counterexamples.                            
+[Colassus Checker] [None, ({'d1': '-2147483645', 'd2': '-260043914', 'd3': '0', 'x1': '1', 'x2': '1887411073', 'x3': '16777216'}, {'d1': '-2147483645', 'd2': '-260043914', 'd3': '0', 'x1': '2147483646', 'x2': '2147454987', 'x3': '16777216'}), {'d1': '0', 'd2': '-2', 'd3': '0', 'x1': '-2147483647', 'x2': '-2147483645', 'x3': '-2147483648'}] 
+
+[Colossus Checker] ( ( x2 > ( 0 - d1 ) && x1 < ( d2 + x1 ) ) || ( x1 == 1 && x1 < ( d2 + x1 ) ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] Colassus Found Counterexamples.                            
+[Colassus Checker] [None, ({'d1': '-1073741826', 'd2': '2147483645', 'd3': '0', 'x1': '1', 'x2': '3', 'x3': '16777216'}, {'d1': '-1073741826', 'd2': '2147483645', 'd3': '0', 'x1': '1073741827', 'x2': '-2147483642', 'x3': '16777216'}), None] 
+
+avg reward so far : -0.55511: 100%|██████████| 100/100 [01:22<00:00,  1.22it/s]
+Example is not trivial
+epoch: 5, average reward: -0.5551, Random: ( x1 == ( x1 * 0 ) && d2 >= ( 0 - d2 ) ), result_r: -2.2650
+best_reward: -1.0 , best_root: ( ( x2 > ( 0 - d2 ) && x1 <= 1 ) || ( x2 <= ( 1 - 1 ) && x1 < ( x1 + x1 ) ) )
+Simpify :  [Or(And(x2 <= 0, Not(x1 <= 0)),
+    And(Not(x2 <= -1*d2), x1 <= 1))]
+z3_global_stats: Counter({'ce-I:': 34073, 'ce-F:': 32667, 'ce-T:': 23654, 'boogie_result': 5965, 'actual_z3': 21})
+[Colossus Checker] ( x1 < ( d2 + x1 ) && ( x3 < ( d2 + x1 ) || x1 > ( 0 - d1 ) ) && ( d2 < ( d2 + x1 ) || x2 > ( 0 - d1 ) ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] Colassus Found Counterexamples.                            
+[Colassus Checker] [None, None, {'d1': '1072693280', 'd2': '4784130', 'd3': '0', 'x1': '-2122256371', 'x2': '1074790369', 'x3': '-2147483648'}] 
+
+avg reward so far : -0.59917: 100%|██████████| 100/100 [01:14<00:00,  1.34it/s]
+Example is not trivial
+epoch: 6, average reward: -0.5992, Random: ( x3 > ( 0 - d1 ) || x1 < ( d2 + x1 ) ), result_r: -1.9500
+best_reward: 0.0 , best_root: ( x1 < ( d2 + x1 ) && ( x3 < ( d2 + x1 ) || x1 > ( 0 - d1 ) ) && ( d2 < ( d2 + x1 ) || x2 > ( 0 - d1 ) ) )
+Simpify :  [Not(d2 <= 0),
+ Or(Not(x1 <= -1*d1), Not(d2 + x1 <= x3)),
+ Or(Not(x1 <= 0), Not(x2 <= -1*d1))]
+z3_global_stats: Counter({'ce-I:': 44831, 'ce-F:': 39181, 'ce-T:': 27566, 'boogie_result': 6943, 'actual_z3': 22})
+[Colossus Checker] ( d3 == ( 0 + 1 ) && ( d1 < ( d2 + x1 ) || x2 >= ( d3 - 1 ) ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] Colassus Found Counterexamples.                            
+[Colassus Checker] [None, ({'d1': '77201504', 'd2': '11141169', 'd3': '1', 'x1': '138413968', 'x2': '64', 'x3': '16777216'}, {'d1': '77201504', 'd2': '11141169', 'd3': '1', 'x1': '61212464', 'x2': '-11141105', 'x3': '16777215'}), {'d1': '0', 'd2': '0', 'd3': '1', 'x1': '0', 'x2': '0', 'x3': '-2147483648'}] 
+
+avg reward so far : -0.54689: 100%|██████████| 100/100 [01:12<00:00,  1.39it/s]
+Example is not trivial
+epoch: 7, average reward: -0.5469, Random: ( ( x3 >= ( d3 - 1 ) || x2 == ( 1 + 1 ) ) && d2 < ( d2 + x1 ) && x3 == ( 1 * 1 ) ), result_r: -2.0608
+best_reward: -1.0 , best_root: ( d3 == ( 0 + 1 ) && ( d1 < ( d2 + x1 ) || x2 >= ( d3 - 1 ) ) )
+Simpify :  [Or(Not(d2 + x1 <= d1), x2 >= 0)]
+z3_global_stats: Counter({'ce-I:': 56319, 'ce-F:': 46104, 'ce-T:': 31522, 'boogie_result': 7932, 'actual_z3': 23})
+
+real    9m51.073s
+user    27m25.680s
+sys     0m17.907s
+colossus
+Could not converge for 130 & colossus_spec
+Using default K-Induction K = 64
+    _        _                
+   / \   ___| |__   __ _ _ __ 
+  / _ \ / __| '_ \ / _` | '__|
+ / ___ \ (__| | | | (_| | |   
+/_/   \_\___|_| |_|\__,_|_|   
+                              
+colossus
+OP_FILE results/inv_result_131_colossus_spec.log
+ ==== Solving timeout=10s, epoch=8, K=1 | File : 131 ==== 
+{'S': [['S1'], ['S2']], 'S1': [['(', 'C1', ')'], ['(', 'C1', '||', 'C1', ')'], ['(', 'C1', '||', 'C1', '||', 'C1', ')']], 'C1': [['p'], ['(', 'p', '&&', 'p', ')']], 'S2': [['(', 'C2', ')'], ['(', 'C2', '&&', 'C2', ')'], ['(', 'C2', '&&', 'C2', '&&', 'C2', ')']], 'C2': [['p'], ['(', 'p', '||', 'p', ')']], 'p': [['var', 'cmp', 'expr']], 'expr': [['(', 'var', 'op', 'var', ')'], ['(', 'var', 'op', 'const', ')'], ['(', 'const', 'op', 'var', ')'], ['(', 'const', 'op', 'const', ')'], ['var'], ['const']], 'cmp': [['<'], ['>'], ['=='], ['<='], ['>=']], 'op': [['+'], ['-'], ['*']]}
+MAX CHILD 7
+VAR FORMAT ssa
+====== begin of s2v configuration ======
+| msg_average = 0
+======   end of s2v configuration ======
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Parameter inited
+[Colossus Checker] ( x2 < ( 1 - d3 ) ) 
+[Colossus Checker] Fuzzer Called       
+  0%|          | 0/100 [00:00<?, ?it/s]/usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1709: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1698: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+[Colossus Checker] ( ( x2 > ( x1 + x3 ) && x3 == ( x2 + x3 ) ) || d2 == d1 )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( d3 == ( x1 * 0 ) && ( x3 == ( d1 * x3 ) || x1 < d2 ) && ( d2 > ( x2 - d1 ) || x2 < 1 ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( ( d1 > ( x3 + x3 ) && x2 <= ( x3 + 1 ) ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( d1 > 0 || ( d2 < ( x2 * 1 ) && x2 > ( x3 + x1 ) ) || ( d1 == ( 0 + 1 ) && x3 < ( x1 + d3 ) ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( ( d3 == 1 && x2 == ( x2 - 1 ) ) || d1 > ( 0 * 0 ) )
+[Colossus Checker] Fuzzer Called       
+[Colossus Checker] ( d2 == ( x1 * 1 ) || ( d1 == ( d3 * d3 ) && d1 > d1 ) || ( d1 > ( 1 + d3 ) && x1 < ( 1 + 0 ) ) )
+[Colossus Checker] Fuzzer Called                                             
+[Colossus Checker] ( d1 >= ( 1 - x3 ) || d1 <= ( 1 - 1 ) || ( x3 == ( d3 - x3 ) && d2 == ( x3 * 1 ) ) )
+[Colossus Checker] Fuzzer Called                                             
+[Colossus Checker] ( d2 >= ( 0 - x1 ) )                                       
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] ( x1 >= ( 0 * d1 ) )                                       
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] ( ( x3 >= ( 1 * d3 ) && d3 > ( 0 - 0 ) ) || d2 == ( x1 + 0 ) || ( d2 < ( d3 * d1 ) && x3 > ( 0 + d1 ) ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] ( ( x3 > d3 || x1 > ( 1 - 1 ) ) )                          
+[Colossus Checker] Fuzzer Called                                              
+avg reward so far : -0.54031: 100%|██████████| 100/100 [01:06<00:00,  1.51it/s]
+Example is not trivial
+epoch: 0, average reward: -0.5403, Random: ( d3 < ( d3 + x2 ) ), result_r: -2.2323
+best_reward: 0.0 , best_root: ( d2 >= ( 0 - x1 ) )
+Simpify :  [d2 >= -1*x1]
+z3_global_stats: Counter({'ce-F:': 4671, 'ce-T:': 3956, 'ce-I:': 1796, 'boogie_result': 1001, 'actual_z3': 12})
+avg reward so far : -0.47945: 100%|██████████| 100/100 [00:56<00:00,  1.77it/s]
+Example is not trivial
+epoch: 1, average reward: -0.4795, Random: ( ( d3 > d3 && d3 > d2 ) || ( d3 >= d3 && x1 <= d2 ) ), result_r: -2.0200
+best_reward: -1.1280000000000001 , best_root: ( d3 >= ( 1 - x1 ) || ( d2 >= ( d3 * 0 ) && d3 <= ( d3 * 0 ) ) || d2 < ( 1 + x1 ) )
+Simpify :  [Or(d3 >= 1 + -1*x1,
+    And(d2 >= 0, d3 <= 0),
+    Not(x1 <= -1 + d2))]
+z3_global_stats: Counter({'ce-F:': 9651, 'ce-T:': 7940, 'ce-I:': 4784, 'boogie_result': 1997, 'actual_z3': 12})
+[Colossus Checker] ( x1 >= ( 0 * x1 ) && ( d3 >= ( 0 - x1 ) || x3 == ( d1 - x1 ) ) && ( x3 >= ( 0 + x1 ) || d3 <= ( x1 + 0 ) ) )
+[Colossus Checker] Fuzzer Called                                             
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                         
+
+[Colassus Checker] Colassus Found Counterexamples.                           
+[Colassus Checker] [None, ({'d1': '-2147483647', 'd2': '0', 'd3': '-2147483648', 'x1': '1073741823', 'x2': '16777216', 'x3': '1073741826'}, {'d1': '-2147483647', 'd2': '0', 'd3': '-2147483648', 'x1': '-1073741826', 'x2': '16777216', 'x3': '-1073741822'}), {'d1': '0', 'd2': '0', 'd3': '0', 'x1': '0', 'x2': '-2147483648', 'x3': '0'}] 
+
+[Colossus Checker] ( d2 > ( 1 - x3 ) || d3 <= ( x1 * 1 ) || x1 >= ( 0 - x3 ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] Colassus Found Counterexamples.                            
+[Colassus Checker] [None, ({'d1': '-1075838976', 'd2': '41900026', 'd3': '1114964327', 'x1': '1073741824', 'x2': '16777216', 'x3': '1073053824'}, {'d1': '-1075838976', 'd2': '41900026', 'd3': '1114964327', 'x1': '-2145386496', 'x2': '-25122810', 'x3': '-41910503'}), {'d1': '0', 'd2': '131', 'd3': '0', 'x1': '0', 'x2': '-2147483648', 'x3': '2147483519'}] 
+
+[Colossus Checker] ( d2 <= ( d1 + d1 ) && ( x3 >= ( 0 - x3 ) || d1 == ( x1 * 1 ) ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] Colassus Found Counterexamples.                            
+[Colassus Checker] [None, ({'d1': '0', 'd2': '0', 'd3': '-542375920', 'x1': '16777216', 'x2': '16777216', 'x3': '1612709920'}, {'d1': '0', 'd2': '0', 'd3': '-542375920', 'x1': '16777216', 'x2': '16777216', 'x3': '-2139881456'}), {'d1': '0', 'd2': '0', 'd3': '0', 'x1': '0', 'x2': '-2147483648', 'x3': '0'}] 
+
+avg reward so far : -0.53515: 100%|██████████| 100/100 [01:42<00:00,  1.02s/it]
+Example is not trivial
+epoch: 2, average reward: -0.5351, Random: ( ( x2 > ( d1 - x3 ) || d1 >= ( 0 - x3 ) ) ), result_r: -1.7097
+best_reward: -1.0 , best_root: ( x1 >= ( 0 * x1 ) && ( d3 >= ( 0 - x1 ) || x3 == ( d1 - x1 ) ) && ( x3 >= ( 0 + x1 ) || d3 <= ( x1 + 0 ) ) )
+Simpify :  [x1 >= 0,
+ Or(d3 >= -1*x1, x3 == d1 + -1*x1),
+ Or(d3 <= x1, x3 >= x1)]
+z3_global_stats: Counter({'ce-F:': 14626, 'ce-T:': 11920, 'ce-I:': 9016, 'boogie_result': 2992, 'actual_z3': 15})
+[Colossus Checker] ( d3 > ( 1 - x3 ) || ( x2 < ( d1 + d1 ) && x2 >= ( 0 - x3 ) ) || d3 <= ( x1 * 1 ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] ( d1 >= ( 1 - 1 ) && ( d3 <= ( x1 * 1 ) || d2 >= ( 0 - x3 ) ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] ( d1 <= ( x1 * 1 ) || d3 > ( 0 - x3 ) )                    
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] Colassus Found Counterexamples.                            
+[Colassus Checker] [None, ({'d1': '16777217', 'd2': '0', 'd3': '-1531410476', 'x1': '16777216', 'x2': '16777216', 'x3': '1954391540'}, {'d1': '16777217', 'd2': '0', 'd3': '-1531410476', 'x1': '-1', 'x2': '16777216', 'x3': '-809165280'}), {'d1': '0', 'd2': '0', 'd3': '0', 'x1': '0', 'x2': '-2147483648', 'x3': '0'}] 
+
+[Colossus Checker] ( d2 > d3 || ( x2 >= ( 0 - x3 ) && x1 > ( 1 - 1 ) ) || d3 > ( 0 - x3 ) )
+[Colossus Checker] Fuzzer Called                                              
+avg reward so far : -0.57305: 100%|██████████| 100/100 [01:12<00:00,  1.37it/s]
+Example is not trivial
+epoch: 3, average reward: -0.5730, Random: ( x1 < ( x3 + d1 ) ), result_r: -2.1098
+best_reward: 0.0 , best_root: ( d1 >= ( 1 - 1 ) && ( d3 <= ( x1 * 1 ) || d2 >= ( 0 - x3 ) ) )
+Simpify :  [d1 >= 0, Or(d3 <= x1, d2 >= -1*x3)]
+z3_global_stats: Counter({'ce-F:': 20212, 'ce-I:': 16296, 'ce-T:': 16138, 'boogie_result': 3980, 'actual_z3': 19})
+[Colossus Checker] ( ( x1 <= 1 && x3 >= ( 0 - x3 ) ) || ( x1 <= ( 1 * x1 ) && d3 == ( x1 + 0 ) ) )
+[Colossus Checker] Fuzzer Called                                              
+[Colossus Checker] Fuzzer is UNSAT, Calling Colossus                          
+
+[Colassus Checker] Colassus Found Counterexamples.                            
+[Colassus Checker] [None, ({'d1': '-1934090176', 'd2': '0', 'd3': '1896077064', 'x1': '1896077064', 'x2': '16777216', 'x3': '905973248'}, {'d1': '-1934090176', 'd2': '0', 'd3': '1896077064', 'x1': '-464800056', 'x2': '16777216', 'x3': '-990103816'}), {'d1': '0', 'd2': '0', 'd3': '0', 'x1': '0', 'x2': '-2147483648', 'x3': '0'}] 
+
+avg reward so far : -0.54584: 100%|██████████| 100/100 [01:11<00:00,  1.40it/s]
+Example is not trivial
+epoch: 4, average reward: -0.5458, Random: ( ( x3 == ( x1 * 1 ) && x3 >= ( 0 * d1 ) ) || ( x2 >= ( 0 * d1 ) && d2 > ( 0 - 0 ) ) || ( x2 < ( x3 + d1 ) && x1 > ( 0 * x2 ) ) ), result_r: -1.9383
+best_reward: -1.0 , best_root: ( ( x1 <= 1 && x3 >= ( 0 - x3 ) ) || ( x1 <= ( 1 * x1 ) && d3 == ( x1 + 0 ) ) )
+Simpify :  [Or(And(x1 <= 1, x3 >= 0), d3 == x1)]
+z3_global_stats: Counter({'ce-F:': 26176, 'ce-I:': 25068, 'ce-T:': 21108, 'boogie_result': 4974, 'actual_z3': 20})
+avg reward so far : -0.55953: 100%|██████████| 100/100 [00:55<00:00,  1.79it/s]
+Example is not trivial
+epoch: 5, average reward: -0.5595, Random: ( x2 >= ( 0 * d2 ) && d2 <= 1 ), result_r: -1.8730
+best_reward: -1.0844444444444445 , best_root: ( ( x1 >= 0 && x3 == ( x1 * 1 ) ) || d1 == ( x1 * 1 ) || d1 > ( d2 + d1 ) )
+Simpify :  [Or(Not(0 <= d2), And(x1 >= 0, x3 == x1), d1 == x1)]
+z3_global_stats: Counter({'ce-I:': 34005, 'ce-F:': 32134, 'ce-T:': 26073, 'boogie_result': 5967, 'actual_z3': 20})
+avg reward so far : -0.55157: 100%|██████████| 100/100 [00:56<00:00,  1.77it/s]
+Example is not trivial
+epoch: 6, average reward: -0.5516, Random: ( d1 >= ( 0 + x2 ) && ( x2 >= ( 0 + d2 ) || d2 > ( 0 + d3 ) ) ), result_r: -2.0744
+best_reward: -1.1116666666666666 , best_root: ( d2 > ( d3 + d1 ) || x1 >= ( 0 * d2 ) || ( d3 == ( x1 * 1 ) && x1 <= ( 1 * x3 ) ) )
+Simpify :  [Or(Not(d2 <= d3 + d1), x1 >= 0, And(d3 == x1, x1 <= x3))]
+z3_global_stats: Counter({'ce-I:': 42960, 'ce-F:': 38104, 'ce-T:': 31048, 'boogie_result': 6962, 'actual_z3': 20})
+avg reward so far : -0.53127: 100%|██████████| 100/100 [00:59<00:00,  1.68it/s]
+Example is not trivial
+epoch: 7, average reward: -0.5313, Random: ( x2 > ( 0 + d3 ) || x3 == ( x1 - 0 ) ), result_r: -2.0527
+best_reward: -1.0844444444444445 , best_root: ( x1 == ( d2 * 1 ) || x3 == ( 0 * x2 ) )
+Simpify :  [Or(x1 == d2, x3 == 0)]
+z3_global_stats: Counter({'ce-I:': 51897, 'ce-F:': 44062, 'ce-T:': 36013, 'boogie_result': 7955, 'actual_z3': 20})
+
+real    9m6.208s
+user    28m24.740s
+sys     0m16.150s
+colossus
+Could not converge for 131 & colossus_spec

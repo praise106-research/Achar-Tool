@@ -1,0 +1,8 @@
+S ::= p
+p ::= ( ( ( varX == 0 ) && expr ) "||" ( ( varY != 0 ) ) )
+expr ::= ( var * var <= var ) |  ( var * var >= var )
+cmp ::= < | > | == | <= | >=
+var ::= res | num_orig
+varX ::= bit | res
+varY ::= bit
+op ::= + | - | *

@@ -1,0 +1,8 @@
+S ::= p
+p ::= ( ( varX >= 0 ) && ( var == ( varX - b ) * varY ) && ( varY == var ) )
+expr ::= ( var op var ) | ( var op const ) | ( const op var ) | ( const op const ) | var | const
+var ::= r | a
+varX ::= y | b 
+varY ::= x | a
+cmp ::= < | > | == | <= | >=
+op ::= + | - | *

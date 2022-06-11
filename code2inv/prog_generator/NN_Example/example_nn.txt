@@ -1,0 +1,87 @@
+Using default K-Induction K = 64
+    _        _                
+   / \   ___| |__   __ _ _ __ 
+  / _ \ / __| '_ \ / _` | '__|
+ / ___ \ (__| | | | (_| | |   
+/_/   \_\___|_| |_|\__,_|_|   
+                              
+K-Induction : 64, 64
+OP_FILE results/inv_result_150_fuzz_rq3.log
+ ==== Solving timeout=10s, epoch=8, K=64 | File : 150 ==== 
+{'S': [['p']], 'p': [['(', '(', 'index', '<=', 'n', ')', '&&', '(', '(', 'sum', 'cmp', '(', 'expr', '-', '9', ')', ')', '&&', '(', 'sum', 'cmp', '(', 'expr', '+', '9', ')', ')', ')', ')']], 'expr': [['(5', '*', '((index', '/', '10)', '-', '1)', '*', '(index', '/', '10))', '+', '((index', '/', '10)', '*', '(index', '-', '10', '*', '(index', '/', '10)))']], 'const': [['10'], ['1']], 'var': [['index'], ['sum'], ['n']], 'cmp': [['=='], ['>='], ['<=']], 'op': [['+'], ['-']]}
+MAX CHILD 29
+VAR FORMAT ssa
+====== begin of s2v configuration ======
+| msg_average = 0
+======   end of s2v configuration ======
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Parameter inited
+[RQ3 Checker] ( ( index <= n ) && ( ( sum <= ( (5 * ((index / 10) - 1) * (index / 10)) + ((index / 10) * (index - 10 * (index / 10))) - 9 ) ) && ( sum == ( (5 * ((index / 10) - 1) * (index / 10)) + ((index / 10) * (index - 10 * (index / 10))) + 9 ) ) ) )
+[RQ3 Checker] ( ( index <= n ) && ( ( sum >= ( (5 * ((index / 10) - 1) * (index / 10)) + ((index / 10) * (index - 10 * (index / 10))) - 9 ) ) && ( sum == ( (5 * ((index / 10) - 1) * (index / 10)) + ((index / 10) * (index - 10 * (index / 10))) + 9 ) ) ) )
+[RQ3 Checker] ( ( index <= n ) && ( ( sum >= ( (5 * ((index / 10) - 1) * (index / 10)) + ((index / 10) * (index - 10 * (index / 10))) - 9 ) ) && ( sum >= ( (5 * ((index / 10) - 1) * (index / 10)) + ((index / 10) * (index - 10 * (index / 10))) + 9 ) ) ) )
+[RQ3 Checker] ( ( index <= n ) && ( ( sum == ( (5 * ((index / 10) - 1) * (index / 10)) + ((index / 10) * (index - 10 * (index / 10))) - 9 ) ) && ( sum >= ( (5 * ((index / 10) - 1) * (index / 10)) + ((index / 10) * (index - 10 * (index / 10))) + 9 ) ) ) )
+[RQ3 Checker] ( ( index <= n ) && ( ( sum >= ( (5 * ((index / 10) - 1) * (index / 10)) + ((index / 10) * (index - 10 * (index / 10))) - 9 ) ) && ( sum >= ( (5 * ((index / 10) - 1) * (index / 10)) + ((index / 10) * (index - 10 * (index / 10))) + 9 ) ) ) )
+[RQ3 Checker] ( ( index <= n ) && ( ( sum >= ( (5 * ((index / 10) - 1) * (index / 10)) + ((index / 10) * (index - 10 * (index / 10))) - 9 ) ) && ( sum == ( (5 * ((index / 10) - 1) * (index / 10)) + ((index / 10) * (index - 10 * (index / 10))) + 9 ) ) ) )
+[RQ3 Checker] ( ( index <= n ) && ( ( sum <= ( (5 * ((index / 10) - 1) * (index / 10)) + ((index / 10) * (index - 10 * (index / 10))) - 9 ) ) && ( sum >= ( (5 * ((index / 10) - 1) * (index / 10)) + ((index / 10) * (index - 10 * (index / 10))) + 9 ) ) ) )
+[RQ3 Checker] ( ( index <= n ) && ( ( sum >= ( (5 * ((index / 10) - 1) * (index / 10)) + ((index / 10) * (index - 10 * (index / 10))) - 9 ) ) && ( sum >= ( (5 * ((index / 10) - 1) * (index / 10)) + ((index / 10) * (index - 10 * (index / 10))) + 9 ) ) ) )
+[RQ3 Checker] ( ( index <= n ) && ( ( sum >= ( (5 * ((index / 10) - 1) * (index / 10)) + ((index / 10) * (index - 10 * (index / 10))) - 9 ) ) && ( sum == ( (5 * ((index / 10) - 1) * (index / 10)) + ((index / 10) * (index - 10 * (index / 10))) + 9 ) ) ) )
+[RQ3 Checker] ( ( index <= n ) && ( ( sum >= ( (5 * ((index / 10) - 1) * (index / 10)) + ((index / 10) * (index - 10 * (index / 10))) - 9 ) ) && ( sum <= ( (5 * ((index / 10) - 1) * (index / 10)) + ((index / 10) * (index - 10 * (index / 10))) + 9 ) ) ) )
+found a solution for 0 , sol: ( ( index <= n ) && ( ( sum >= ( (5 * ((index / 10) - 1) * (index / 10)) + ((index / 10) * (index - 10 * (index / 10))) - 9 ) ) && ( sum <= ( (5 * ((index / 10) - 1) * (index / 10)) + ((index / 10) * (index - 10 * (index / 10))) + 9 ) ) ) )
+z3_report time: 103.11 pid: 0 stats: Counter({'boogie_result': 10, 'actual_z3': 10, 'ce-T:': 9})
+Writing logs to results/inv_result_150_fuzz_rq3.log
+  0%|          | 0/100 [01:42<?, ?it/s]
+
+real	1m44.025s
+user	1m57.833s
+sys	0m4.901s

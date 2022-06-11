@@ -1,0 +1,182 @@
+Using default K-Induction K = 64
+    _        _                
+   / \   ___| |__   __ _ _ __ 
+  / _ \ / __| '_ \ / _` | '__|
+ / ___ \ (__| | | | (_| | |   
+/_/   \_\___|_| |_|\__,_|_|   
+                              
+K-Induction : 64, 64
+OP_FILE results/inv_result_15_fuzz_rq2.log
+ ==== Solving timeout=10s, epoch=8, K=64 | File : 15 ==== 
+{'S': [['p']], 'p': [['(', '(', 'sum', '==', '(', 'term', ')', '/', 'const', ')', '&&', '(', 'var', '<=', 'var', ')', ')']], 'term': [['expr', '*', 'expr', '*', 'expr', '*', 'expr'], ['expr', '*', 'expr', '*', 'expr'], ['expr', '*', 'expr']], 'expr': [['(', '1', '*', 'i', '+', '1', ')'], ['(', '1', '*', 'i', '+', '0', ')']], 'cmp': [['<'], ['>'], ['=='], ['<='], ['>=']], 'var': [['i'], ['n']], 'const': [['1'], ['4']], 'op': [['+'], ['-'], ['*']]}
+MAX CHILD 17
+VAR FORMAT ssa
+====== begin of s2v configuration ======
+| msg_average = 0
+======   end of s2v configuration ======
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Parameter inited
+[RQ2 Solver] ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 0 ) * ( 1 * i + 1 ) * ( 1 * i + 0 ) ) / 1 ) && ( i <= i ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 4 ) && ( n <= i ) )
+[RQ2 Solver] ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 4 ) && ( n <= i ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 4 ) && ( i <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 4 ) && ( i <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 4 ) && ( i <= n ) )
+[RQ2 Solver] ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 4 ) && ( i <= n ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 1 ) && ( i <= i ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 1 ) && ( i <= i ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 1 ) && ( i <= i ) )
+[RQ2 Solver] ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 1 ) && ( i <= i ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( n <= i ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( n <= i ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( n <= i ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( n <= i ) )
+[RQ2 Solver] ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( n <= i ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 1 ) && ( i <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 1 ) && ( i <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 1 ) && ( i <= n ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 1 ) && ( i <= n ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 1 ) && ( i <= n ) )
+[RQ2 Solver] ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 1 ) && ( i <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( n <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( n <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( n <= n ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( n <= n ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( n <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( n <= n ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( n <= n ) )
+[RQ2 Solver] ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( n <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 4 ) && ( n <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 4 ) && ( n <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 4 ) && ( n <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 4 ) && ( n <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 4 ) && ( n <= n ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 4 ) && ( n <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 4 ) && ( n <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 4 ) && ( n <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 4 ) && ( n <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 4 ) && ( n <= n ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 1 ) && ( n <= n ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 1 ) && ( n <= n ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 1 ) && ( n <= n ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 1 ) && ( n <= n ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 1 ) && ( n <= n ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 1 ) && ( n <= n ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 1 ) && ( n <= i ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 1 ) && ( n <= i ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 1 ) && ( n <= i ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 1 ) && ( n <= i ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 1 ) && ( n <= i ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 1 ) && ( n <= i ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 1 ) && ( i <= i ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 1 ) && ( i <= i ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 1 ) && ( i <= i ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 1 ) && ( i <= i ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 1 ) && ( i <= i ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 1 ) && ( i <= i ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 1 ) && ( i <= i ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 1 ) && ( i <= i ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 1 ) && ( i <= i ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 1 ) && ( i <= i ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( n <= i ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( n <= i ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( n <= i ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( n <= i ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( n <= i ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( n <= i ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 1 ) && ( i <= i ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 1 ) && ( i <= i ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 1 ) && ( i <= i ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 1 ) && ( i <= i ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 1 ) && ( i <= i ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / 1 ) && ( i <= i ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 1 ) ) / 4 ) && ( i <= i ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 1 ) ) / 4 ) && ( i <= i ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 1 ) ) / 4 ) && ( i <= i ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 1 ) ) / 4 ) && ( i <= i ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 1 ) ) / 4 ) && ( i <= i ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 1 ) ) / 4 ) && ( i <= i ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 1 ) ) / 4 ) && ( i <= i ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 1 ) ) / 4 ) && ( i <= i ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 1 ) ) / 4 ) && ( i <= i ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( i <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( i <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( i <= n ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( i <= n ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( i <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( i <= n ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( i <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( i <= n ) )
+[RQ2 Checker] False || Inv : ( ( sum == ( ( 1 * i + 0 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( i <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( i <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( i <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( i <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( i <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( i <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( i <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( i <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( i <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( i <= n ) )
+[RQ2 Checker] True || Inv : ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( i <= n ) )
+[RQ2 Solver] ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( i <= n ) )
+found a solution for 0 , sol: ( ( sum == ( ( 1 * i + 1 ) * ( 1 * i + 1 ) * ( 1 * i + 0 ) * ( 1 * i + 0 ) ) / 4 ) && ( i <= n ) )
+z3_report time: 140.35 pid: 0 stats: Counter({'ce-I:': 47, 'ce-T:': 26, 'boogie_result': 16, 'actual_z3': 8})
+Writing logs to results/inv_result_15_fuzz_rq2.log                             
+avg reward so far : -1.79958:   1%|          | 1/100 [02:20<3:51:23, 140.24s/it]
+
+real    2m21.121s
+user    0m21.293s
+sys     0m9.579s
+K-Induction : 64, 64
+Could not converge for 15 & fuzz_rq2

@@ -1,0 +1,6 @@
+S ::= p
+p ::= ( gcd ( var , var ) == gcd ( var , var ) )
+expr ::= ( var cmp var ) | ( var cmp varX ) | ( varX cmp var )
+cmp ::= < | > | == | <= | >=
+var ::= a | b | x | y
+op ::= + | - | *

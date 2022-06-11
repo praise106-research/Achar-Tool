@@ -1,0 +1,127 @@
+Using default K-Induction K = 64
+    _        _                
+   / \   ___| |__   __ _ _ __ 
+  / _ \ / __| '_ \ / _` | '__|
+ / ___ \ (__| | | | (_| | |   
+/_/   \_\___|_| |_|\__,_|_|   
+                              
+K-Induction : 64, 64
+OP_FILE results/inv_result_3_fuzz_rq2.log
+ ==== Solving timeout=10s, epoch=8, K=64 | File : 3 ==== 
+{'S': [['p']], 'p': [['(', 'gcd', '(', 'var', ',', 'var', ')', '==', 'gcd', '(', 'var', ',', 'var', ')', ')']], 'expr': [['(', 'var', 'cmp', 'var', ')'], ['(', 'var', 'cmp', 'varX', ')'], ['(', 'varX', 'cmp', 'var', ')']], 'cmp': [['<'], ['>'], ['=='], ['<='], ['>=']], 'var': [['a'], ['b'], ['x'], ['y']], 'op': [['+'], ['-'], ['*']]}
+MAX CHILD 15
+VAR FORMAT ssa
+====== begin of s2v configuration ======
+| msg_average = 0
+======   end of s2v configuration ======
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Parameter inited
+[RQ2 Solver] ( gcd ( b , y ) == gcd ( a , b ) )
+[RQ2 Checker] False || Inv : ( gcd ( a , a ) == gcd ( a , b ) )
+[RQ2 Solver] ( gcd ( a , a ) == gcd ( a , b ) )
+[RQ2 Checker] True || Inv : ( gcd ( a , b ) == gcd ( a , y ) )
+[RQ2 Checker] True || Inv : ( gcd ( a , b ) == gcd ( a , y ) )
+[RQ2 Solver] ( gcd ( a , b ) == gcd ( a , y ) )
+[RQ2 Checker] True || Inv : ( gcd ( y , a ) == gcd ( b , x ) )
+[RQ2 Checker] True || Inv : ( gcd ( y , a ) == gcd ( b , x ) )
+[RQ2 Checker] False || Inv : ( gcd ( y , a ) == gcd ( b , x ) )
+[RQ2 Solver] ( gcd ( y , a ) == gcd ( b , x ) )
+[RQ2 Checker] False || Inv : ( gcd ( x , b ) == gcd ( y , y ) )
+[RQ2 Checker] False || Inv : ( gcd ( x , b ) == gcd ( y , y ) )
+[RQ2 Checker] False || Inv : ( gcd ( x , b ) == gcd ( y , y ) )
+[RQ2 Checker] False || Inv : ( gcd ( x , b ) == gcd ( y , y ) )
+[RQ2 Solver] ( gcd ( x , b ) == gcd ( y , y ) )
+[RQ2 Checker] False || Inv : ( gcd ( a , b ) == gcd ( b , b ) )
+[RQ2 Checker] False || Inv : ( gcd ( a , b ) == gcd ( b , b ) )
+[RQ2 Checker] False || Inv : ( gcd ( a , b ) == gcd ( b , b ) )
+[RQ2 Checker] False || Inv : ( gcd ( a , b ) == gcd ( b , b ) )
+[RQ2 Checker] True || Inv : ( gcd ( a , b ) == gcd ( b , b ) )
+[RQ2 Solver] ( gcd ( a , b ) == gcd ( b , b ) )
+[RQ2 Checker] False || Inv : ( gcd ( x , y ) == gcd ( a , a ) )
+[RQ2 Checker] False || Inv : ( gcd ( x , y ) == gcd ( a , a ) )
+[RQ2 Checker] False || Inv : ( gcd ( x , y ) == gcd ( a , a ) )
+[RQ2 Checker] False || Inv : ( gcd ( x , y ) == gcd ( a , a ) )
+[RQ2 Checker] False || Inv : ( gcd ( x , y ) == gcd ( a , a ) )
+[RQ2 Checker] False || Inv : ( gcd ( x , y ) == gcd ( a , a ) )
+[RQ2 Checker] False || Inv : ( gcd ( a , y ) == gcd ( y , y ) )
+[RQ2 Checker] False || Inv : ( gcd ( a , y ) == gcd ( y , y ) )
+[RQ2 Checker] False || Inv : ( gcd ( a , y ) == gcd ( y , y ) )
+[RQ2 Checker] False || Inv : ( gcd ( a , y ) == gcd ( y , y ) )
+[RQ2 Checker] False || Inv : ( gcd ( a , y ) == gcd ( y , y ) )
+[RQ2 Checker] True || Inv : ( gcd ( a , y ) == gcd ( y , y ) )
+[RQ2 Checker] False || Inv : ( gcd ( y , b ) == gcd ( y , a ) )
+[RQ2 Checker] False || Inv : ( gcd ( y , b ) == gcd ( y , a ) )
+[RQ2 Checker] False || Inv : ( gcd ( y , b ) == gcd ( y , a ) )
+[RQ2 Checker] False || Inv : ( gcd ( y , b ) == gcd ( y , a ) )
+[RQ2 Checker] True || Inv : ( gcd ( y , b ) == gcd ( y , a ) )
+[RQ2 Checker] True || Inv : ( gcd ( y , b ) == gcd ( y , a ) )
+[RQ2 Checker] True || Inv : ( gcd ( y , b ) == gcd ( y , a ) )
+[RQ2 Checker] True || Inv : ( gcd ( a , b ) == gcd ( x , y ) )
+[RQ2 Checker] True || Inv : ( gcd ( a , b ) == gcd ( x , y ) )
+[RQ2 Checker] True || Inv : ( gcd ( a , b ) == gcd ( x , y ) )
+[RQ2 Checker] True || Inv : ( gcd ( a , b ) == gcd ( x , y ) )
+[RQ2 Checker] True || Inv : ( gcd ( a , b ) == gcd ( x , y ) )
+[RQ2 Checker] True || Inv : ( gcd ( a , b ) == gcd ( x , y ) )
+[RQ2 Checker] False || Inv : ( gcd ( a , b ) == gcd ( x , y ) )
+[RQ2 Solver] ( gcd ( a , b ) == gcd ( x , y ) )
+found a solution for 0 , sol: ( gcd ( a , b ) == gcd ( x , y ) )
+z3_report time: 70.67 pid: 0 stats: Counter({'ce-T:': 26, 'boogie_result': 10, 'actual_z3': 7, 'ce-F:': 7, 'ce-I:': 6})
+Writing logs to results/inv_result_3_fuzz_rq2.log
+  0%|          | 0/100 [01:10<?, ?it/s]
+
+real    1m11.393s
+user    0m11.353s
+sys     0m4.386s
+K-Induction : 64, 64
+Could not converge for 3 & fuzz_rq2

@@ -1,0 +1,113 @@
+Using default K-Induction K = 64
+    _        _                
+   / \   ___| |__   __ _ _ __ 
+  / _ \ / __| '_ \ / _` | '__|
+ / ___ \ (__| | | | (_| | |   
+/_/   \_\___|_| |_|\__,_|_|   
+                              
+K-Induction : 64, 64
+OP_FILE results/inv_result_5_fuzz_rq2.log
+ ==== Solving timeout=10s, epoch=8, K=64 | File : 5 ==== 
+{'S': [['p']], 'p': [['(', '(', '(', 'res', '*', 'binpow(', 'args', ',', 'args', ')', ')', '%', 'm', ')', '==', '(', 'binpow(', 'args', ',', 'args', ')', '%', 'm', ')', ')']], 'expr': [['(', 'var', 'op', 'var', ')'], ['(', 'var', 'op', 'const', ')'], ['(', 'const', 'op', 'var', ')'], ['(', 'const', 'op', 'const', ')'], ['var'], ['const']], 'cmp': [['<'], ['>'], ['=='], ['<='], ['>=']], 'args': [['a'], ['b'], ['x'], ['y']], 'op': [['+'], ['-'], ['*']]}
+MAX CHILD 25
+VAR FORMAT ssa
+====== begin of s2v configuration ======
+| msg_average = 0
+======   end of s2v configuration ======
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Parameter inited
+[RQ2 Solver] ( ( ( res * binpow( a , x ) ) % m ) == ( binpow( y , y ) % m ) )
+[RQ2 Checker] True || Inv : ( ( ( res * binpow( b , x ) ) % m ) == ( binpow( b , a ) % m ) )
+[RQ2 Solver] ( ( ( res * binpow( b , x ) ) % m ) == ( binpow( b , a ) % m ) )
+[RQ2 Checker] True || Inv : ( ( ( res * binpow( a , y ) ) % m ) == ( binpow( a , b ) % m ) )
+[RQ2 Checker] False || Inv : ( ( ( res * binpow( a , y ) ) % m ) == ( binpow( a , b ) % m ) )
+[RQ2 Solver] ( ( ( res * binpow( a , y ) ) % m ) == ( binpow( a , b ) % m ) )
+[RQ2 Checker] True || Inv : ( ( ( res * binpow( x , a ) ) % m ) == ( binpow( b , x ) % m ) )
+[RQ2 Checker] True || Inv : ( ( ( res * binpow( x , a ) ) % m ) == ( binpow( b , x ) % m ) )
+[RQ2 Checker] False || Inv : ( ( ( res * binpow( x , a ) ) % m ) == ( binpow( b , x ) % m ) )
+[RQ2 Checker] False || Inv : ( ( ( res * binpow( x , a ) ) % m ) == ( binpow( b , x ) % m ) )
+[RQ2 Solver] ( ( ( res * binpow( x , a ) ) % m ) == ( binpow( b , x ) % m ) )
+[RQ2 Checker] True || Inv : ( ( ( res * binpow( b , a ) ) % m ) == ( binpow( x , y ) % m ) )
+[RQ2 Checker] False || Inv : ( ( ( res * binpow( b , a ) ) % m ) == ( binpow( x , y ) % m ) )
+[RQ2 Checker] False || Inv : ( ( ( res * binpow( b , a ) ) % m ) == ( binpow( x , y ) % m ) )
+[RQ2 Checker] False || Inv : ( ( ( res * binpow( b , a ) ) % m ) == ( binpow( x , y ) % m ) )
+[RQ2 Solver] ( ( ( res * binpow( b , a ) ) % m ) == ( binpow( x , y ) % m ) )
+[RQ2 Checker] True || Inv : ( ( ( res * binpow( b , b ) ) % m ) == ( binpow( y , b ) % m ) )
+[RQ2 Checker] True || Inv : ( ( ( res * binpow( b , b ) ) % m ) == ( binpow( y , b ) % m ) )
+[RQ2 Checker] False || Inv : ( ( ( res * binpow( b , b ) ) % m ) == ( binpow( y , b ) % m ) )
+[RQ2 Checker] True || Inv : ( ( ( res * binpow( b , b ) ) % m ) == ( binpow( y , b ) % m ) )
+[RQ2 Checker] False || Inv : ( ( ( res * binpow( b , b ) ) % m ) == ( binpow( y , b ) % m ) )
+[RQ2 Checker] True || Inv : ( ( ( res * binpow( b , b ) ) % m ) == ( binpow( y , b ) % m ) )
+[RQ2 Checker] False || Inv : ( ( ( res * binpow( b , b ) ) % m ) == ( binpow( y , b ) % m ) )
+[RQ2 Solver] ( ( ( res * binpow( b , b ) ) % m ) == ( binpow( y , b ) % m ) )
+[RQ2 Checker] True || Inv : ( ( ( res * binpow( a , b ) ) % m ) == ( binpow( x , y ) % m ) )
+[RQ2 Checker] True || Inv : ( ( ( res * binpow( a , b ) ) % m ) == ( binpow( x , y ) % m ) )
+[RQ2 Checker] False || Inv : ( ( ( res * binpow( a , b ) ) % m ) == ( binpow( x , y ) % m ) )
+[RQ2 Checker] True || Inv : ( ( ( res * binpow( a , b ) ) % m ) == ( binpow( x , y ) % m ) )
+[RQ2 Checker] True || Inv : ( ( ( res * binpow( a , b ) ) % m ) == ( binpow( x , y ) % m ) )
+[RQ2 Checker] True || Inv : ( ( ( res * binpow( a , b ) ) % m ) == ( binpow( x , y ) % m ) )
+[RQ2 Checker] True || Inv : ( ( ( res * binpow( a , b ) ) % m ) == ( binpow( x , y ) % m ) )
+[RQ2 Checker] True || Inv : ( ( ( res * binpow( a , b ) ) % m ) == ( binpow( x , y ) % m ) )
+[RQ2 Checker] True || Inv : ( ( ( res * binpow( a , b ) ) % m ) == ( binpow( x , y ) % m ) )
+[RQ2 Solver] ( ( ( res * binpow( a , b ) ) % m ) == ( binpow( x , y ) % m ) )
+found a solution for 0 , sol: ( ( ( res * binpow( a , b ) ) % m ) == ( binpow( x , y ) % m ) )
+z3_report time: 52.37 pid: 0 stats: Counter({'ce-I:': 12, 'ce-T:': 9, 'boogie_result': 7, 'actual_z3': 7})
+Writing logs to results/inv_result_5_fuzz_rq2.log
+  0%|          | 0/100 [00:52<?, ?it/s]
+
+real    0m53.133s
+user    0m8.705s
+sys     0m3.530s
+K-Induction : 64, 64
+Could not converge for 5 & fuzz_rq2

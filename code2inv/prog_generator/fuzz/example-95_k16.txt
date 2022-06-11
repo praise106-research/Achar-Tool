@@ -1,0 +1,153 @@
+    _        _                
+   / \   ___| |__   __ _ _ __ 
+  / _ \ / __| '_ \ / _` | '__|
+ / ___ \ (__| | | | (_| | |   
+/_/   \_\___|_| |_|\__,_|_|   
+                              
+K-Induction : 64, 16
+OP_FILE results/inv_result_95_fuzz_spec.log
+ ==== Solving timeout=10s, epoch=8, K=16 | File : 95 ==== 
+{'S': [['S1'], ['S2']], 'S1': [['(', 'C1', ')'], ['(', 'C1', '||', 'C1', ')'], ['(', 'C1', '||', 'C1', '||', 'C1', ')']], 'C1': [['p'], ['(', 'p', '&&', 'p', ')']], 'S2': [['(', 'C2', ')'], ['(', 'C2', '&&', 'C2', ')'], ['(', 'C2', '&&', 'C2', '&&', 'C2', ')']], 'C2': [['p'], ['(', 'p', '||', 'p', ')']], 'p': [['var', 'cmp', 'expr']], 'expr': [['(', 'var', 'op', 'var', ')'], ['(', 'var', 'op', 'const', ')'], ['(', 'const', 'op', 'var', ')'], ['(', 'const', 'op', 'const', ')'], ['var'], ['const']], 'cmp': [['<'], ['>'], ['=='], ['<='], ['>=']], 'op': [['+'], ['-'], ['*']]}
+MAX CHILD 7
+VAR FORMAT ssa
+====== begin of s2v configuration ======
+| msg_average = 0
+======   end of s2v configuration ======
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Parameter inited
+  0%|          | 0/100 [00:00<?, ?it/s]/usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1709: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1698: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+[Fuzz Checker] ( ( x > 1 || y > ( 1 * x ) ) && ( i < ( j + j ) || i >= ( 1 + x ) ) && ( y < ( x * x ) || y < ( x - 1 ) ) )
+[Fuzz Checker] ( y > 1 && ( j < ( j - 0 ) || i <= ( 0 * x ) ) )
+[Fuzz Checker] ( i > ( j * x ) )       
+[Fuzz Checker] ( i <= ( 1 + y ) || ( j < ( 0 + 1 ) && y == ( 0 + 1 ) ) )
+[Fuzz Checker] ( ( j >= i && j < ( x + 0 ) ) || j <= 1 )
+[Fuzz Checker] ( ( i < ( i - 0 ) && i > ( 1 + i ) ) )
+[Fuzz Checker] ( ( x >= ( 0 - 1 ) || i <= i ) )
+[Fuzz Checker] ( y > ( i * x ) )       
+[Fuzz Checker] ( i < ( 1 + 0 ) )       
+[Fuzz Checker] ( ( i == ( j + x ) && j <= ( 1 + 0 ) ) || y < 1 || i == y )   
+[Fuzz Checker] ( ( y <= ( 1 * 0 ) && x >= x ) || x >= ( i - x ) )            
+[Fuzz Checker] ( ( y < ( 1 * 0 ) && i >= ( i - 0 ) ) || ( x < y && i <= ( 1 * 0 ) ) || ( j >= ( j - y ) && j >= 0 ) )
+[Fuzz Checker] ( ( y >= ( y * i ) && j >= j ) || ( x == x && x <= ( 0 - 1 ) ) || ( x >= ( 1 * 0 ) && y == ( 1 * 0 ) ) )
+[Fuzz Checker] ( j >= ( i * y ) )                                             
+[Fuzz Checker] ( ( x == ( y - 0 ) || i <= 1 ) && ( j < 0 || i >= ( j - i ) ) )
+[Fuzz Checker] ( y == ( 1 * j ) || y < 0 || ( j == ( 0 * y ) && i < y ) )     
+[Fuzz Checker] ( y >= ( i * y ) || y > i )                                    
+[Fuzz Checker] ( ( i >= ( i - y ) && j == i ) || ( y == ( 0 * y ) && y <= ( 1 + 0 ) ) || ( x == 0 && i < y ) )
+[Fuzz Checker] ( ( x > 0 || x == ( 0 * j ) ) && ( y == ( 0 * y ) || y >= ( i - y ) ) && ( y > ( 0 - y ) || j <= ( i * j ) ) )
+avg reward so far : -0.52541: 100%|██████████| 100/100 [01:23<00:00,  1.19it/s]
+Example is not trivial
+epoch: 0, average reward: -0.5254, Random: ( j < 1 ), result_r: -1.9903
+best_reward: 0.0 , best_root: ( j >= ( i * y ) )
+Simpify :  [j >= i*y]
+z3_global_stats: Counter({'ce-I:': 9108, 'ce-F:': 2406, 'ce-T:': 1960, 'boogie_result': 993, 'actual_z3': 19})
+[Fuzz Checker] ( ( y < y && y == ( y * y ) ) || ( j == ( i * y ) && x >= ( i - i ) ) )
+avg reward so far : -0.53906: 100%|██████████| 100/100 [01:01<00:00,  1.62it/s]
+Example is not trivial
+epoch: 1, average reward: -0.5391, Random: ( ( y < ( 1 * 1 ) && j <= ( 1 - 1 ) ) || j < ( 1 * 1 ) || i < 1 ), result_r: -1.9903
+best_reward: -1.0745454545454545 , best_root: ( ( j == ( i * y ) || i == x ) )
+Simpify :  [Or(j == i*y, i == x)]
+z3_global_stats: Counter({'ce-I:': 20064, 'ce-F:': 5394, 'ce-T:': 4681, 'boogie_result': 1989, 'actual_z3': 20})
+[Fuzz Checker] ( ( y > 0 && j >= ( i * i ) ) )                               
+avg reward so far : -0.57765: 100%|██████████| 100/100 [01:03<00:00,  1.59it/s]
+Example is not trivial
+epoch: 2, average reward: -0.5776, Random: ( ( i == ( 1 * i ) || i < 1 ) && ( y < 1 || j < ( 1 * i ) ) ), result_r: -2.2650
+best_reward: 0.0 , best_root: ( ( y > 0 && j >= ( i * i ) ) )
+Simpify :  [Not(y <= 0), j >= i*i]
+z3_global_stats: Counter({'ce-I:': 30899, 'ce-F:': 9285, 'ce-T:': 7636, 'boogie_result': 2974, 'actual_z3': 21})
+[Fuzz Checker] ( ( y < 1 || j == ( 1 * i ) ) && ( j == x || j >= ( i * i ) ) && ( y == ( 1 * 1 ) || j == ( 1 - i ) ) )
+avg reward so far : -0.53542: 100%|██████████| 100/100 [01:06<00:00,  1.49it/s]
+Example is not trivial
+epoch: 3, average reward: -0.5354, Random: ( ( i > ( i + j ) || y <= ( 1 - 1 ) ) && j > ( x - 1 ) && j <= ( 1 * 0 ) ), result_r: -2.0200
+best_reward: -1.0 , best_root: ( ( y < 1 || j == ( 1 * i ) ) && ( j == x || j >= ( i * i ) ) && ( y == ( 1 * 1 ) || j == ( 1 - i ) ) )
+Simpify :  [Or(Not(1 <= y), j == i),
+ Or(j == x, j >= i*i),
+ Or(y == 1, j == 1 + -1*i)]
+z3_global_stats: Counter({'ce-I:': 42721, 'ce-F:': 13233, 'ce-T:': 10597, 'boogie_result': 3961, 'actual_z3': 22})
+avg reward so far : -0.50231: 100%|██████████| 100/100 [01:12<00:00,  1.37it/s]
+Example is not trivial
+epoch: 4, average reward: -0.5023, Random: ( y <= ( 1 - 1 ) || ( y >= ( i - 1 ) && j == ( 0 * i ) ) || ( y <= ( 1 - 1 ) && i == ( 0 - i ) ) ), result_r: -1.7342
+best_reward: -1.0708333333333335 , best_root: ( ( y == ( 0 * i ) || j == ( 1 * i ) ) )
+Simpify :  [Or(y == 0, j == i)]
+z3_global_stats: Counter({'ce-I:': 54541, 'ce-F:': 17173, 'ce-T:': 13552, 'boogie_result': 4946, 'actual_z3': 22})
+avg reward so far : -0.49190: 100%|██████████| 100/100 [01:04<00:00,  1.55it/s]
+Example is not trivial
+epoch: 5, average reward: -0.4919, Random: ( ( j == ( 0 - j ) || i >= ( i - 0 ) ) && ( y <= ( 1 - 0 ) || i <= ( i - j ) ) ), result_r: -2.1017
+best_reward: -1.0708333333333335 , best_root: ( ( y == ( 0 * i ) || j == ( 0 + i ) ) )
+Simpify :  [Or(y == 0, j == i)]
+z3_global_stats: Counter({'ce-I:': 66457, 'ce-F:': 21145, 'ce-T:': 16531, 'boogie_result': 5939, 'actual_z3': 22})
+[Fuzz Checker] ( ( x == ( 0 - j ) && y <= ( 0 - 0 ) ) || y > 1 || j == ( i + 0 ) )
+avg reward so far : -0.51025: 100%|██████████| 100/100 [01:01<00:00,  1.63it/s]
+Example is not trivial
+epoch: 6, average reward: -0.5102, Random: ( ( y == ( i + 0 ) || x >= j ) && ( j == ( 1 - j ) || i == ( i - 0 ) ) && j >= ( i + 0 ) ), result_r: -2.0420
+best_reward: -1.0 , best_root: ( ( x == ( 0 - j ) && y <= ( 0 - 0 ) ) || y > 1 || j == ( i + 0 ) )
+Simpify :  [Or(Not(y <= 1), And(x == -1*j, y <= 0), j == i)]
+z3_global_stats: Counter({'ce-I:': 79099, 'ce-F:': 25097, 'ce-T:': 19495, 'boogie_result': 6927, 'actual_z3': 23})
+avg reward so far : -0.48796: 100%|██████████| 100/100 [01:00<00:00,  1.65it/s]
+Example is not trivial
+epoch: 7, average reward: -0.4880, Random: ( x <= ( 0 - 0 ) || ( j == ( 1 - x ) && j <= ( 0 + 1 ) ) ), result_r: -2.0608
+best_reward: -1.0676923076923075 , best_root: ( ( x >= ( i + 1 ) || j == ( i - 0 ) ) )
+Simpify :  [Or(j == i, x >= 1 + i)]
+z3_global_stats: Counter({'ce-I:': 91982, 'ce-F:': 29061, 'ce-T:': 22468, 'boogie_result': 7918, 'actual_z3': 23})
+
+real    9m0.834s
+user    30m40.087s
+sys     0m14.937s
+K-Induction : 64, 64
+Invariant Checked : ( j == ( i * y ) )
+CounterExample : [None, None, None]
+Simplifed Expression : []

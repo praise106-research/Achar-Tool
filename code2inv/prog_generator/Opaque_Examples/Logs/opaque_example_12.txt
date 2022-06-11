@@ -1,0 +1,270 @@
+Using default K-Induction K = 64
+    _        _                
+   / \   ___| |__   __ _ _ __ 
+  / _ \ / __| '_ \ / _` | '__|
+ / ___ \ (__| | | | (_| | |   
+/_/   \_\___|_| |_|\__,_|_|   
+                              
+K-Induction : 64, 64
+OP_FILE results/inv_result_12_fuzz_rq2.log
+ ==== Solving timeout=10s, epoch=8, K=64 | File : 12 ==== 
+{'S': [['p']], 'p': [['(', '(', 'x_0', '==', 'var', '+', 'var', '*', 'var', ')', '&&', '(', 'var', '>=', 'var', ')', ')']], 'expr': [['(', 'var', 'op', 'var', ')'], ['(', 'var', 'op', 'const', ')'], ['(', 'const', 'op', 'var', ')'], ['(', 'const', 'op', 'const', ')'], ['var'], ['const']], 'cmp': [['<'], ['>'], ['=='], ['<='], ['>=']], 'var': [['x'], ['y'], ['result']], 'op': [['+'], ['-'], ['*']]}
+MAX CHILD 17
+VAR FORMAT ssa
+====== begin of s2v configuration ======
+| msg_average = 0
+======   end of s2v configuration ======
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Parameter inited
+
+  0%|          | 0/100 [00:00<?, ?it/s]
+                                       
+[RQ2 Solver] ( ( x_0 == y + x * result ) && ( result >= result ) )
+
+  0%|          | 0/100 [00:00<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:02<?, ?it/s]
+                                       
+[RQ2 Solver] ( ( x_0 == y + x * y ) && ( result >= x ) )
+
+  0%|          | 0/100 [00:02<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:05<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:06<?, ?it/s]
+                                       
+[RQ2 Solver] ( ( x_0 == result + result * x ) && ( x >= result ) )
+
+  0%|          | 0/100 [00:06<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:08<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:10<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:11<?, ?it/s]
+                                       
+[RQ2 Solver] ( ( x_0 == y + y * x ) && ( result >= y ) )
+
+  0%|          | 0/100 [00:11<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:13<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:15<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:16<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:17<?, ?it/s]
+                                       
+[RQ2 Solver] ( ( x_0 == x + x * y ) && ( x >= y ) )
+
+  0%|          | 0/100 [00:17<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:20<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:21<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:23<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:24<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:25<?, ?it/s]
+                                       
+[RQ2 Solver] ( ( x_0 == result + result * result ) && ( result >= result ) )
+
+  0%|          | 0/100 [00:25<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:28<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:29<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:30<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:32<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:33<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:34<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:35<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:37<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:38<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:39<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:41<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:42<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:43<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:44<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:46<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:47<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:48<?, ?it/s]
+                                       
+[RQ2 Checker] False
+
+  0%|          | 0/100 [00:49<?, ?it/s]
+                                       
+[RQ2 Checker] True
+
+  0%|          | 0/100 [00:51<?, ?it/s]
+                                       
+[RQ2 Checker] True
+
+  0%|          | 0/100 [00:52<?, ?it/s]
+                                       
+[RQ2 Checker] True
+
+  0%|          | 0/100 [00:53<?, ?it/s]
+                                       
+[RQ2 Checker] True
+
+  0%|          | 0/100 [00:54<?, ?it/s]
+                                       
+[RQ2 Checker] True
+
+  0%|          | 0/100 [00:56<?, ?it/s]
+                                       
+[RQ2 Checker] True
+
+  0%|          | 0/100 [00:57<?, ?it/s]
+                                       
+[RQ2 Solver] ( ( x_0 == x + y * result ) && ( x >= x ) )
+
+  0%|          | 0/100 [00:57<?, ?it/s]
+                                       
+found a solution for 0 , sol: ( ( x_0 == x + y * result ) && ( x >= x ) )
+
+  0%|          | 0/100 [01:07<?, ?it/s]
+                                       
+z3_report time: 67.63 pid: 0 stats: Counter({'ce-T:': 39, 'boogie_result': 10, 'actual_z3': 7})
+
+  0%|          | 0/100 [01:07<?, ?it/s]
+                                       
+Writing logs to results/inv_result_12_fuzz_rq2.log
+
+  0%|          | 0/100 [01:07<?, ?it/s]
+  0%|          | 0/100 [01:07<?, ?it/s]
+K-Induction : 64, 64
+Could not converge for 12 & fuzz_rq2

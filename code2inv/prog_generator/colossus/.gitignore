@@ -1,0 +1,10 @@
+base_*/
+
+*.log
+*.a
+*.bc
+
+core
+
+*.out
+*.o

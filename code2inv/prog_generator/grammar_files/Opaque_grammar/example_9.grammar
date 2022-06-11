@@ -1,0 +1,8 @@
+S ::= p
+p ::= ( ( var >= cubeExpr ) && ( icbrt( args ) >= y ) ) |  ( ( var <= cubeExpr ) && ( icbrt( args ) >= y ) ) | ( ( var == cubeExpr ) && ( icbrt( args ) == y ) ) 
+expr ::= ( var op var ) | ( var op const ) | ( const op var ) | ( const op const ) | var | const
+cmp ::= < | > | == | <= | >=
+args ::= orig_x | x
+var ::= orig_x | x
+cubeExpr ::= ( y * y * y )
+op ::= + | - | *

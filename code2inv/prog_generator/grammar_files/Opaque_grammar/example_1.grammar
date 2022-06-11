@@ -1,0 +1,5 @@
+S ::= p
+p ::= ( ( var <= var ) && C )
+C ::= ( sum == ( var * term * term ) / ( 6 ) )
+term ::= ( 1 * var + 1 ) | ( 2 * var + 1 )
+var ::= i | n

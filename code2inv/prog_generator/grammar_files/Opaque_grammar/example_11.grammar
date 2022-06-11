@@ -1,0 +1,7 @@
+S ::= p
+p ::= ( ( res == expr ) && ( var <= n ) )
+expr ::= ( term ) | ( term * term * term ) | ( term * term )
+term ::=  ( a + b + var )
+var ::= n | i
+cmp ::= < | > | == | <= | >=
+op ::= + | -

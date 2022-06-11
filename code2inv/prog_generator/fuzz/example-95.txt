@@ -1,0 +1,118 @@
+
+Using default K-Induction K = 64
+    _        _                
+   / \   ___| |__   __ _ _ __ 
+  / _ \ / __| '_ \ / _` | '__|
+ / ___ \ (__| | | | (_| | |   
+/_/   \_\___|_| |_|\__,_|_|   
+                              
+K-Induction : 64, 64
+OP_FILE results/inv_result_95_fuzz_spec.log
+ ==== Solving timeout=10s, epoch=8, K=64 | File : 95 ==== 
+{'S': [['S1'], ['S2']], 'S1': [['(', 'C1', ')'], ['(', 'C1', '||', 'C1', ')'], ['(', 'C1', '||', 'C1', '||', 'C1', ')']], 'C1': [['p'], ['(', 'p', '&&', 'p', ')']], 'S2': [['(', 'C2', ')'], ['(', 'C2', '&&', 'C2', ')'], ['(', 'C2', '&&', 'C2', '&&', 'C2', ')']], 'C2': [['p'], ['(', 'p', '||', 'p', ')']], 'p': [['var', 'cmp', 'expr']], 'expr': [['(', 'var', 'op', 'var', ')'], ['(', 'var', 'op', 'const', ')'], ['(', 'const', 'op', 'var', ')'], ['(', 'const', 'op', 'const', ')'], ['var'], ['const']], 'cmp': [['<'], ['>'], ['=='], ['<='], ['>=']], 'op': [['+'], ['-'], ['*']]}
+MAX CHILD 7
+VAR FORMAT ssa
+====== begin of s2v configuration ======
+| msg_average = 0
+======   end of s2v configuration ======
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Parameter inited
+  0%|          | 0/100 [00:00<?, ?it/s]/usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1709: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1698: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+[Fuzz Checker] ( ( x > 1 || y > ( 1 * x ) ) && ( i < ( j + j ) || i >= ( 1 + x ) ) && ( y < ( x * x ) || y < ( x - 1 ) ) )
+[Fuzz Checker] ( y > 1 && ( j < ( j - 0 ) || i <= ( 0 * x ) ) )
+[Fuzz Checker] ( i > ( j * x ) )       
+[Fuzz Checker] ( i <= ( 1 + y ) || ( j < ( 0 + 1 ) && y == ( 0 + 1 ) ) )
+[Fuzz Checker] ( ( j >= i && j < ( x + 0 ) ) || j <= 1 )
+[Fuzz Checker] ( ( i < ( i - 0 ) && i > ( 1 + i ) ) )
+[Fuzz Checker] ( ( x >= ( 0 - 1 ) || i <= i ) )
+[Fuzz Checker] ( y > ( i * x ) )       
+[Fuzz Checker] ( i < ( 1 + 0 ) )       
+[Fuzz Checker] ( ( y <= ( 1 * 0 ) && x >= x ) || x >= ( i - x ) )            
+[Fuzz Checker] ( ( x == j && y <= ( 1 - x ) ) || ( x < 0 && x < 1 ) || ( i == ( 0 - i ) && j > y ) )
+[Fuzz Checker] ( ( y == ( j + 0 ) || i <= 0 ) && ( x <= ( 1 - 1 ) || x >= ( y + 0 ) ) && x == ( 0 + x ) )
+[Fuzz Checker] ( y > ( i + 0 ) )                                              
+avg reward so far : -0.49614: 100%|██████████| 100/100 [01:23<00:00,  1.20it/s]
+[Fuzz Checker] ( j == ( i * y ) || ( x < ( 1 * 0 ) && x >= j ) || ( i >= ( 1 * j ) && j == ( j + j ) ) )
+Example is not trivial
+epoch: 0, average reward: -0.4961, Random: ( j == ( i * y ) || ( x < ( 1 * 0 ) && x >= j ) || ( i >= ( 1 * j ) && j == ( j + j ) ) ), result_r: -1.5844
+best_reward: 0.0 , best_root: ( y > ( i * x ) )
+Simpify :  [Not(y <= i*x)]
+z3_global_stats: Counter({'ce-I:': 6807, 'ce-F:': 1979, 'ce-T:': 1848, 'boogie_result': 997, 'actual_z3': 14})
+[Fuzz Checker] ( ( x >= ( 1 * 1 ) && x < 1 ) || ( y < ( 1 * 1 ) && i > ( i + 0 ) ) || i <= ( 1 + 1 ) )
+[Fuzz Checker] ( i < ( 1 * 1 ) || i <= ( 1 * 1 ) || y < 1 )                   
+[Fuzz Checker] ( ( i > ( i + 0 ) && j > ( i + 0 ) ) || ( i == ( y - x ) && y > 0 ) || ( y > ( i + 0 ) && j >= j ) )
+[Fuzz Checker] ( ( i <= ( 1 + 1 ) && x == ( x * y ) ) )                       
+avg reward so far : -0.48578: 100%|██████████| 100/100 [01:37<00:00,  1.03it/s]
+Example is not trivial
+epoch: 1, average reward: -0.4858, Random: ( i <= 1 && ( j < ( 1 * 1 ) || x == ( i - j ) ) && j == ( j - x ) ), result_r: -1.8127
+best_reward: -1.0 , best_root: ( ( x >= ( 1 * 1 ) && x < 1 ) || ( y < ( 1 * 1 ) && i > ( i + 0 ) ) || i <= ( 1 + 1 ) )
+Simpify :  [Or(And(x >= 1, Not(1 <= x)), i <= 2)]
+z3_global_stats: Counter({'ce-I:': 18030, 'ce-F:': 3967, 'ce-T:': 3836, 'boogie_result': 1991, 'actual_z3': 18})
+[Fuzz Checker] ( y > i && j == ( i * y ) )                                   
+[Fuzz Checker] ( j == ( i * y ) )                                             
+found a solution for 0 , sol: ( j == ( i * y ) )                              
+z3_report time: 205.06 pid: 0 stats: Counter({'ce-I:': 20182, 'ce-F:': 4279, 'ce-T:': 4148, 'boogie_result': 2147, 'actual_z3': 20})
+Writing logs to results/inv_result_95_fuzz_spec.log                           
+avg reward so far : -0.59850:  15%|█▌        | 15/100 [00:21<02:00,  1.42s/it]
+
+real    3m25.881s
+user    9m35.564s
+sys     0m6.066s
+K-Induction : 64, 64
+Invariant Checked : ( j == ( i * y ) )
+CounterExample : [None, None, None]
+Simplifed Expression : []

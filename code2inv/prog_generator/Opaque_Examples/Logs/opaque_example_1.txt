@@ -1,0 +1,113 @@
+Using default K-Induction K = 64
+    _        _                
+   / \   ___| |__   __ _ _ __ 
+  / _ \ / __| '_ \ / _` | '__|
+ / ___ \ (__| | | | (_| | |   
+/_/   \_\___|_| |_|\__,_|_|   
+                              
+K-Induction : 64, 64
+OP_FILE results/inv_result_1_fuzz_rq2.log
+ ==== Solving timeout=10s, epoch=8, K=64 | File : 1 ==== 
+{'S': [['p']], 'p': [['(', '(', 'var', '<=', 'var', ')', '&&', 'C', ')']], 'C': [['(', 'sum', '==', '(', 'var', '*', 'term', '*', 'term', ')', '/', '(', '6', ')', ')']], 'term': [['(', '1', '*', 'var', '+', '1', ')'], ['(', '2', '*', 'var', '+', '1', ')']], 'var': [['i'], ['n']]}
+MAX CHILD 15
+VAR FORMAT ssa
+====== begin of s2v configuration ======
+| msg_average = 0
+======   end of s2v configuration ======
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Parameter inited
+  0%|          | 0/100 [00:00<?, ?it/s]                                       [RQ2 Solver] ( ( n <= n ) && ( sum == ( n * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / ( 6 ) ) )
+  0%|          | 0/100 [00:00<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:03<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:04<?, ?it/s]                                       [RQ2 Solver] ( ( i <= i ) && ( sum == ( n * ( 2 * n + 1 ) * ( 2 * n + 1 ) ) / ( 6 ) ) )
+  0%|          | 0/100 [00:04<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:07<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:08<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:09<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:10<?, ?it/s]                                       [RQ2 Solver] ( ( i <= i ) && ( sum == ( n * ( 1 * i + 1 ) * ( 1 * i + 1 ) ) / ( 6 ) ) )
+  0%|          | 0/100 [00:10<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:13<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:14<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:15<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:17<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:18<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:19<?, ?it/s]                                       [RQ2 Solver] ( ( n <= n ) && ( sum == ( n * ( 2 * n + 1 ) * ( 1 * i + 1 ) ) / ( 6 ) ) )
+  0%|          | 0/100 [00:19<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:21<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:23<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:24<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:25<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:26<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:28<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:29<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:30<?, ?it/s]                                       [RQ2 Solver] ( ( n <= n ) && ( sum == ( n * ( 1 * i + 1 ) * ( 1 * n + 1 ) ) / ( 6 ) ) )
+  0%|          | 0/100 [00:30<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:33<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:34<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:35<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:36<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:38<?, ?it/s]                                       [RQ2 Solver] ( ( n <= i ) && ( sum == ( i * ( 2 * i + 1 ) * ( 1 * i + 1 ) ) / ( 6 ) ) )
+  0%|          | 0/100 [00:38<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:40<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:41<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:43<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:44<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:45<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:46<?, ?it/s]                                       [RQ2 Solver] ( ( i <= n ) && ( sum == ( i * ( 1 * i + 1 ) * ( 2 * i + 1 ) ) / ( 6 ) ) )
+  0%|          | 0/100 [00:46<?, ?it/s]                                       found a solution for 0 , sol: ( ( i <= n ) && ( sum == ( i * ( 1 * i + 1 ) * ( 2 * i + 1 ) ) / ( 6 ) ) )
+  0%|          | 0/100 [00:57<?, ?it/s]                                       z3_report time: 57.17 pid: 0 stats: Counter({'ce-I:': 20, 'boogie_result': 7, 'actual_z3': 7, 'ce-F:': 1})
+  0%|          | 0/100 [00:57<?, ?it/s]                                       Writing logs to results/inv_result_1_fuzz_rq2.log
+  0%|          | 0/100 [00:57<?, ?it/s]  0%|          | 0/100 [00:57<?, ?it/s]
+K-Induction : 64, 64
+Could not converge for 1 & fuzz_rq2

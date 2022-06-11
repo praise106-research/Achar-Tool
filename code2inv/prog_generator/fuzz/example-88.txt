@@ -1,0 +1,347 @@
+➜  ~ cd Documents/Research/code2inv 
+➜  code2inv git:(almost-ver) ✗ ./runner.sh 88 c_nl_spec
+OP_FILE results/inv_result_88_c_nl_spec.txt
+{'S': [['S1'], ['S2']], 'S1': [['(', 'C1', ')'], ['(', 'C1', '||', 'C1', ')'], ['(', 'C1', '||', 'C1', '||', 'C1', ')']], 'C1': [['p'], ['(', 'p', '&&', 'p', ')']], 'S2': [['(', 'C2', ')'], ['(', 'C2', '&&', 'C2', ')'], ['(', 'C2', '&&', 'C2', '&&', 'C2', ')']], 'C2': [['p'], ['(', 'p', '||', 'p', ')']], 'p': [['var', 'cmp', 'expr']], 'expr': [['(', 'var', 'op', 'var', ')'], ['(', 'var', 'op', 'const', ')'], ['(', 'const', 'op', 'var', ')'], ['(', 'const', 'op', 'const', ')'], ['var'], ['const']], 'cmp': [['<'], ['>'], ['=='], ['<='], ['>=']], 'op': [['+'], ['-'], ['*']]}
+MAX CHILD 7
+VAR FORMAT ssa
+====== begin of s2v configuration ======
+| msg_average = 0
+======   end of s2v configuration ======
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Parameter inited
+  0%|          | 0/100 [00:00<?, ?it/s]/usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1709: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1698: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+avg reward so far : -0.62461: 100%|██████████| 100/100 [01:22<00:00,  1.21it/s]
+Example is not trivial
+epoch: 0, average reward: -0.6246, Random: ( lock <= ( 0 - y ) ), result_r: -2.1425
+best_reward: 0.0 , best_root: ( lock <= ( 0 + 1 ) )
+Simpify :  [lock <= 1]
+z3_global_stats: Counter({'ce-T:': 3908, 'ce-I:': 3883, 'ce-F:': 1787, 'boogie_result': 990, 'actual_z3': 18})
+avg reward so far : -0.63826: 100%|██████████| 100/100 [01:02<00:00,  1.60it/s]
+Example is not trivial
+epoch: 1, average reward: -0.6383, Random: ( ( y >= 0 || lock < ( 0 * 1 ) ) ), result_r: -1.8975
+best_reward: -1.1525 , best_root: ( ( x <= ( 0 * 1 ) || lock >= ( 0 - y ) ) && ( lock < ( 0 - x ) || x < ( y * y ) ) && ( lock > ( 1 - x ) || lock == ( lock * lock ) ) )
+Simpify :  [Or(x <= 0, lock >= -1*y),
+ Or(Not(-1*x <= lock), Not(y*y <= x)),
+ Or(Not(lock <= 1 + -1*x), lock == lock*lock)]
+z3_global_stats: Counter({'ce-T:': 7852, 'ce-I:': 7827, 'ce-F:': 3759, 'boogie_result': 1976, 'actual_z3': 18})
+avg reward so far : -0.64160: 100%|██████████| 100/100 [00:59<00:00,  1.68it/s]
+Example is not trivial
+epoch: 2, average reward: -0.6416, Random: ( ( lock > ( 0 + 0 ) || lock >= ( lock - 1 ) ) && lock > ( 0 - y ) && ( x > ( 0 - y ) || lock > ( y - 1 ) ) ), result_r: -2.0200
+best_reward: -1.1525 , best_root: ( y > x || x > ( 1 - lock ) )
+Simpify :  [Or(Not(y <= x), Not(x <= 1 + -1*lock))]
+z3_global_stats: Counter({'ce-T:': 11784, 'ce-I:': 11759, 'ce-F:': 5725, 'boogie_result': 2959, 'actual_z3': 18})
+avg reward so far : -0.64673: 100%|██████████| 100/100 [00:58<00:00,  1.71it/s]
+Example is not trivial
+epoch: 3, average reward: -0.6467, Random: ( ( x > ( y - 1 ) && y > ( 0 + 0 ) ) ), result_r: -2.0200
+best_reward: -1.1525 , best_root: ( ( x < ( 0 + 0 ) && lock < 1 ) || y > ( lock * lock ) )
+Simpify :  [Or(And(Not(0 <= x), Not(1 <= lock)), Not(y <= lock*lock))]
+z3_global_stats: Counter({'ce-T:': 15736, 'ce-I:': 15711, 'ce-F:': 7701, 'boogie_result': 3947, 'actual_z3': 18})
+avg reward so far : -0.58339: 100%|██████████| 100/100 [01:05<00:00,  1.52it/s]
+Example is not trivial
+epoch: 4, average reward: -0.5834, Random: ( ( lock <= ( y * y ) && x == ( lock * y ) ) ), result_r: -2.1425
+best_reward: -1.1525 , best_root: ( ( y > ( 0 - y ) && x > ( 0 * y ) ) || ( lock >= ( lock * 1 ) && x < y ) )
+Simpify :  [Or(And(Not(y <= 0), Not(x <= 0)), Not(y <= x))]
+z3_global_stats: Counter({'ce-T:': 19676, 'ce-I:': 19651, 'ce-F:': 9671, 'boogie_result': 4932, 'actual_z3': 18})
+avg reward so far : -0.64083: 100%|██████████| 100/100 [01:13<00:00,  1.37it/s]
+Example is not trivial
+epoch: 5, average reward: -0.6408, Random: ( ( lock <= ( y * y ) || y < ( 0 - 1 ) ) ), result_r: -1.8975
+best_reward: -1.275 , best_root: ( ( x >= ( 0 * y ) && y > ( 0 - y ) ) || ( lock <= ( y - y ) && y <= ( 0 - 1 ) ) )
+Simpify :  [Or(And(lock <= 0, y <= -1), And(x >= 0, Not(y <= 0)))]
+z3_global_stats: Counter({'ce-T:': 23588, 'ce-I:': 23563, 'ce-F:': 11627, 'boogie_result': 5910, 'actual_z3': 18})
+avg reward so far : -0.63119: 100%|██████████| 100/100 [00:58<00:00,  1.71it/s]
+Example is not trivial
+epoch: 6, average reward: -0.6312, Random: ( lock > ( lock - 0 ) && y > ( lock * 1 ) ), result_r: -2.0200
+best_reward: -1.1525 , best_root: ( y >= 1 || ( y > ( lock - 1 ) && x < y ) )
+Simpify :  [Or(y >= 1, And(Not(y <= -1 + lock), Not(y <= x)))]
+z3_global_stats: Counter({'ce-T:': 27532, 'ce-I:': 27507, 'ce-F:': 13599, 'boogie_result': 6896, 'actual_z3': 18})
+avg reward so far : -0.57818: 100%|██████████| 100/100 [01:03<00:00,  1.57it/s]
+Example is not trivial
+epoch: 7, average reward: -0.5782, Random: ( ( lock >= 0 || y > ( 0 + 0 ) ) && y > ( lock + 1 ) ), result_r: -1.8975
+best_reward: -1.1525 , best_root: ( ( x < ( y * y ) && y >= ( lock + 0 ) ) || y > ( lock * 1 ) || ( y > ( lock + 0 ) && lock == 1 ) )
+Simpify :  [Or(And(Not(y*y <= x), y >= lock),
+    And(Not(y <= lock), lock == 1),
+    Not(y <= lock))]
+z3_global_stats: Counter({'ce-T:': 31444, 'ce-I:': 31419, 'ce-F:': 15555, 'boogie_result': 7874, 'actual_z3': 18})
+➜  code2inv git:(almost-ver) ✗ ./runner.sh 88 fuzz_spec
+OP_FILE results/inv_result_88_fuzz_spec.txt
+{'S': [['S1'], ['S2']], 'S1': [['(', 'C1', ')'], ['(', 'C1', '||', 'C1', ')'], ['(', 'C1', '||', 'C1', '||', 'C1', ')']], 'C1': [['p'], ['(', 'p', '&&', 'p', ')']], 'S2': [['(', 'C2', ')'], ['(', 'C2', '&&', 'C2', ')'], ['(', 'C2', '&&', 'C2', '&&', 'C2', ')']], 'C2': [['p'], ['(', 'p', '||', 'p', ')']], 'p': [['var', 'cmp', 'expr']], 'expr': [['(', 'var', 'op', 'var', ')'], ['(', 'var', 'op', 'const', ')'], ['(', 'const', 'op', 'var', ')'], ['(', 'const', 'op', 'const', ')'], ['var'], ['const']], 'cmp': [['<'], ['>'], ['=='], ['<='], ['>=']], 'op': [['+'], ['-'], ['*']]}
+MAX CHILD 7
+VAR FORMAT ssa
+====== begin of s2v configuration ======
+| msg_average = 0
+======   end of s2v configuration ======
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Parameter inited
+  0%|          | 0/100 [00:00<?, ?it/s]/usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1709: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1698: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+avg reward so far : -0.63379: 100%|██████████| 100/100 [01:16<00:00,  1.30it/s]
+Example is not trivial
+epoch: 0, average reward: -0.6338, Random: ( lock >= ( lock + lock ) ), result_r: -1.8158
+best_reward: 0.0 , best_root: ( ( lock <= 0 || x < ( 1 * 1 ) ) && ( lock > ( 1 - x ) || y > ( 1 * x ) ) )
+Simpify :  [Or(lock <= 0, Not(1 <= x)),
+ Or(Not(y <= x), Not(lock <= 1 + -1*x))]
+z3_global_stats: Counter({'ce-T:': 3963, 'ce-F:': 3030, 'ce-I:': 2732, 'boogie_result': 995, 'actual_z3': 11})
+avg reward so far : -0.56500: 100%|██████████| 100/100 [01:01<00:00,  1.62it/s]
+Example is not trivial
+epoch: 1, average reward: -0.5650, Random: ( ( x >= ( 1 + y ) && y == ( y + lock ) ) || ( lock <= ( 0 + 1 ) && x >= 0 ) || y > lock ), result_r: -1.8485
+best_reward: -1.0 , best_root: ( ( y < ( 1 + x ) && y == 1 ) || ( y >= ( 1 + x ) && lock < ( 0 + 1 ) ) || ( y >= ( 1 + x ) && y == ( lock - 1 ) ) )
+Simpify :  [Or(And(y >= 1 + x, y == -1 + lock),
+    And(Not(x <= -1 + y), y == 1),
+    And(y >= 1 + x, Not(1 <= lock)))]
+z3_global_stats: Counter({'ce-T:': 8383, 'ce-F:': 6974, 'ce-I:': 5996, 'boogie_result': 1981, 'actual_z3': 13})
+avg reward so far : -0.61385: 100%|██████████| 100/100 [00:55<00:00,  1.81it/s]
+Example is not trivial
+epoch: 2, average reward: -0.6139, Random: ( ( lock < ( 0 + lock ) && y <= ( x * 1 ) ) || x >= ( 0 + lock ) ), result_r: -1.9710
+best_reward: -1.1280000000000001 , best_root: ( ( lock >= ( 1 + y ) && lock <= ( 0 * 1 ) ) || x > ( lock + lock ) )
+Simpify :  [Or(And(lock >= 1 + y, lock <= 0), Not(x <= 2*lock))]
+z3_global_stats: Counter({'ce-T:': 13288, 'ce-F:': 10898, 'ce-I:': 9920, 'boogie_result': 2962, 'actual_z3': 13})
+avg reward so far : -0.54371: 100%|██████████| 100/100 [00:58<00:00,  1.72it/s]
+Example is not trivial
+epoch: 3, average reward: -0.5437, Random: ( ( lock > ( 0 * 1 ) || x > ( lock - 0 ) ) && x < ( y + y ) ), result_r: -1.9465
+best_reward: -1.1525 , best_root: ( y == ( 1 + x ) )
+Simpify :  []
+z3_global_stats: Counter({'ce-T:': 18218, 'ce-F:': 14842, 'ce-I:': 13864, 'boogie_result': 3948, 'actual_z3': 13})
+avg reward so far : -0.62749: 100%|██████████| 100/100 [00:58<00:00,  1.71it/s]
+Example is not trivial
+epoch: 4, average reward: -0.6275, Random: ( ( y > ( 0 + 1 ) || x >= ( 1 * lock ) ) && x <= ( x * 1 ) && ( y < ( y - y ) || lock == ( 0 + 1 ) ) ), result_r: -2.0200
+best_reward: -1.1280000000000001 , best_root: ( ( lock <= ( x * 0 ) || x > ( 0 + lock ) ) && y < ( y * y ) )
+Simpify :  [Or(lock <= 0, Not(x <= lock)), Not(y*y <= y)]
+z3_global_stats: Counter({'ce-T:': 23103, 'ce-F:': 18750, 'ce-I:': 17772, 'boogie_result': 4925, 'actual_z3': 13})
+found a solution for 0 , sol: ( lock == ( 0 + 1 ) || x < ( y * 1 ) )          
+z3_report time: 333.53 pid: 0 stats: Counter({'ce-T:': 23998, 'ce-F:': 19466, 'ce-I:': 18488, 'boogie_result': 5104, 'actual_z3': 14})
+Writing logs to results/inv_result_88_fuzz_spec.txt                           
+avg reward so far : -0.59137:  17%|█▋        | 17/100 [00:20<01:39,  1.20s/it]
+➜  code2inv git:(almost-ver) ✗ ./scripts/check.sh 88 "( lock == ( 0 + 1 ) || x < ( y * 1 ) )"    
+Invariant Checked : ( lock == ( 0 + 1 ) || x < ( y * 1 ) )
+CounterExample : [None, None, None]
+Simplifed Expression : [Or(lock == 1, Not(y <= x))]
+➜  code2inv git:(almost-ver) ✗ ./scripts/check.sh 88 "( lock == ( 0 + 1 ) || x < ( y * 1 ) )" 
+Invariant Checked : ( lock == ( 0 + 1 ) || x < ( y * 1 ) )
+CounterExample : [None, None, None]
+Simplifed Expression : [Or(lock == 1, Not(y <= x))]
+➜  code2inv git:(almost-ver) ✗ ./runner.sh 88 c_nl_spec
+OP_FILE results/inv_result_88_c_nl_spec.txt
+{'S': [['S1'], ['S2']], 'S1': [['(', 'C1', ')'], ['(', 'C1', '||', 'C1', ')'], ['(', 'C1', '||', 'C1', '||', 'C1', ')']], 'C1': [['p'], ['(', 'p', '&&', 'p', ')']], 'S2': [['(', 'C2', ')'], ['(', 'C2', '&&', 'C2', ')'], ['(', 'C2', '&&', 'C2', '&&', 'C2', ')']], 'C2': [['p'], ['(', 'p', '||', 'p', ')']], 'p': [['var', 'cmp', 'expr']], 'expr': [['(', 'var', 'op', 'var', ')'], ['(', 'var', 'op', 'const', ')'], ['(', 'const', 'op', 'var', ')'], ['(', 'const', 'op', 'const', ')'], ['var'], ['const']], 'cmp': [['<'], ['>'], ['=='], ['<='], ['>=']], 'op': [['+'], ['-'], ['*']]}
+MAX CHILD 7
+VAR FORMAT ssa
+====== begin of s2v configuration ======
+| msg_average = 0
+======   end of s2v configuration ======
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Parameter inited
+  0%|          | 0/100 [00:00<?, ?it/s]/usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1709: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1698: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+avg reward so far : -0.58840: 100%|██████████| 100/100 [01:04<00:00,  1.56it/s]
+Example is not trivial
+epoch: 0, average reward: -0.5884, Random: ( lock == x || y == ( lock * 1 ) ), result_r: -2.1343
+best_reward: 0.0 , best_root: ( lock > ( x - y ) )
+Simpify :  [Not(lock <= x + -1*y)]
+z3_global_stats: Counter({'ce-I:': 3948, 'ce-T:': 2988, 'ce-F:': 1735, 'boogie_result': 1000, 'actual_z3': 18})
+avg reward so far : -0.61934: 100%|██████████| 100/100 [01:01<00:00,  1.63it/s]
+Example is not trivial
+epoch: 1, average reward: -0.6193, Random: ( ( lock >= ( 1 - y ) || x < ( 1 - y ) ) && x <= ( 1 + 1 ) && ( y < ( 0 - y ) || y <= ( y * 1 ) ) ), result_r: -2.0200
+best_reward: -1.1280000000000001 , best_root: ( y > ( x - y ) && ( x == 1 || lock > ( x - y ) ) && ( y < ( 0 + y ) || lock >= ( 0 - y ) ) )
+Simpify :  [Not(2*y <= x),
+ Or(Not(lock <= x + -1*y), x == 1),
+ lock >= -1*y]
+z3_global_stats: Counter({'ce-I:': 8873, 'ce-T:': 6090, 'ce-F:': 3705, 'boogie_result': 1985, 'actual_z3': 19})
+avg reward so far : -0.59554: 100%|██████████| 100/100 [00:58<00:00,  1.71it/s]
+Example is not trivial
+epoch: 2, average reward: -0.5955, Random: ( y <= ( 1 - 1 ) && y > ( 0 - y ) && x > ( y - y ) ), result_r: -2.0200
+best_reward: -1.0 , best_root: ( ( lock > ( x - y ) || y > ( x - x ) ) && y > ( x - lock ) && ( lock < ( 1 - y ) || y >= ( 1 - y ) ) )
+Simpify :  [Or(Not(y <= 0), Not(lock <= x + -1*y)),
+ Not(y <= x + -1*lock),
+ Or(Not(-1*y <= -1 + lock), y >= 1)]
+z3_global_stats: Counter({'ce-I:': 14628, 'ce-T:': 10038, 'ce-F:': 5679, 'boogie_result': 2972, 'actual_z3': 20})
+avg reward so far : -0.65738: 100%|██████████| 100/100 [00:55<00:00,  1.81it/s]
+Example is not trivial
+epoch: 3, average reward: -0.6574, Random: ( ( x < ( 0 + x ) && x <= ( 1 - y ) ) || y < x ), result_r: -2.1833
+best_reward: -1.1525 , best_root: ( ( y < ( 0 - y ) && y == ( y + 0 ) ) || ( x < ( 0 + y ) && x > ( lock - y ) ) || y > ( lock * lock ) )
+Simpify :  [Or(Not(y <= lock*lock),
+    Not(y >= 0),
+    And(Not(y <= x), Not(x <= lock + -1*y)))]
+z3_global_stats: Counter({'ce-I:': 20520, 'ce-T:': 13966, 'ce-F:': 7643, 'boogie_result': 3954, 'actual_z3': 20})
+avg reward so far : -0.59922: 100%|██████████| 100/100 [00:54<00:00,  1.85it/s]
+Example is not trivial
+epoch: 4, average reward: -0.5992, Random: ( lock < ( 0 + 1 ) && lock < x && lock > ( lock * lock ) ), result_r: -2.0200
+best_reward: -1.1525 , best_root: ( ( x >= ( 1 * x ) && y > ( 0 * 1 ) ) || y < 0 )
+Simpify :  [Or(Not(y <= 0), Not(0 <= y))]
+z3_global_stats: Counter({'ce-I:': 26430, 'ce-T:': 17906, 'ce-F:': 9613, 'boogie_result': 4939, 'actual_z3': 20})
+avg reward so far : -0.58830: 100%|██████████| 100/100 [00:57<00:00,  1.74it/s]
+Example is not trivial
+epoch: 5, average reward: -0.5883, Random: ( ( lock <= ( 1 + x ) && x > ( 1 - 0 ) ) || x < 0 ), result_r: -2.0200
+best_reward: -1.1116666666666666 , best_root: ( ( x == ( y + 0 ) && y < x ) || lock == ( y + 1 ) || y > x )
+Simpify :  [Or(And(x == y, Not(x <= y)), lock == 1 + y, Not(y <= x))]
+z3_global_stats: Counter({'ce-I:': 32376, 'ce-T:': 21870, 'ce-F:': 11595, 'boogie_result': 5930, 'actual_z3': 20})
+avg reward so far : -0.56786: 100%|██████████| 100/100 [00:56<00:00,  1.76it/s]
+Example is not trivial
+epoch: 6, average reward: -0.5679, Random: ( ( x < 1 || y <= x ) && y <= ( 1 - x ) && ( x > ( lock * 1 ) || y > 0 ) ), result_r: -2.0608
+best_reward: -1.1525 , best_root: ( y >= ( 1 * 1 ) || y < 0 || ( x > ( 0 - y ) && y == 1 ) )
+Simpify :  [Or(y >= 1, Not(0 <= y), And(Not(x <= -1*y), y == 1))]
+z3_global_stats: Counter({'ce-I:': 38214, 'ce-T:': 25762, 'ce-F:': 13541, 'boogie_result': 6903, 'actual_z3': 20})
+avg reward so far : -0.60390: 100%|██████████| 100/100 [00:57<00:00,  1.73it/s]
+Example is not trivial
+epoch: 7, average reward: -0.6039, Random: ( ( lock >= ( 1 - 0 ) && x > ( 1 * lock ) ) || y > ( 0 * 1 ) || ( y > x && y > ( 1 + 1 ) ) ), result_r: -1.7750
+best_reward: -1.1525 , best_root: ( ( y < 0 || y > ( 0 - y ) ) )
+Simpify :  [Or(Not(0 <= y), Not(y <= 0))]
+z3_global_stats: Counter({'ce-I:': 43998, 'ce-T:': 29618, 'ce-F:': 15469, 'boogie_result': 7867, 'actual_z3': 20})

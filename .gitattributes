@@ -1,0 +1,4 @@
+code2inv/prog_generator/neuralinv/torchcc/results.csv filter=lfs diff=lfs merge=lfs -text
+code2inv/prog_generator/neuralinv/torchcc/test.csv filter=lfs diff=lfs merge=lfs -text
+code2inv/prog_generator/neuralinv/torchcc/train.csv filter=lfs diff=lfs merge=lfs -text
+code2inv/prog_generator/neuralinv/data/invariant_check.txt filter=lfs diff=lfs merge=lfs -text

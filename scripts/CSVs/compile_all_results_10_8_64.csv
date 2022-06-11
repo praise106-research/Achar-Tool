@@ -1,0 +1,117 @@
+Benchmark Example, Type, Invariant, Z3 Check Pass, Code2Inv Converged, Simplified Expression, CE-s Count, Solve-Time
+101, fuzz_spec, ( ( n >= ( 0 + x ) && x >= ( n - n ) ) || x == ( 0 - 0 ) ), Passed, Yes, "[Or(x == 0, And(n >= x, x >= 0))]",  10,  94.41
+102, fuzz_spec, ( ( x <= 1 && x == ( 0 + 0 ) ) || x < 0 || ( n >= n && n >= x ) ), Passed, Yes, "[Or(Not(0 <= x), n >= x, And(x <= 1, x == 0))]",  9,  111.81
+103, fuzz_spec, ( x <= 100 || ( x == ( 100 + x ) && x > ( x - 100 ) ) ), Passed, Yes, "[x <= 100]",  16,  170.63
+104, fuzz_spec, ( ( n >= ( 0 + x ) && x >= ( n - n ) ) || x == ( 0 - 0 ) ), Passed, Yes, "[Or(x == 0, And(n >= x, x >= 0))]",  10,  94.47
+105, fuzz_spec, ( ( x <= 0 || n >= ( x - 0 ) ) ), Passed, Yes, "[Or(x <= 0, n >= x)]",  8,  80.22
+10, fuzz_spec, ( x < ( 4 + y ) ), Passed, Yes, "[Not(y <= -4 + x)]",  21,  221.51
+114, fuzz_spec, ( x == ( sn * 1 ) || ( x > ( x * 1 ) && x < ( 1 * sn ) ) ), Passed, Yes, "[]",  10,  85.55
+115, fuzz_spec, ( x == ( sn * 1 ) && x >= x ), Passed, Yes, "[]",  12,  110.48
+116, fuzz_spec, ( ( sn > x && sn <= ( x + -1 ) ) || x == ( sn * 1 ) ), Passed, Yes, "None",  12,  112.92
+117, fuzz_spec, ( ( sn == x || sn == -1 ) && sn >= ( sn * 0 ) && x >= x ), Passed, Yes, "None",  11,  95.39
+11, fuzz_spec, ( y > ( x - 20 ) ), Passed, Yes, "[Not(y <= -20 + x)]",  16,  183.23
+120, fuzz_spec, ( sn == ( i - 1 ) && ( i <= 8 || i == ( i - 0 ) ) && ( i <= ( 1 + 8 ) || i <= ( 0 + 8 ) ) ), Passed, Yes, "[Or(i <= 9, i <= 8)]",  22,  374.65
+121, fuzz_spec, ( i > ( sn - 0 ) && ( i <= ( 8 + 1 ) || sn == ( i + 1 ) ) && sn == ( i - 1 ) ), Passed, Yes, "[i <= 9]",  35,  529.82
+128, fuzz_spec, ( x >= 1 || ( y >= 1 && x < ( x * 1 ) ) ), Passed, Yes, "[x >= 1]",  9,  97.55
+129, fuzz_spec, ( x >= 1 || ( x == ( x - y ) && x == 1 ) ), Passed, Yes, "[Or(x >= 1, And(y == 0, x == 1))]",  8,  88.87
+12, fuzz_spec, ( y >= ( x - 10 ) ), Passed, Yes, "[y >= -10 + x]",  24,  281.00
+130, fuzz_spec, ( ( x2 >= ( 0 * d2 ) || d2 == x1 ) && ( d2 == ( d2 * d2 ) || d2 == x1 ) && ( d3 >= ( d1 * d2 ) || d3 >= ( 0 - x2 ) ) ), Failed, Yes, "[Or(x2 >= 0, d2 == x1),
+ Or(d2 == d2*d2, d2 == x1),
+ Or(d3 >= d1*d2, d3 >= -1*x2)]",  16,  361.09
+131, fuzz_spec, ( x1 >= ( d3 * d2 ) || d1 >= ( 1 + d3 ) || ( x1 == ( d2 * 0 ) && d1 > ( 0 - x3 ) ) ), Failed, Yes, "[Or(d1 >= 1 + d3,
+    x1 >= d2*d3,
+    And(x1 == 0, Not(d1 <= -1*x3)))]",  10,  102.51
+132, fuzz_spec, ( i >= 0 || ( i <= ( 48 - 57 ) && j >= ( 57 + j ) ) ), Passed, Yes, "[i >= 0]",  8,  62.92
+133, fuzz_spec, ( ( x > ( 1 + 0 ) && x < 0 ) || ( x <= ( x + 0 ) && n >= ( x + 0 ) ) ), Passed, Yes, "[Or(And(Not(x <= 1), Not(0 <= x)), n >= x)]",  8,  67.92
+13, fuzz_spec, ( ( y >= x && x <= 4 ) || ( y >= ( x - 2 ) && x <= ( x * 2 ) ) || ( x > ( x - 0 ) && y == ( 2 + 0 ) ) ), Passed, Yes, "[Or(And(y >= x, x <= 4), And(y >= -2 + x, x >= 0))]",  11,  104.43
+14, fuzz_spec, ( ( x < x || x <= ( 2 + y ) ) && x >= 0 ), Passed, Yes, "[x <= 2 + y, x >= 0]",  22,  247.73
+15, fuzz_spec, ( ( m < n || n <= 0 ) ), Passed, Yes, "[Or(Not(n <= m), n <= 0)]",  18,  217.75
+16, fuzz_spec, ( m >= 0 && ( x >= x || x > m ) && x >= 0 ), Passed, Yes, "[m >= 0, x >= 0]",  31,  316.83
+17, fuzz_spec, ( ( m < n || n <= 1 ) && x <= ( 1 * x ) && ( n == ( x - m ) || m == m ) ), Passed, Yes, "[Or(Not(n <= m), n <= 1)]",  17,  173.29
+18, fuzz_spec, ( x >= m && ( m <= ( m * m ) || x == ( x * 1 ) ) && m > ( 1 - 1 ) ), Passed, Yes, "[x >= m, Not(m <= 0)]",  19,  226.26
+19, fuzz_spec, ( m <= 0 || m < n ), Passed, Yes, "[Or(m <= 0, Not(n <= m))]",  33,  392.74
+1, fuzz_spec, ( x == x ), Failed, Yes, "[]",  4,  43.02
+20, fuzz_spec, ( ( n == 0 && x <= ( n - n ) ) || ( x <= ( m + x ) && x >= ( x - x ) ) ), Passed, Yes, "[Or(And(0 <= m, x >= 0), And(n == 0, x <= 0))]",  26,  276.32
+21, fuzz_spec, ( ( n >= ( m * n ) || m < n ) && ( x >= ( x * m ) || m < n ) ), Passed, Yes, "[Or(Not(n <= m), n >= m*n), Or(Not(n <= m), x >= m*x)]",  16,  184.62
+22, fuzz_spec, ( ( x == ( m * m ) || x >= 1 ) && m > ( 1 - m ) ), Passed, Yes, "[Or(x >= 1, x == m*m), Not(m <= 0)]",  18,  197.69
+23, fuzz_spec, ( j == ( 20 * i ) && j > ( i * i ) && ( j >= ( i - 20 ) || j <= i ) ), Failed, Yes, "[Not(20*i <= i*i), Or(i <= 0, i >= -1)]",  42,  646.12
+25, fuzz_spec, ( x >= ( x - x ) || x == 10000 ), Passed, Yes, "[Or(x == 10000, x >= 0)]",  16,  169.48
+28, fuzz_spec, ( ( x < ( 1 - n ) || n > ( 0 + 0 ) ) && ( x >= ( 0 + 0 ) || n > ( n + n ) ) ), Passed, Yes, "[Or(Not(-1*n <= -1 + x), Not(n <= 0)),
+ Or(x >= 0, Not(n >= 0))]",  12,  120.37
+29, fuzz_spec, ( ( x >= ( 0 * 1 ) && x <= ( x + x ) ) || x >= n || x < x ), Passed, Yes, "[Or(x >= 0, x >= n)]",  13,  179.12
+2, fuzz_spec, ( ( x > ( y - 1 ) && y > 0 ) || x > ( y * y ) ), Passed, Yes, "[Or(And(Not(x <= -1 + y), Not(y <= 0)), Not(x <= y*y))]",  34,  636.89
+30, fuzz_spec, ( x >= ( x - x ) || x == 100 ), Passed, Yes, "[Or(x == 100, x >= 0)]",  16,  169.45
+33, fuzz_spec, ( ( n >= 1 && x >= ( 0 - 0 ) ) || x == ( 0 + n ) ), Passed, Yes, "[Or(And(n >= 1, x >= 0), x == n)]",  14,  182.68
+34, fuzz_spec, ( x >= ( 0 * 0 ) || n < x || n == x ), Passed, Yes, "[Or(x >= 0, n == x, Not(x <= n))]",  10,  110.90
+35, fuzz_spec, ( c >= ( c - c ) || c == 1 ), Passed, Yes, "[Or(c == 1, c >= 0)]",  15,  132.13
+36, fuzz_spec, ( c < ( 40 + 1 ) ), Passed, Yes, "[Not(41 <= c)]",  18,  195.29
+37, fuzz_spec, ( ( c < c && c == ( c - 40 ) ) || c <= ( c - c ) || c > 0 ), Passed, Yes, "[]",  7,  72.99
+38, fuzz_spec, ( ( c > ( 0 - 1 ) && c >= 0 ) ), Passed, Yes, "[Not(c <= -1), c >= 0]",  8,  77.73
+39, fuzz_spec, ( n <= n || ( n >= ( n + 1 ) && c < ( c * 1 ) ) || c <= ( 1 + c ) ), Passed, Yes, "[]",  7,  72.72
+3, fuzz_spec, ( ( x <= ( 5 - x ) || y <= ( 1 * z ) ) && ( x == ( 5 + z ) || y >= y ) ), Passed, Yes, "[Or(x <= 2, y <= z)]",  16,  187.84
+40, fuzz_spec, ( c >= ( n * 0 ) && n > ( 0 * c ) ), Passed, Yes, "[c >= 0, Not(n <= 0)]",  7,  75.75
+41, fuzz_spec, ( ( c >= 0 && c < ( 1 * n ) ) ), Passed, Yes, "[c >= 0, Not(n <= c)]",  8,  86.01
+42, fuzz_spec, ( ( c > ( 0 + 1 ) && c < 1 ) || ( c <= ( c + 1 ) && n >= ( c + 1 ) ) ), Passed, Yes, "[Or(And(Not(c <= 1), Not(1 <= c)), n >= 1 + c)]",  7,  75.96
+43, fuzz_spec, ( n > ( n * c ) && ( c < ( 1 + c ) || n >= ( n + 0 ) ) ), Passed, Yes, "[Not(n <= c*n)]",  1,  10.40
+44, fuzz_spec, ( n > ( n * c ) && ( c < ( 1 + c ) || n >= ( n + 0 ) ) ), Passed, Yes, "[Not(n <= c*n)]",  1,  10.40
+45, fuzz_spec, ( ( c <= ( n * 1 ) || n <= 0 ) && n >= n ), Failed, Yes, "[Or(c <= n, n <= 0)]",  4,  41.59
+46, fuzz_spec, ( ( c <= n && n > 0 ) || ( c >= 0 && c < c ) ), Passed, Yes, "[c <= n, Not(n <= 0)]",  10,  128.49
+47, fuzz_spec, ( c >= ( n * 0 ) && n > ( 0 * c ) ), Passed, Yes, "[c >= 0, Not(n <= 0)]",  7,  75.58
+48, fuzz_spec, ( c > ( n * c ) || c <= ( c + n ) ), Passed, Yes, "[Or(Not(c <= c*n), 0 <= n)]",  3,  31.19
+49, fuzz_spec, ( c > ( n * c ) || c <= ( c + n ) ), Passed, Yes, "[Or(Not(c <= c*n), 0 <= n)]",  3,  31.19
+4, fuzz_spec, ( y <= ( 1 * z ) || x == ( x * x ) || ( z <= ( 1 * x ) && z > ( y + 500 ) ) ), Passed, Yes, "[Or(y <= z, x == x*x, And(z <= x, Not(z <= 500 + y)))]",  33,  480.20
+50, fuzz_spec, ( c >= ( c - c ) || c == 1 ), Passed, Yes, "[Or(c == 1, c >= 0)]",  8,  68.31
+51, fuzz_spec, ( c < ( 4 + 1 ) ), Passed, Yes, "[Not(5 <= c)]",  18,  195.34
+52, fuzz_spec, ( ( c < c && c == ( c - 4 ) ) || c <= ( c - c ) || c > 0 ), Passed, Yes, "[]",  7,  72.82
+53, fuzz_spec, ( ( c > ( 0 * 0 ) && c == ( 0 * c ) ) || ( c < n && c == ( n * 0 ) ) || ( n == ( c - 0 ) && n > ( 0 + c ) ) ), Passed, Yes, "[Or(And(Not(c <= 0), c == 0),
+    And(Not(n <= c), c == 0),
+    And(n == c, Not(n <= c)))]",  8,  86.79
+54, fuzz_spec, ( ( c >= 0 && c < ( 1 * n ) ) ), Passed, Yes, "[c >= 0, Not(n <= c)]",  8,  85.92
+55, fuzz_spec, ( ( c > ( 0 + 1 ) && c < 1 ) || ( c <= ( c + 1 ) && n >= ( c + 1 ) ) ), Passed, Yes, "[Or(And(Not(c <= 1), Not(1 <= c)), n >= 1 + c)]",  7,  75.55
+56, fuzz_spec, ( n > ( n * c ) && ( c < ( 1 + c ) || n >= ( n + 0 ) ) ), Passed, Yes, "[Not(n <= c*n)]",  1,  10.40
+57, fuzz_spec, ( n > ( n * c ) && ( c < ( 1 + c ) || n >= ( n + 0 ) ) ), Passed, Yes, "[Not(n <= c*n)]",  1,  10.41
+58, fuzz_spec, ( c >= ( n * 0 ) && n > ( 0 * c ) ), Passed, Yes, "[c >= 0, Not(n <= 0)]",  7,  75.57
+59, fuzz_spec, ( ( c >= ( c + c ) || n == n ) && c >= ( 1 - n ) && ( c <= n || n > ( c + c ) ) ), Passed, Yes, "[c >= 1 + -1*n, Or(Not(n <= 2*c), c <= n)]",  11,  158.70
+5, fuzz_spec, ( z >= y || x == ( 0 * 0 ) ), Passed, Yes, "[Or(x == 0, z >= y)]",  18,  272.90
+60, fuzz_spec, ( c >= ( n * 0 ) && n > ( 0 * c ) ), Passed, Yes, "[c >= 0, Not(n <= 0)]",  7,  75.62
+63, fuzz_spec, ( ( y < x || x > ( 0 + 0 ) ) && ( y >= ( 0 + 1 ) || y <= ( 10 + 1 ) ) && ( x == ( 1 + 0 ) || y <= ( y + y ) ) ), Passed, Yes, "[Or(Not(x <= 0), Not(x <= y)),
+ Or(y <= 11, y >= 1),
+ Or(x == 1, y >= 0)]",  15,  170.79
+64, fuzz_spec, ( y <= ( 10 - 10 ) || ( x == x && y == 1 ) || ( y >= ( x - x ) && x < 10 ) ), Passed, Yes, "[Or(y <= 0, y == 1, And(y >= 0, Not(10 <= x)))]",  15,  172.67
+65, fuzz_spec, ( y == ( 0 * 100 ) || ( y == ( 0 + 1 ) && y > ( 0 - x ) ) || x < 100 ), Passed, Yes, "[Or(And(y == 1, Not(y <= -1*x)), Not(100 <= x), y == 0)]",  11,  112.98
+66, fuzz_spec, ( x < ( 1 + 100 ) || y < 100 ), Passed, Yes, "[Or(Not(101 <= x), Not(100 <= y))]",  9,  83.25
+67, fuzz_spec, ( ( x == ( 1 + 0 ) || y >= ( 0 * y ) ) && y >= y ), Passed, Yes, "[Or(x == 1, y >= 0)]",  10,  94.47
+68, fuzz_spec, ( ( y >= ( x * y ) || y <= n ) ), Passed, Yes, "[Or(y <= n, y >= x*y)]",  17,  218.61
+69, fuzz_spec, ( ( x <= ( y + x ) || x <= 1 ) ), Passed, Yes, "[Or(0 <= y, x <= 1)]",  10,  93.54
+6, fuzz_spec, ( ( x <= 1 && x <= ( x - x ) ) || z >= ( 0 + y ) || ( size >= ( y + x ) && x <= ( x - x ) ) ), Passed, Yes, "[Or(z >= y, And(size >= y + x, x <= 0), And(x <= 1, x <= 0))]",  29,  672.49
+70, fuzz_spec, ( ( y == ( y * x ) || n > ( x - 1 ) ) ), Passed, Yes, "[Or(Not(n <= -1 + x), y == x*y)]",  33,  540.74
+71, fuzz_spec, ( ( c > 36 || z >= 127 ) ), Passed, Yes, "[Or(Not(c <= 36), z >= 127)]",  11,  111.03
+73, fuzz_spec, ( y < ( z + 1 ) ), Passed, Yes, "[Not(z <= -1 + y)]",  9,  96.44
+74, fuzz_spec, ( ( y > ( 1 + 0 ) && y <= ( z * 1 ) ) ), Passed, Yes, "[Not(y <= 1), y <= z]",  12,  120.61
+76, fuzz_spec, ( y < ( z + 1 ) ), Passed, Yes, "[Not(z <= -1 + y)]",  9,  96.21
+77, fuzz_spec, ( y <= ( 0 + x ) ), Passed, Yes, "[y <= x]",  15,  146.67
+78, fuzz_spec, ( i >= 0 ), Passed, Yes, "[i >= 0]",  21,  178.10
+79, fuzz_spec, ( ( x >= y || i >= y ) ), Passed, Yes, "[Or(i >= y, x >= y)]",  20,  167.96
+7, fuzz_spec, ( x == x && x < ( y + 20 ) ), Passed, Yes, "[Not(y <= -20 + x)]",  14,  172.68
+80, fuzz_spec, ( x > ( y - 1 ) ), Passed, Yes, "[Not(x <= -1 + y)]",  12,  128.72
+81, fuzz_spec, ( i >= ( i * 0 ) ), Passed, Yes, "[i >= 0]",  9,  94.51
+82, fuzz_spec, ( ( x < ( 1 + x ) && i >= 0 ) || ( y < ( x * 0 ) && x >= 0 ) ), Passed, Yes, "[Or(i >= 0, And(Not(0 <= y), x >= 0))]",  8,  78.84
+83, fuzz_spec, ( ( y > ( 0 + y ) && y > ( 0 * y ) ) || y > ( y - y ) || x < 0 ), Passed, Yes, "[Or(Not(y <= 0), Not(0 <= x))]",  354,  3899.18
+84, fuzz_spec, ( x < ( y - 1 ) || ( x < ( 0 + x ) && x <= -50 ) || ( x < 0 && x <= x ) ), Passed, Yes, "None",  10,  111.63
+85, fuzz_spec, ( ( y >= ( x - y ) && y > 1 ) || x < ( 0 * x ) || ( y <= ( -15000 + -15000 ) && y == ( x * 0 ) ) ), Passed, Yes, "None",  12,  118.76
+86, fuzz_spec, ( ( y >= y && x <= -50 ) || ( y >= ( 1 - y ) && x < ( 0 + y ) ) ), Passed, Yes, "None",  12,  156.80
+87, fuzz_spec, ( ( lock == 1 || x < y ) && y < ( y + 1 ) ), Passed, Yes, "[Or(lock == 1, Not(y <= x))]",  28,  641.92
+88, fuzz_spec, ( x < ( 0 + y ) || lock == 1 ), Passed, Yes, "[Or(Not(y <= x), lock == 1)]",  16,  274.06
+89, fuzz_spec, ( ( x >= ( 1 - lock ) && x == ( y + 1 ) ) || ( y > ( x - lock ) && x < ( y + 0 ) ) || ( lock == 1 && y == x ) ), Passed, Yes, "[Or(And(x >= 1 + -1*lock, x == 1 + y),
+    And(lock == 1, y == x),
+    And(Not(y <= x + -1*lock), Not(y <= x)))]",  13,  544.25
+8, fuzz_spec, ( x < ( 20 + y ) ), Passed, Yes, "[Not(y <= -20 + x)]",  21,  222.11
+90, fuzz_spec, ( lock == 1 || ( y > ( 0 + x ) && y <= ( 0 + y ) ) ), Passed, Yes, "[Or(Not(y <= x), lock == 1)]",  15,  285.01
+91, fuzz_spec, ( x >= 0 && ( y > ( 0 * 0 ) || y >= 0 ) && ( y == 0 || x == x ) ), Passed, Yes, "[x >= 0, Or(Not(y <= 0), y >= 0)]",  3,  31.26
+92, fuzz_spec, ( x >= 0 && ( y > ( 0 * 0 ) || y >= 0 ) && ( y == 0 || x == x ) ), Passed, Yes, "[x >= 0, Or(Not(y <= 0), y >= 0)]",  3,  31.35
+95, fuzz_spec, ( j == ( i * y ) ), Passed, Yes, "[]",  17,  176.27
+96, fuzz_spec, ( ( j == ( y * i ) && j >= ( j * 1 ) ) ), Passed, Yes, "[]",  22,  527.86
+97, fuzz_spec, ( y >= ( 2 * 1 ) ), Passed, Yes, "[y >= 2]",  12,  93.20
+98, fuzz_spec, ( y > 1 ), Passed, Yes, "[Not(y <= 1)]",  14,  115.76
+99, fuzz_spec, ( x == ( n - y ) ), Passed, Yes, "[]",  20,  300.89
+9, fuzz_spec, ( ( y == y || x < ( y + y ) ) && ( x <= ( y + 2 ) || x <= ( y - 4 ) ) ), Passed, Yes, "[Or(x <= 2 + y, x <= -4 + y)]",  15,  177.98

@@ -1,0 +1,9 @@
+S ::= p
+p ::=  ( ( var > 2 ) && ( var <= var ) && ( ( opaque && expr ) "||" ( ( ! opaque ) && expr ) ) )
+expr ::= ( varX == 1 * varX ) | ( varX == 2 * i )
+opaque ::= ( isprime( var ) )
+terms ::= var | const
+cmp ::= < | > | == | <= | >=
+var ::= n | i
+varX ::= out | i
+op ::= + | *

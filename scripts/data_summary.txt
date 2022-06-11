@@ -1,0 +1,90 @@
+Achar (All, 10s) ==> 
+	 == Solved Examples : 							100, 5 == 
+			total_cex : 1779
+			total_time : 22156.0 sec
+				 <======================> 			
+
+Achar (All, 20s) ==> 
+	 == Solved Examples : 							100, 4 == 
+			total_cex : 1445
+			total_time : 30684.5 sec
+				 <======================> 			
+
+Achar (Hybrid, Loop) ==> 
+	 == Solved Examples : 							100, 0 == 
+			total_cex : 1503
+			total_time : 7564.7 sec
+				 <======================> 			
+
+Achar (Hybrid, Pre) ==> 
+	 == Solved Examples : 							100, 0 == 
+			total_cex : 1418
+			total_time : 7570.4 sec
+				 <======================> 			
+
+Achar (K=1) ==> 
+	 == Solved Examples : 							97, 6 == 
+			total_cex : 1337
+			total_time : 6728.5 sec
+				 <======================> 			
+
+Achar (K=2) ==> 
+	 == Solved Examples : 							97, 5 == 
+			total_cex : 1257
+			total_time : 7730.0 sec
+				 <======================> 			
+
+Achar (K=16) ==> 
+	 == Solved Examples : 							97, 6 == 
+			total_cex : 1280
+			total_time : 9957.0 sec
+				 <======================> 			
+
+Achar (K=32) ==> 
+	 == Solved Examples : 							98, 6 == 
+			total_cex : 1295
+			total_time : 7822.4 sec
+				 <======================> 			
+
+Achar (K=64) ==> 
+	 == Solved Examples : 							100, 5 == 
+			total_cex : 1416
+			total_time : 8587.0 sec
+				 <======================> 			
+
+Achar (K=128) ==> 
+	 == Solved Examples : 							96, 6 == 
+			total_cex : 1301
+			total_time : 10186.9 sec
+				 <======================> 			
+
+Achar (Single, 10s) ==> 
+	 == Solved Examples : 							100, 5 == 
+			total_cex : 1416
+			total_time : 8587.0 sec
+				 <======================> 			
+
+Achar ==> 
+	 == Solved Examples : 							100, 5 == 
+			total_cex : 1416
+			total_time : 8587.0 sec
+				 <======================> 			
+
+Achar (Single, 20s) ==> 
+	 == Solved Examples : 							100, 4 == 
+			total_cex : 1329
+			total_time : 8255.4 sec
+				 <======================> 			
+
+Code2Inv ==> 
+	 == Solved Examples : 							92, 0 == 
+			total_cex : 1239
+			total_time : 3377.4 sec
+				 <======================> 			
+
+Code2Inv (Single) ==> 
+	 == Solved Examples : 							96, 0 == 
+			total_cex : 1307
+			total_time : 3676.9 sec
+				 <======================> 			
+

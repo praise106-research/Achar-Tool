@@ -1,0 +1,7 @@
+S ::= p
+p ::= ( ( res * ( expr ) ) cmp ( expr ) )  
+expr ::= binpow( arg1 , arg2 )
+cmp ::= == | >=
+arg1 ::= a | x 
+arg2 ::= b | y
+op ::= + | - | *

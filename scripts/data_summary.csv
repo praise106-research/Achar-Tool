@@ -1,0 +1,16 @@
+Tool Setting, #Solved, #Failed, #Cex, Time(secs)
+Achar (All. 10s),100,5,1779,22156.0
+Achar (All. 20s),100,4,1445,30684.5
+Achar (Hybrid. Loop),100,0,1503,7564.7
+Achar (Hybrid. Pre),100,0,1418,7570.4
+Achar (K=1),97,6,1337,6728.5
+Achar (K=2),97,5,1257,7730.0
+Achar (K=16),97,6,1280,9957.0
+Achar (K=32),98,6,1295,7822.4
+Achar (K=64),100,5,1416,8587.0
+Achar (K=128),96,6,1301,10186.9
+Achar (Single. 10s),100,5,1416,8587.0
+Achar,100,5,1416,8587.0
+Achar (Single. 20s),100,4,1329,8255.4
+Code2Inv,92,0,1239,3377.4
+Code2Inv (Single),96,0,1307,3676.9

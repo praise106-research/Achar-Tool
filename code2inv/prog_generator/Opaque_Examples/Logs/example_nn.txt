@@ -1,0 +1,170 @@
+Using default K-Induction K = 64
+    _        _                
+   / \   ___| |__   __ _ _ __ 
+  / _ \ / __| '_ \ / _` | '__|
+ / ___ \ (__| | | | (_| | |   
+/_/   \_\___|_| |_|\__,_|_|   
+                              
+K-Induction : 64, 64
+OP_FILE results/inv_result_150_fuzz_rq3.log
+ ==== Solving timeout=10s, epoch=8, K=64 | File : 150 ==== 
+{'S': [['p']], 'p': [['(', '(', 'varX', '<=', 'n', ')', '&&', '(', '(', 'var', 'cmp', '(', 'expr', '-', '9', ')', ')', '&&', '(', 'var', 'cmp', '(', 'expr', '+', '9', ')', ')', ')', ')']], 'expr': [['(', '5', '*', '(', '(', 'varX', '/', '10', ')', '-', '1', ')', '*', '(', 'varX', '/', '10', ')', ')', '+', '(', '(', 'varX', '/', '10', ')', '*', '(', 'varX', '-', '10', '*', '(', 'varX', '/', '10', ')', ')', ')']], 'const': [['10'], ['1']], 'var': [['sum'], ['n']], 'varX': [['index'], ['i']], 'cmp': [['>='], ['<=']], 'op': [['+'], ['-']]}
+MAX CHILD 39
+VAR FORMAT ssa
+====== begin of s2v configuration ======
+| msg_average = 0
+======   end of s2v configuration ======
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Parameter inited
+
+  0%|          | 0/100 [00:00<?, ?it/s]
+                                       
+[RQ3 NN Checker] ( ( index <= n ) && ( ( sum >= ( ( 5 * ( ( i / 10 ) - 1 ) * ( index / 10 ) ) + ( ( i / 10 ) * ( i - 10 * ( index / 10 ) ) ) - 9 ) ) && ( n <= ( ( 5 * ( ( i / 10 ) - 1 ) * ( i / 10 ) ) + ( ( i / 10 ) * ( index - 10 * ( i / 10 ) ) ) + 9 ) ) ) )
+
+  0%|          | 0/100 [00:00<?, ?it/s]
+                                       
+[RQ3 NN Checker] ( ( i <= n ) && ( ( n <= ( ( 5 * ( ( i / 10 ) - 1 ) * ( index / 10 ) ) + ( ( i / 10 ) * ( i - 10 * ( i / 10 ) ) ) - 9 ) ) && ( n <= ( ( 5 * ( ( i / 10 ) - 1 ) * ( i / 10 ) ) + ( ( index / 10 ) * ( index - 10 * ( index / 10 ) ) ) + 9 ) ) ) )
+
+  0%|          | 0/100 [00:08<?, ?it/s]
+                                       
+[RQ3 NN Checker] ( ( index <= n ) && ( ( n <= ( ( 5 * ( ( index / 10 ) - 1 ) * ( index / 10 ) ) + ( ( index / 10 ) * ( i - 10 * ( index / 10 ) ) ) - 9 ) ) && ( sum >= ( ( 5 * ( ( index / 10 ) - 1 ) * ( i / 10 ) ) + ( ( i / 10 ) * ( index - 10 * ( index / 10 ) ) ) + 9 ) ) ) )
+
+  0%|          | 0/100 [00:17<?, ?it/s]
+                                       
+[RQ3 NN Checker] ( ( index <= n ) && ( ( sum <= ( ( 5 * ( ( i / 10 ) - 1 ) * ( index / 10 ) ) + ( ( i / 10 ) * ( index - 10 * ( i / 10 ) ) ) - 9 ) ) && ( n >= ( ( 5 * ( ( index / 10 ) - 1 ) * ( i / 10 ) ) + ( ( index / 10 ) * ( i - 10 * ( i / 10 ) ) ) + 9 ) ) ) )
+
+  0%|          | 0/100 [00:25<?, ?it/s]
+                                       
+[RQ3 NN Checker] ( ( index <= n ) && ( ( n >= ( ( 5 * ( ( index / 10 ) - 1 ) * ( i / 10 ) ) + ( ( i / 10 ) * ( i - 10 * ( index / 10 ) ) ) - 9 ) ) && ( sum <= ( ( 5 * ( ( i / 10 ) - 1 ) * ( i / 10 ) ) + ( ( index / 10 ) * ( index - 10 * ( index / 10 ) ) ) + 9 ) ) ) )
+
+  0%|          | 0/100 [00:34<?, ?it/s]
+                                       
+[RQ3 NN Checker] ( ( i <= n ) && ( ( sum <= ( ( 5 * ( ( index / 10 ) - 1 ) * ( index / 10 ) ) + ( ( i / 10 ) * ( i - 10 * ( i / 10 ) ) ) - 9 ) ) && ( sum >= ( ( 5 * ( ( i / 10 ) - 1 ) * ( i / 10 ) ) + ( ( i / 10 ) * ( index - 10 * ( index / 10 ) ) ) + 9 ) ) ) )
+
+  0%|          | 0/100 [00:43<?, ?it/s]
+                                       
+[RQ3 NN Checker] ( ( i <= n ) && ( ( sum <= ( ( 5 * ( ( i / 10 ) - 1 ) * ( i / 10 ) ) + ( ( index / 10 ) * ( index - 10 * ( index / 10 ) ) ) - 9 ) ) && ( n >= ( ( 5 * ( ( index / 10 ) - 1 ) * ( index / 10 ) ) + ( ( i / 10 ) * ( i - 10 * ( i / 10 ) ) ) + 9 ) ) ) )
+
+  0%|          | 0/100 [00:51<?, ?it/s]
+                                       
+[RQ3 NN Checker] ( ( i <= n ) && ( ( sum <= ( ( 5 * ( ( index / 10 ) - 1 ) * ( i / 10 ) ) + ( ( i / 10 ) * ( index - 10 * ( i / 10 ) ) ) - 9 ) ) && ( sum <= ( ( 5 * ( ( i / 10 ) - 1 ) * ( i / 10 ) ) + ( ( i / 10 ) * ( index - 10 * ( index / 10 ) ) ) + 9 ) ) ) )
+
+  0%|          | 0/100 [00:59<?, ?it/s]
+                                       
+[RQ3 NN Checker] ( ( index <= n ) && ( ( n >= ( ( 5 * ( ( index / 10 ) - 1 ) * ( index / 10 ) ) + ( ( i / 10 ) * ( i - 10 * ( index / 10 ) ) ) - 9 ) ) && ( n >= ( ( 5 * ( ( i / 10 ) - 1 ) * ( index / 10 ) ) + ( ( index / 10 ) * ( i - 10 * ( i / 10 ) ) ) + 9 ) ) ) )
+
+  0%|          | 0/100 [01:08<?, ?it/s]
+                                       
+[RQ3 NN Checker] ( ( index <= n ) && ( ( n <= ( ( 5 * ( ( i / 10 ) - 1 ) * ( i / 10 ) ) + ( ( i / 10 ) * ( index - 10 * ( i / 10 ) ) ) - 9 ) ) && ( sum <= ( ( 5 * ( ( index / 10 ) - 1 ) * ( index / 10 ) ) + ( ( i / 10 ) * ( i - 10 * ( i / 10 ) ) ) + 9 ) ) ) )
+
+  0%|          | 0/100 [01:17<?, ?it/s]
+avg reward so far : -2.25000:   0%|          | 0/100 [01:28<?, ?it/s]
+avg reward so far : -2.25000:   1%|          | 1/100 [01:28<2:25:37, 88.26s/it]
+                                                                               
+[RQ3 NN Checker] ( ( index <= n ) && ( ( sum >= ( ( 5 * ( ( i / 10 ) - 1 ) * ( i / 10 ) ) + ( ( i / 10 ) * ( index - 10 * ( i / 10 ) ) ) - 9 ) ) && ( sum <= ( ( 5 * ( ( index / 10 ) - 1 ) * ( index / 10 ) ) + ( ( i / 10 ) * ( index - 10 * ( index / 10 ) ) ) + 9 ) ) ) )
+
+avg reward so far : -2.25000:   1%|          | 1/100 [01:28<2:25:37, 88.26s/it]
+                                                                               
+[RQ3 NN Checker] ( ( i <= n ) && ( ( sum >= ( ( 5 * ( ( i / 10 ) - 1 ) * ( index / 10 ) ) + ( ( i / 10 ) * ( index - 10 * ( index / 10 ) ) ) - 9 ) ) && ( n <= ( ( 5 * ( ( index / 10 ) - 1 ) * ( i / 10 ) ) + ( ( index / 10 ) * ( index - 10 * ( i / 10 ) ) ) + 9 ) ) ) )
+
+avg reward so far : -2.25000:   1%|          | 1/100 [01:36<2:25:37, 88.26s/it]
+                                                                               
+[RQ3 NN Checker] ( ( i <= n ) && ( ( sum <= ( ( 5 * ( ( index / 10 ) - 1 ) * ( index / 10 ) ) + ( ( i / 10 ) * ( i - 10 * ( index / 10 ) ) ) - 9 ) ) && ( n >= ( ( 5 * ( ( index / 10 ) - 1 ) * ( i / 10 ) ) + ( ( i / 10 ) * ( index - 10 * ( index / 10 ) ) ) + 9 ) ) ) )
+
+avg reward so far : -2.25000:   1%|          | 1/100 [01:44<2:25:37, 88.26s/it]
+                                                                               
+[RQ3 NN Checker] ( ( index <= n ) && ( ( n <= ( ( 5 * ( ( i / 10 ) - 1 ) * ( i / 10 ) ) + ( ( index / 10 ) * ( index - 10 * ( i / 10 ) ) ) - 9 ) ) && ( sum >= ( ( 5 * ( ( index / 10 ) - 1 ) * ( i / 10 ) ) + ( ( index / 10 ) * ( index - 10 * ( i / 10 ) ) ) + 9 ) ) ) )
+
+avg reward so far : -2.25000:   1%|          | 1/100 [01:52<2:25:37, 88.26s/it]
+                                                                               
+[RQ3 NN Checker] ( ( i <= n ) && ( ( sum <= ( ( 5 * ( ( i / 10 ) - 1 ) * ( i / 10 ) ) + ( ( index / 10 ) * ( i - 10 * ( i / 10 ) ) ) - 9 ) ) && ( sum >= ( ( 5 * ( ( index / 10 ) - 1 ) * ( i / 10 ) ) + ( ( index / 10 ) * ( i - 10 * ( i / 10 ) ) ) + 9 ) ) ) )
+
+avg reward so far : -2.25000:   1%|          | 1/100 [02:00<2:25:37, 88.26s/it]
+                                                                               
+[RQ3 NN Checker] ( ( i <= n ) && ( ( sum >= ( ( 5 * ( ( i / 10 ) - 1 ) * ( index / 10 ) ) + ( ( index / 10 ) * ( index - 10 * ( i / 10 ) ) ) - 9 ) ) && ( sum <= ( ( 5 * ( ( i / 10 ) - 1 ) * ( index / 10 ) ) + ( ( index / 10 ) * ( index - 10 * ( i / 10 ) ) ) + 9 ) ) ) )
+
+avg reward so far : -2.25000:   1%|          | 1/100 [02:09<2:25:37, 88.26s/it]
+                                                                               
+[RQ3 NN Checker] ( ( i <= n ) && ( ( sum <= ( ( 5 * ( ( i / 10 ) - 1 ) * ( index / 10 ) ) + ( ( index / 10 ) * ( i - 10 * ( index / 10 ) ) ) - 9 ) ) && ( n >= ( ( 5 * ( ( index / 10 ) - 1 ) * ( i / 10 ) ) + ( ( index / 10 ) * ( index - 10 * ( i / 10 ) ) ) + 9 ) ) ) )
+
+avg reward so far : -2.25000:   1%|          | 1/100 [02:17<2:25:37, 88.26s/it]
+                                                                               
+[RQ3 NN Checker] ( ( index <= n ) && ( ( n <= ( ( 5 * ( ( index / 10 ) - 1 ) * ( index / 10 ) ) + ( ( index / 10 ) * ( i - 10 * ( i / 10 ) ) ) - 9 ) ) && ( sum <= ( ( 5 * ( ( index / 10 ) - 1 ) * ( index / 10 ) ) + ( ( i / 10 ) * ( index - 10 * ( index / 10 ) ) ) + 9 ) ) ) )
+
+avg reward so far : -2.25000:   1%|          | 1/100 [02:25<2:25:37, 88.26s/it]
+                                                                               
+[RQ3 NN Checker] ( ( i <= n ) && ( ( sum >= ( ( 5 * ( ( i / 10 ) - 1 ) * ( i / 10 ) ) + ( ( i / 10 ) * ( index - 10 * ( i / 10 ) ) ) - 9 ) ) && ( sum <= ( ( 5 * ( ( i / 10 ) - 1 ) * ( index / 10 ) ) + ( ( i / 10 ) * ( i - 10 * ( index / 10 ) ) ) + 9 ) ) ) )
+
+avg reward so far : -2.25000:   1%|          | 1/100 [02:34<2:25:37, 88.26s/it]
+avg reward so far : -2.05050:   1%|          | 1/100 [02:43<2:25:37, 88.26s/it]
+avg reward so far : -2.05050:   2%|▏         | 2/100 [02:43<2:11:19, 80.40s/it]
+                                                                               
+[RQ3 NN Checker] ( ( index <= n ) && ( ( sum >= ( ( 5 * ( ( index / 10 ) - 1 ) * ( i / 10 ) ) + ( ( index / 10 ) * ( index - 10 * ( index / 10 ) ) ) - 9 ) ) && ( sum <= ( ( 5 * ( ( i / 10 ) - 1 ) * ( index / 10 ) ) + ( ( index / 10 ) * ( index - 10 * ( i / 10 ) ) ) + 9 ) ) ) )
+
+avg reward so far : -2.05050:   2%|▏         | 2/100 [02:43<2:11:19, 80.40s/it]
+                                                                               
+found a solution for 0 , sol: ( ( index <= n ) && ( ( sum >= ( ( 5 * ( ( index / 10 ) - 1 ) * ( i / 10 ) ) + ( ( index / 10 ) * ( index - 10 * ( index / 10 ) ) ) - 9 ) ) && ( sum <= ( ( 5 * ( ( i / 10 ) - 1 ) * ( index / 10 ) ) + ( ( index / 10 ) * ( index - 10 * ( i / 10 ) ) ) + 9 ) ) ) )
+
+avg reward so far : -2.05050:   2%|▏         | 2/100 [03:00<2:11:19, 80.40s/it]
+                                                                               
+z3_report time: 180.97 pid: 0 stats: Counter({'ce-I:': 48, 'boogie_result': 21, 'actual_z3': 20, 'ce-T:': 20})
+
+avg reward so far : -2.05050:   2%|▏         | 2/100 [03:00<2:11:19, 80.40s/it]
+                                                                               
+Writing logs to results/inv_result_150_fuzz_rq3.log
+
+avg reward so far : -2.05050:   2%|▏         | 2/100 [03:00<2:11:19, 80.40s/it]
+avg reward so far : -2.05050:   2%|▏         | 2/100 [03:00<2:27:36, 90.37s/it]
+K-Induction : 64, 64
+Could not converge for 150 & fuzz_rq3

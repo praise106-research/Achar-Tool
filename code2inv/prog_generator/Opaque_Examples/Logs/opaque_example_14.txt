@@ -1,0 +1,457 @@
+Using default K-Induction K = 64
+    _        _                
+   / \   ___| |__   __ _ _ __ 
+  / _ \ / __| '_ \ / _` | '__|
+ / ___ \ (__| | | | (_| | |   
+/_/   \_\___|_| |_|\__,_|_|   
+                              
+K-Induction : 64, 64
+OP_FILE results/inv_result_14_fuzz_rq2.log
+ ==== Solving timeout=10s, epoch=8, K=64 | File : 14 ==== 
+{'S': [['p']], 'p': [['(', 'var', '==', 'factorial(', 'var', ')', '&&', '(', 'var', '<=', 'expr', ')', '&&', '(', 'var', '>=', 'expr', ')', ')']], 'expr': [['n'], ['1'], ['0']], 'cmp': [['<'], ['>'], ['=='], ['<='], ['>=']], 'op': [['+'], ['-'], ['*']]}
+MAX CHILD 19
+VAR FORMAT ssa
+====== begin of s2v configuration ======
+| msg_average = 0
+======   end of s2v configuration ======
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Linear inited
+a GRUCell inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Linear inited
+a Parameter inited
+a Parameter inited
+a Parameter inited
+  0%|          | 0/100 [00:00<?, ?it/s]                                       [RQ2 Solver] ( n == factorial( res ) && ( n <= 0 ) && ( n >= 0 ) )
+  0%|          | 0/100 [00:00<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:02<?, ?it/s]                                       [RQ2 Solver] ( k == factorial( res ) && ( k <= 0 ) && ( res >= 0 ) )
+  0%|          | 0/100 [00:02<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:05<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:06<?, ?it/s]                                       [RQ2 Solver] ( res == factorial( n ) && ( k <= 1 ) && ( n >= 0 ) )
+  0%|          | 0/100 [00:06<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:08<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:10<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:11<?, ?it/s]                                       [RQ2 Solver] ( res == factorial( res ) && ( k <= 1 ) && ( res >= n ) )
+  0%|          | 0/100 [00:11<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:13<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:15<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:16<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:17<?, ?it/s]                                       [RQ2 Solver] ( k == factorial( n ) && ( res <= 1 ) && ( n >= 0 ) )
+  0%|          | 0/100 [00:17<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:20<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:21<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:22<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:24<?, ?it/s]                                       [RQ2 Solver] ( k == factorial( res ) && ( res <= n ) && ( res >= 1 ) )
+  0%|          | 0/100 [00:24<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:26<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:27<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:29<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:30<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:31<?, ?it/s]                                       [RQ2 Solver] ( res == factorial( res ) && ( res <= 0 ) && ( res >= 1 ) )
+  0%|          | 0/100 [00:31<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:34<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:35<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:36<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:38<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:39<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:40<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:41<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:43<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:44<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:45<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:46<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:48<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:49<?, ?it/s]                                       [RQ2 Solver] ( k == factorial( res ) && ( res <= 1 ) && ( k >= 1 ) )
+  0%|          | 0/100 [00:49<?, ?it/s]                                       [RQ2 Checker] True
+  0%|          | 0/100 [00:52<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:53<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:54<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:55<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:57<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:58<?, ?it/s]                                       [RQ2 Checker] False
+  0%|          | 0/100 [00:59<?, ?it/s]avg reward so far : -2.08803:   0%|          | 0/100 [01:02<?, ?it/s]avg reward so far : -2.08803:   1%|          | 1/100 [01:02<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:03<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:04<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:05<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:07<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:08<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:09<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:10<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:12<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:13<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:14<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:15<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:17<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:18<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:19<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:21<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:22<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:23<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:25<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:26<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:27<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:28<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -2.08803:   1%|          | 1/100 [01:30<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -2.08803:   1%|          | 1/100 [01:31<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -2.08803:   1%|          | 1/100 [01:32<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -2.08803:   1%|          | 1/100 [01:34<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -2.08803:   1%|          | 1/100 [01:35<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:36<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -2.08803:   1%|          | 1/100 [01:38<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:39<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -2.08803:   1%|          | 1/100 [01:40<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -2.08803:   1%|          | 1/100 [01:42<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -2.08803:   1%|          | 1/100 [01:43<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -2.08803:   1%|          | 1/100 [01:44<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -2.08803:   1%|          | 1/100 [01:45<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -2.08803:   1%|          | 1/100 [01:47<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:48<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -2.08803:   1%|          | 1/100 [01:49<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -2.08803:   1%|          | 1/100 [01:50<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -2.08803:   1%|          | 1/100 [01:52<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:53<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:54<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:56<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:57<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:58<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [01:59<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -2.08803:   1%|          | 1/100 [02:01<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [02:02<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [02:03<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [02:04<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [02:06<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [02:07<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [02:08<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -2.08803:   1%|          | 1/100 [02:09<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [02:11<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [02:12<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [02:13<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [02:14<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [02:16<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [02:17<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -2.08803:   1%|          | 1/100 [02:18<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [02:20<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [02:21<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [02:22<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [02:23<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [02:25<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [02:26<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -2.08803:   1%|          | 1/100 [02:27<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -2.08803:   1%|          | 1/100 [02:28<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -2.08803:   1%|          | 1/100 [02:30<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -2.08803:   1%|          | 1/100 [02:31<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -2.08803:   1%|          | 1/100 [02:32<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -2.08803:   1%|          | 1/100 [02:33<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -2.08803:   1%|          | 1/100 [02:35<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -2.08803:   1%|          | 1/100 [02:36<1:42:37, 62.20s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -2.08803:   1%|          | 1/100 [02:37<1:42:37, 62.20s/it]avg reward so far : -1.99267:   1%|          | 1/100 [02:37<1:42:37, 62.20s/it]avg reward so far : -1.99267:   2%|▏         | 2/100 [02:37<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.99267:   2%|▏         | 2/100 [02:39<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.99267:   2%|▏         | 2/100 [02:40<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.99267:   2%|▏         | 2/100 [02:41<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.99267:   2%|▏         | 2/100 [02:42<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.99267:   2%|▏         | 2/100 [02:44<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.99267:   2%|▏         | 2/100 [02:45<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.99267:   2%|▏         | 2/100 [02:46<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.99267:   2%|▏         | 2/100 [02:48<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.99267:   2%|▏         | 2/100 [02:49<2:13:41, 81.85s/it]                                                                               [RQ2 Solver] ( res == factorial( k ) && ( res <= n ) && ( n >= 1 ) )
+avg reward so far : -1.99267:   2%|▏         | 2/100 [02:49<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.99267:   2%|▏         | 2/100 [02:51<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [02:53<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [02:54<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [02:55<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [02:57<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [02:58<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [02:59<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:00<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:02<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:03<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:04<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:06<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:07<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:08<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:10<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:11<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:12<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:13<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:15<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:16<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:17<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:19<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:20<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:21<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:22<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:24<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:25<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:26<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:28<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:29<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:30<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:31<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:33<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:34<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:35<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:36<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:38<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:39<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:40<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:42<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:43<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:44<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:45<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:47<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:48<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:49<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:50<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:52<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:53<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:54<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:55<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:57<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:58<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [03:59<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [04:01<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [04:02<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.99267:   2%|▏         | 2/100 [04:03<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [04:04<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [04:06<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [04:07<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [04:08<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [04:10<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [04:11<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [04:12<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.99267:   2%|▏         | 2/100 [04:13<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [04:15<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [04:16<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [04:17<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [04:18<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [04:20<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [04:21<2:13:41, 81.85s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.99267:   2%|▏         | 2/100 [04:22<2:13:41, 81.85s/it]avg reward so far : -1.93864:   2%|▏         | 2/100 [04:22<2:13:41, 81.85s/it]avg reward so far : -1.93864:   3%|▎         | 3/100 [04:22<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:23<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:25<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:26<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:27<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:28<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:30<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:31<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:32<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:33<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:35<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:36<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:37<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:39<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:40<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:41<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:42<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:44<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:45<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:46<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:48<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:49<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:50<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:51<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:53<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:54<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:55<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:56<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:58<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [04:59<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:00<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:02<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:03<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:04<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:05<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:07<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:08<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:09<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:11<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:12<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:13<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:15<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:16<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:17<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:19<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:20<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:21<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:22<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:24<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:25<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:26<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:28<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:29<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:30<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:31<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:33<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:34<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:35<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:37<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:38<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:39<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:41<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:42<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:43<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:44<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:46<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:47<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:48<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:49<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:51<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:52<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:53<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:55<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:56<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:57<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [05:58<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [06:00<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [06:01<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [06:02<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [06:04<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [06:05<2:29:14, 92.32s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.93864:   3%|▎         | 3/100 [06:06<2:29:14, 92.32s/it]avg reward so far : -1.92872:   3%|▎         | 3/100 [06:06<2:29:14, 92.32s/it]avg reward so far : -1.92872:   4%|▍         | 4/100 [06:06<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:08<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:09<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:10<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:11<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:13<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:14<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:15<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:16<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:18<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:19<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:20<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:22<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:23<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:24<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:25<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:27<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:28<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:29<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:31<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:32<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:33<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:34<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:36<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:37<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:38<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:39<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:41<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:42<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:43<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:44<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:46<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:47<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:48<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:49<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:51<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:52<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:53<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:55<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:56<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:57<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.92872:   4%|▍         | 4/100 [06:58<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:00<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:01<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:02<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:03<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:05<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:06<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:07<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:09<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:10<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:11<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:12<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:14<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:15<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:16<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:18<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:19<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:20<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:21<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:23<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:24<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:25<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:26<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:28<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:29<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:30<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:32<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:33<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:34<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:35<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:37<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:38<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:39<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:40<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:42<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] True
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:43<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:44<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:45<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:47<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:48<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:49<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:50<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:52<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:53<2:35:13, 97.01s/it]                                                                               [RQ2 Checker] False
+avg reward so far : -1.92872:   4%|▍         | 4/100 [07:54<2:35:13, 97.01s/it]avg reward so far : -1.91949:   4%|▍         | 4/100 [07:54<2:35:13, 97.01s/it]avg reward so far : -1.91949:   5%|▌         | 5/100 [07:54<2:39:49, 100.94s/it]                                                                                [RQ2 Checker] True
+avg reward so far : -1.91949:   5%|▌         | 5/100 [07:55<2:39:49, 100.94s/it]                                                                                [RQ2 Checker] True
+avg reward so far : -1.91949:   5%|▌         | 5/100 [07:57<2:39:49, 100.94s/it]                                                                                [RQ2 Checker] True
+avg reward so far : -1.91949:   5%|▌         | 5/100 [07:58<2:39:49, 100.94s/it]                                                                                [RQ2 Checker] True
+avg reward so far : -1.91949:   5%|▌         | 5/100 [07:59<2:39:49, 100.94s/it]                                                                                [RQ2 Checker] True
+avg reward so far : -1.91949:   5%|▌         | 5/100 [08:00<2:39:49, 100.94s/it]                                                                                [RQ2 Checker] True
+avg reward so far : -1.91949:   5%|▌         | 5/100 [08:02<2:39:49, 100.94s/it]                                                                                [RQ2 Checker] True
+avg reward so far : -1.91949:   5%|▌         | 5/100 [08:03<2:39:49, 100.94s/it]                                                                                [RQ2 Checker] True
+avg reward so far : -1.91949:   5%|▌         | 5/100 [08:04<2:39:49, 100.94s/it]                                                                                [RQ2 Checker] True
+avg reward so far : -1.91949:   5%|▌         | 5/100 [08:06<2:39:49, 100.94s/it]                                                                                [RQ2 Checker] True
+avg reward so far : -1.91949:   5%|▌         | 5/100 [08:07<2:39:49, 100.94s/it]                                                                                [RQ2 Checker] True
+avg reward so far : -1.91949:   5%|▌         | 5/100 [08:08<2:39:49, 100.94s/it]                                                                                [RQ2 Solver] ( res == factorial( k ) && ( k <= n ) && ( n >= 0 ) )
+avg reward so far : -1.91949:   5%|▌         | 5/100 [08:08<2:39:49, 100.94s/it]                                                                                found a solution for 0 , sol: ( res == factorial( k ) && ( k <= n ) && ( n >= 0 ) )
+avg reward so far : -1.91949:   5%|▌         | 5/100 [08:18<2:39:49, 100.94s/it]                                                                                z3_report time: 499.05 pid: 0 stats: Counter({'ce-T:': 238, 'ce-I:': 117, 'boogie_result': 51, 'actual_z3': 10})
+avg reward so far : -1.91949:   5%|▌         | 5/100 [08:18<2:39:49, 100.94s/it]                                                                                Writing logs to results/inv_result_14_fuzz_rq2.log
+avg reward so far : -1.91949:   5%|▌         | 5/100 [08:18<2:39:49, 100.94s/it]avg reward so far : -1.91949:   5%|▌         | 5/100 [08:18<2:38:00, 99.80s/it] 
+K-Induction : 64, 64
+Could not converge for 14 & fuzz_rq2

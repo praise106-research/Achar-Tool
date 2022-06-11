@@ -1,0 +1,9 @@
+S ::= p
+p ::= ( condExpr && ( ( var cmp ( expr - 9 ) ) && ( var cmp ( expr + 9 ) ) ) )
+expr ::= ( 5 * ( ( varX / 10 ) - 1 ) * ( varX / 10 ) ) + ( ( varX / 10 ) * ( varX - 10 * ( varX / 10 ) ) )
+condExpr ::= ( index <= n ) | ( index >= n )
+const ::= 10 | 1
+var ::= sum | n | i
+varX ::= index | i
+cmp ::= >= | <=
+op ::= + | -

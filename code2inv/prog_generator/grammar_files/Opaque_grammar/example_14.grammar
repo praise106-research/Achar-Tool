@@ -1,0 +1,5 @@
+S ::= p
+p ::=  ( var == factorial( var ) && ( var <= expr ) && ( var >= expr ) )
+expr ::= n | 1 | 0
+cmp ::= < | > | == | <= | >=
+op ::= + | - | *

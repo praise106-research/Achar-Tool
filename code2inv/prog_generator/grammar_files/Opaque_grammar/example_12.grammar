@@ -1,0 +1,6 @@
+S ::= p
+p ::= ( ( x_0 == var + var * var ) && ( var  >= var ) )
+expr ::= ( var op var ) | ( var op const ) | ( const op var ) | ( const op const ) | var | const
+cmp ::= < | > | == | <= | >=
+var ::= x | y | result
+op ::= + | - | *
